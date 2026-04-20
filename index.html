@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Autonation — Taller Multimarca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#0a0a0a;color:#e8e8e8;font-family:'Barlow',sans-serif;overflow-x:hidden}
+:root{--red:#D42B2B;--gold:#C8A951;--border:rgba(255,255,255,.07);--muted:#7a7a7a}
+
+/* TOPBAR */
+.topbar{background:var(--red);text-align:center;padding:9px 20px;font-family:'Barlow Condensed',sans-serif;font-size:.82rem;letter-spacing:2px;text-transform:uppercase;color:#fff}
+.topbar span{opacity:.5;margin:0 14px}
+
+/* NAV */
+nav{position:fixed;top:35px;width:100%;z-index:999;transition:top .3s}
+.nav-inner{max-width:1280px;margin:auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:110px;background:rgba(8,8,8,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(18px);transition:height .3s}
+
+/* LOGO */
+.logo{display:flex;align-items:center;gap:14px}
+#logoImg{height:90px;width:auto;object-fit:contain;display:block;transition:height .3s}
+/* "Taller Multimarca" — tipografía azul/plateada en armonía con el logo:
+   azul marino oscuro del texto AUTONATION + plateado de la silueta del auto */
+.logo-sub{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.35rem;
+  letter-spacing:8px;
+  font-weight:600;
+  line-height:1;
+  white-space:nowrap;
+  text-transform:uppercase;
+  background:linear-gradient(135deg,#3a6cc0 0%,#8aa8d4 50%,#c0cee0 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{font-family:'Barlow Condensed',sans-serif;font-size:.88rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:color .2s;text-decoration:none}
+.nav-links a:hover{color:#fff}
+.nav-phone{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:1px;color:var(--red);white-space:nowrap}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;padding-top:145px}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1920&q=90') center/cover no-repeat;transform:scale(1.04)}
+.hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,1) 0%,rgba(10,10,10,.55) 45%,rgba(10,10,10,.1) 100%)}
+.hero-grad2{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,10,10,.9) 40%,transparent 100%)}
+.hero-content{position:relative;max-width:1280px;width:100%;margin:auto;padding:0 40px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+.hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--red)}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(4rem,8vw,7.5rem);font-weight:900;line-height:.88;letter-spacing:-2px;text-transform:uppercase;color:#fff;margin-bottom:24px}
+.hero h1 .ital{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;color:var(--red);text-transform:none;font-size:clamp(3.5rem,7vw,6.5rem)}
+.hero-desc{font-size:1rem;color:#aaa;line-height:1.7;max-width:500px;margin-bottom:36px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-red{background:var(--red);color:#fff;padding:15px 32px;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
+.btn-red:hover{background:#b52222}
+.btn-ghost{background:transparent;color:#fff;padding:15px 32px;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(255,255,255,.25);cursor:pointer;transition:border-color .2s,color .2s}
+.btn-ghost:hover{border-color:var(--red);color:var(--red)}
+.hero-stats{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,.04)}
+.hero-stat{background:rgba(8,8,8,.82);backdrop-filter:blur(8px);padding:20px 26px;display:flex;align-items:center;gap:20px;border-left:3px solid transparent;transition:border-color .25s}
+.hero-stat:hover{border-left-color:var(--red)}
+.stat-n{font-family:'Barlow Condensed',sans-serif;font-size:2.8rem;font-weight:900;line-height:1;color:#fff;min-width:72px}
+.stat-n.gold{color:var(--gold)}
+.stat-info strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff}
+.stat-info span{font-size:.82rem;color:var(--muted)}
+.hero-loc{background:rgba(8,8,8,.82);backdrop-filter:blur(8px);padding:16px 26px;display:flex;align-items:center;gap:14px;border-left:3px solid var(--red)}
+.hero-loc span{font-size:.83rem;color:#aaa;line-height:1.5}
+.hero-loc strong{display:block;color:#fff;font-size:.9rem}
+
+/* TRUST BAR — bloque propio, directamente después del hero */
+.trust-bar{background:#111;border-top:1px solid #1b1b1b;border-bottom:1px solid #1b1b1b}
+.trust-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);border-right:1px solid #1b1b1b}
+.trust-item{padding:26px;border-left:1px solid #1b1b1b;display:flex;align-items:center;gap:14px}
+.t-dot{width:7px;height:7px;background:var(--red);border-radius:50%;flex-shrink:0}
+.t-text strong{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;display:block;color:#fff}
+.t-text span{font-size:.85rem;color:var(--muted)}
+
+/* BASE */
+section{padding:100px 0}
+.wrap{max-width:1280px;margin:auto;padding:0 40px}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.8rem;letter-spacing:4px;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--red)}
+h2.title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.8rem,5vw,4.8rem);font-weight:900;line-height:.9;letter-spacing:-1px;text-transform:uppercase;color:#fff;margin-bottom:16px}
+h2.title em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;text-transform:none;color:var(--red)}
+.lead{font-size:1.02rem;color:var(--muted);line-height:1.75;max-width:560px}
+
+/* SERVICIOS */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#1c1c1c;margin-top:56px}
+.svc-card{background:#0a0a0a;position:relative;overflow:hidden;cursor:default;transition:background .3s}
+.svc-card:hover{background:#0f0f0f}
+.svc-img{width:100%;height:210px;overflow:hidden;position:relative}
+.svc-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:brightness(.75);transition:filter .5s,transform .6s}
+.svc-card:hover .svc-img img{filter:brightness(.9);transform:scale(1.05)}
+.svc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,1) 0%,rgba(10,10,10,.1) 70%,transparent 100%)}
+.svc-num{position:absolute;top:12px;right:16px;font-family:'Barlow Condensed',sans-serif;font-size:4.5rem;font-weight:900;color:rgba(255,255,255,.04);line-height:1;pointer-events:none;z-index:2}
+.svc-body{padding:22px 28px 30px}
+.svc-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:10px}
+.svc-card p{font-size:.92rem;color:var(--muted);line-height:1.7}
+.svc-tag{margin-top:16px;font-family:'Barlow Condensed',sans-serif;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px}
+.svc-tag::before{content:'';width:16px;height:1px;background:var(--red)}
+
+/* PROCESO */
+.process-section{background:#0d0d0d}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:#1c1c1c;margin-top:56px}
+.process-step{background:#0d0d0d;padding:40px 28px}
+.p-num{font-family:'Barlow Condensed',sans-serif;font-size:4rem;font-weight:900;color:var(--red);opacity:.2;line-height:1;margin-bottom:12px}
+.process-step h4{font-family:'Barlow Condensed',sans-serif;font-size:1.45rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:10px}
+.process-step p{font-size:.92rem;color:var(--muted);line-height:1.7}
+
+/* MANTENIMIENTO */
+.mant-section{background:#0d0d0d}
+.mant-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:56px}
+.mant-img{width:100%;min-height:480px;overflow:hidden;position:relative;background:#0d0d0d}
+.mant-img img{width:100%;height:100%;min-height:480px;object-fit:cover;object-position:center;display:block;filter:brightness(.78)}
+.mant-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,#0d0d0d 100%)}
+.mant-list{display:flex;flex-direction:column;gap:1px;background:#1c1c1c;margin-top:24px}
+.mant-row{background:#0d0d0d;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;transition:background .2s}
+.mant-row:hover{background:#111}
+.mant-row-left{display:flex;align-items:center;gap:12px}
+.mant-row-left::before{content:'';width:5px;height:5px;background:var(--red);border-radius:50%;flex-shrink:0}
+.mant-row strong{font-size:.92rem;font-weight:600;color:#ddd}
+.badge{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border:1px solid}
+.badge.prev{color:var(--red);border-color:rgba(212,43,43,.3)}
+.badge.corr{color:#555;border-color:rgba(255,255,255,.1)}
+
+/* PREMIOS */
+.awards-section{position:relative;overflow:hidden}
+.awards-bg-img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1542282088-fe8426682b8f?w=1600&q=80') center/cover no-repeat;opacity:.07}
+.awards-inner{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.big-7{font-family:'Barlow Condensed',sans-serif;font-size:clamp(8rem,18vw,15rem);font-weight:900;line-height:.82;color:var(--gold);letter-spacing:-6px}
+.awards-left h3{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:#fff;margin-top:8px}
+.awards-left p{font-size:.95rem;color:var(--muted);line-height:1.75;margin-top:14px}
+.awards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#1c1c1c}
+.award-box{background:#0a0a0a;padding:26px 22px;transition:background .2s}
+.award-box:hover{background:#111}
+.award-box .ico{font-size:1.4rem;margin-bottom:10px}
+.award-box h4{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.award-box p{font-size:.85rem;color:var(--muted);line-height:1.6}
+
+/* EV */
+.ev-section{background:#060906}
+.ev-split{display:grid;grid-template-columns:1fr 1fr;margin-top:60px}
+.ev-img-col{position:relative;overflow:hidden;min-height:540px}
+.ev-img-col img{width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(.65)}
+.ev-img-col::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 50%,#060906 100%)}
+.ev-content-col{padding:56px 48px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow.green{color:#22c55e}
+.eyebrow.green::before{background:#22c55e}
+.ev-features{display:flex;flex-direction:column;gap:1px;background:rgba(34,197,94,.05);margin-top:24px}
+.ev-feat{background:#060906;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;border-left:2px solid transparent;transition:background .2s,border-color .2s}
+.ev-feat:hover{background:#0a110a;border-left-color:#22c55e}
+.ev-feat-ico{width:8px;height:8px;background:#22c55e;border-radius:50%;flex-shrink:0;margin-top:7px}
+.ev-feat h4{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#22c55e;margin-bottom:3px}
+.ev-feat p{font-size:.85rem;color:#4a4a4a;line-height:1.6}
+.ev-brand-logos{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.ev-logo-chip{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);padding:10px 18px;display:flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:#22c55e;transition:background .2s}
+.ev-logo-chip:hover{background:rgba(34,197,94,.12)}
+.ev-logo-chip img{height:22px;width:auto;object-fit:contain;filter:brightness(0) saturate(100%) invert(58%) sepia(68%) saturate(500%) hue-rotate(95deg) brightness(90%)}
+
+/* MARCAS — solo logos, sin texto */
+.brands-section{background:#0d0d0d}
+.brands-logos-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:#1c1c1c;margin-top:48px}
+.brand-logo-cell{background:#0d0d0d;padding:24px 20px;display:flex;align-items:center;justify-content:center;transition:background .2s;cursor:default;min-height:80px}
+.brand-logo-cell:hover{background:#111}
+.brand-logo-cell img{height:38px;width:auto;object-fit:contain;max-width:100px;transition:opacity .2s}
+.brand-logo-cell:hover img{opacity:.9}
+
+/* TESTIMONIALES */
+.testi-section{background:#0a0a0a}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#1c1c1c;margin-top:56px}
+.testi-card{background:#0a0a0a;padding:36px 30px;transition:background .2s}
+.testi-card:hover{background:#0f0f0f}
+.testi-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:3rem;color:var(--red);opacity:.25;line-height:1;margin-bottom:8px}
+.stars{color:var(--gold);font-size:.8rem;letter-spacing:3px;margin-bottom:14px}
+.testi-text{font-size:.92rem;color:#aaa;line-height:1.8;margin-bottom:20px}
+.testi-divider{width:28px;height:1px;background:var(--red);margin-bottom:12px}
+.testi-name{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff}
+.testi-car{font-size:.78rem;color:var(--muted)}
+
+/* CONTACTO */
+.contact-section{background:#0d0d0d}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;margin-top:56px;align-items:start}
+.cinfo-group{display:flex;flex-direction:column;gap:1px;background:#1c1c1c;margin-bottom:20px}
+.cinfo-item{background:#0d0d0d;padding:20px 22px;display:flex;gap:16px;align-items:flex-start;transition:background .2s}
+.cinfo-item:hover{background:#111}
+.cinfo-ico{font-size:1.1rem;margin-top:2px;flex-shrink:0}
+.cinfo-item strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:3px}
+.cinfo-item span{font-size:.85rem;color:var(--muted);line-height:1.6}
+.hours-table{background:#111;border:1px solid #1c1c1c;margin-bottom:20px}
+.hours-row{display:flex;justify-content:space-between;padding:12px 20px;border-bottom:1px solid #1c1c1c;font-size:.88rem}
+.hours-row:last-child{border:none}
+.hours-row span:last-child{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red)}
+.form-panel{background:#111;border:1px solid #1c1c1c;padding:36px}
+.form-title{font-family:'Barlow Condensed',sans-serif;font-size:1.9rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid #1c1c1c}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fg{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.fg label{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.fg input,.fg select,.fg textarea{background:#0a0a0a;border:1px solid #222;color:#e8e8e8;padding:12px 14px;font-size:.9rem;font-family:'Barlow',sans-serif;outline:none;transition:border-color .2s;border-radius:0;-webkit-appearance:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--red)}
+.fg select option{background:#111}
+.fg textarea{resize:vertical;min-height:80px}
+.submit-btn{width:100%;background:var(--red);color:#fff;padding:15px;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;margin-bottom:10px;transition:background .2s}
+.submit-btn:hover{background:#b52222}
+.wa-btn{width:100%;background:#25D366;color:#fff;padding:14px;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:filter .2s}
+.wa-btn:hover{filter:brightness(1.1)}
+
+/* FOOTER */
+footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
+.footer-inner{max-width:1280px;margin:auto;padding:0 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid #141414;margin-bottom:24px}
+.f-brand p{font-size:.85rem;color:var(--muted);line-height:1.7;margin-top:12px;max-width:300px}
+.f-gold-badge{margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(200,169,81,.06);border:1px solid rgba(200,169,81,.18);padding:8px 16px;font-family:'Barlow Condensed',sans-serif;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.f-col h5{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.f-col li a{font-size:.85rem;color:var(--muted);transition:color .2s;text-decoration:none}
+.f-col li a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.footer-bottom p,.footer-bottom span{font-size:.74rem;color:#2a2a2a}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:1000;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s;box-shadow:0 4px 24px rgba(37,211,102,.3)}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:27px;height:27px;fill:#fff}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="topbar">📍 La Aurora, Guayaquil — Detrás del Edificio Milenium <span>|</span> +593 99 024 6733 <span>|</span> Lun–Vie: 8:00–18:00 <span>|</span> Sáb: 8:00–13:00</div>
+
+<nav id="mainNav">
+  <div class="nav-inner" id="navInner">
+    <div class="logo">
+      <img id="logoImg" src="https://i.ibb.co/ccmpJK94/Logo-fondo-negro-2.png" alt="Autonation">
+      <span class="logo-sub">Taller Multimarca</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#mantenimiento">Mantenimiento</a></li>
+      <li><a href="#electricos">Eléctricos</a></li>
+      <li><a href="#marcas">Marcas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="tel:+593990246733" class="nav-phone" style="text-decoration:none">+593 99 024 6733</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grad"></div>
+  <div class="hero-grad2"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-eyebrow">Taller Multimarca · La Aurora, Guayaquil</div>
+      <h1>Tu auto<br>en las<br>mejores<br><span class="ital">manos.</span></h1>
+      <p class="hero-desc">Estándares de concesionario, precios accesibles. Más de 20 años de experiencia y 7 Premios Presidente Chevrolet, con repuestos originales y genéricos.</p>
+      <div class="hero-btns">
+        <button class="btn-red" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Agendar Cita →</button>
+        <button class="btn-ghost" onclick="document.getElementById('servicios').scrollIntoView({behavior:'smooth'})">Ver Servicios</button>
+      </div>
+    </div>
+    <div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="stat-n gold">7</div><div class="stat-info"><strong>Premios Presidente</strong><span>Chevrolet — Máxima distinción de calidad</span></div></div>
+        <div class="hero-stat"><div class="stat-n">20<sup style="font-size:1.4rem">+</sup></div><div class="stat-info"><strong>Años de Experiencia</strong><span>Formados en los más altos estándares</span></div></div>
+        <div class="hero-stat"><div class="stat-n">EV</div><div class="stat-info"><strong>Eléctricos e Híbridos</strong><span>Equipamiento certificado especializado</span></div></div>
+        <div class="hero-stat"><div class="stat-n">∞</div><div class="stat-info"><strong>Todas las Marcas</strong><span>Del Ecuador — Sin excepción</span></div></div>
+        <div class="hero-loc"><span style="font-size:1.3rem">📍</span><div><strong>La Aurora, Guayaquil</strong><span>Detrás del Edificio Milenium</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-grid">
+    <div class="trust-item"><div class="t-dot"></div><div class="t-text"><strong>Diagnóstico Gratuito</strong><span>Con cada ingreso al taller</span></div></div>
+    <div class="trust-item"><div class="t-dot"></div><div class="t-text"><strong>Estándares de Concesionario</strong><span>Procesos certificados de calidad</span></div></div>
+    <div class="trust-item"><div class="t-dot"></div><div class="t-text"><strong>Repuestos Originales y Genéricos</strong><span>Tú decides según tu presupuesto</span></div></div>
+    <div class="trust-item"><div class="t-dot"></div><div class="t-text"><strong>Garantía por Escrito</strong><span>En todos nuestros trabajos</span></div></div>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Servicios Especializados</div>
+      <h2 class="title">Lo que hacemos,<br>lo hacemos <em>bien.</em></h2>
+    </div>
+    <div class="svc-grid reveal">
+      <div class="svc-card">
+        <div class="svc-num">01</div>
+        <div class="svc-img"><img src="https://i.ibb.co/N2sDxJXV/Cabina-de-pintura.png" alt="Pintura automotriz"></div>
+        <div class="svc-body"><h3>Pintura Automotriz</h3><p>Cabina de pintura de última generación. Técnico con traje y máscara completa aplicando con pistola de presión. Corrección de color computarizada para cualquier marca.</p><span class="svc-tag">Acabado de Fábrica</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">02</div>
+        <div class="svc-img"><img src="https://i.ibb.co/ccwjhfj0/Reparacion-de-motor-2.png" alt="Reparación de motores"></div>
+        <div class="svc-body"><h3>Reparación de Motores</h3><p>Diagnóstico computarizado, rectificación y reconstrucción parcial o total. Escáner de última generación para todos los sistemas electrónicos del vehículo.</p><span class="svc-tag">Diagnóstico Digital</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">03</div>
+        <div class="svc-img"><img src="https://i.ibb.co/LdBB1qDK/Caja-de-cambios.png" alt="Cajas de cambio"></div>
+        <div class="svc-body"><h3>Cajas de Cambio</h3><p>Transmisiones manuales, automáticas y CVT. Diagnóstico de fallas, cambio de aceite de caja, sincronización y reparación completa de todos los componentes internos.</p><span class="svc-tag">Manual & Automática</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">04</div>
+        <div class="svc-img"><img src="https://i.ibb.co/13MhqzZ/Abolladura.png" alt="Carrocería y chapa"></div>
+        <div class="svc-body"><h3>Latonería & Chapa</h3><p>Reparación de abolladuras en puertas y paneles, enderezado de estructura. Técnicas de reparación sin pintura para daños menores sin perder la garantía del fabricante.</p><span class="svc-tag">Restauración Total</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">05</div>
+        <div class="svc-img"><img src="https://i.ibb.co/KjMrs0Z4/Disco-de-frenos.png" alt="Sistema de frenos"></div>
+        <div class="svc-body"><h3>Sistema de Frenos</h3><p>Rectificación de discos y tambores, cambio de pastillas y zapatas, purga de líquido. Diagnóstico y reparación de ABS, ESC y sistemas de freno electrónico.</p><span class="svc-tag">Seguridad Primero</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">06</div>
+        <div class="svc-img"><img src="https://i.ibb.co/x8wWqPMW/Sistema-electrico.png" alt="Sistema eléctrico"></div>
+        <div class="svc-body"><h3>Sistema Eléctrico</h3><p>Diagnóstico de fallas eléctricas con escáner, reparación de arneses y alternadores. Interpretación de luces de sistema encendidas y configuración de módulos modernos.</p><span class="svc-tag">Alta Tecnología</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="process-section">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">Nuestro Proceso</div><h2 class="title">Simple, <em>rápido</em><br>y transparente.</h2></div>
+    <div class="process-grid reveal">
+      <div class="process-step"><div class="p-num">01</div><h4>Recepción</h4><p>Check-list de ingreso detallado. Todo queda documentado desde el primer momento antes de tocar el vehículo.</p></div>
+      <div class="process-step"><div class="p-num">02</div><h4>Diagnóstico</h4><p>Diagnóstico computarizado sin costo. Informe técnico claro antes de iniciar cualquier trabajo o compra de repuestos.</p></div>
+      <div class="process-step"><div class="p-num">03</div><h4>Ejecución</h4><p>Repuestos originales o genéricos según tu preferencia. Técnicos con procesos certificados de concesionario.</p></div>
+      <div class="process-step"><div class="p-num">04</div><h4>Entrega</h4><p>Revisión final, lavado del vehículo y entrega con garantía escrita. Resumen completo del trabajo realizado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MANTENIMIENTO -->
+<section id="mantenimiento" class="mant-section">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">Mantenimiento</div><h2 class="title">Preventivo<br>& <em>Correctivo.</em></h2></div>
+    <div class="mant-inner reveal">
+      <div class="mant-img">
+        <img src="https://i.ibb.co/jc91XR0/Mantenimiento.png" alt="Mantenimiento preventivo y correctivo">
+      </div>
+      <div>
+        <p class="lead">Plan personalizado según tu marca, modelo y kilometraje. Mismos estándares de los concesionarios a precio de taller independiente.</p>
+        <div class="mant-list">
+          <div class="mant-row"><div class="mant-row-left"><strong>Cambio de Aceite y Filtros</strong></div><span class="badge prev">Preventivo</span></div>
+          <div class="mant-row"><div class="mant-row-left"><strong>Alineación y Balanceo</strong></div><span class="badge prev">Preventivo</span></div>
+          <div class="mant-row"><div class="mant-row-left"><strong>Sistema de Refrigeración</strong></div><span class="badge prev">Preventivo</span></div>
+          <div class="mant-row"><div class="mant-row-left"><strong>Revisión de Suspensión</strong></div><span class="badge prev">Preventivo</span></div>
+          <div class="mant-row"><div class="mant-row-left"><strong>Bujías y Sistema de Encendido</strong></div><span class="badge prev">Preventivo</span></div>
+          <div class="mant-row"><div class="mant-row-left"><strong>Mantenimiento de A/C</strong></div><span class="badge prev">Preventivo</span></div>
+          <div class="mant-row"><div class="mant-row-left"><strong>Diagnóstico de Fallas</strong></div><span class="badge corr">Correctivo</span></div>
+          <div class="mant-row"><div class="mant-row-left"><strong>Reparación de Fugas</strong></div><span class="badge corr">Correctivo</span></div>
+        </div>
+        <button class="btn-red" style="margin-top:24px" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Consultar mi Plan →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREMIOS -->
+<section class="awards-section">
+  <div class="awards-bg-img"></div>
+  <div class="wrap">
+    <div class="awards-inner reveal">
+      <div class="awards-left">
+        <div class="eyebrow" style="color:var(--gold)"><span style="width:28px;height:1px;background:var(--gold);display:inline-block"></span>Premio Presidente Chevrolet</div>
+        <div class="big-7">7</div>
+        <h3>Premios de Excelencia</h3>
+        <p>El máximo reconocimiento de Chevrolet a talleres por excelencia en gestión, calidad y procesos. Esta cultura de 20 años está disponible en Autonation para todas las marcas, con precios accesibles y repuestos a tu elección.</p>
+      </div>
+      <div class="awards-grid">
+        <div class="award-box"><div class="ico">🏆</div><h4>Calidad de Servicio</h4><p>Estándares técnicos de concesionario en taller independiente</p></div>
+        <div class="award-box"><div class="ico">📈</div><h4>Gestión de Clientes</h4><p>Procesos centrados 100% en la satisfacción del cliente</p></div>
+        <div class="award-box"><div class="ico">⚙️</div><h4>Procesos Certificados</h4><p>Metodología que garantiza resultados consistentes</p></div>
+        <div class="award-box"><div class="ico">📚</div><h4>Capacitación Continua</h4><p>Equipo técnico en formación permanente</p></div>
+        <div class="award-box"><div class="ico">🔍</div><h4>Diagnóstico Preciso</h4><p>Equipos de última generación en taller</p></div>
+        <div class="award-box"><div class="ico">📋</div><h4>Transparencia Total</h4><p>Comunicación clara en cada etapa del proceso</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ELÉCTRICOS -->
+<section id="electricos" class="ev-section">
+  <div class="wrap reveal">
+    <div class="eyebrow green">Vehículos del Futuro</div>
+    <h2 class="title">Eléctricos<br>e <em style="color:#22c55e">Híbridos.</em></h2>
+  </div>
+  <div class="ev-split reveal">
+    <div class="ev-img-col">
+      <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=900&q=85" alt="Vehículo eléctrico">
+    </div>
+    <div class="ev-content-col">
+      <p class="lead" style="margin-bottom:0">Equipamiento certificado y técnicos especializados para la nueva generación de vehículos eléctricos e híbridos en Ecuador.</p>
+      <div class="ev-features">
+        <div class="ev-feat"><div class="ev-feat-ico"></div><div><h4>Batería de Alto Voltaje</h4><p>Diagnóstico del estado de la batería HV y degradación celular</p></div></div>
+        <div class="ev-feat"><div class="ev-feat-ico"></div><div><h4>Sistema de Carga</h4><p>Reparación de sistemas AC/DC, puertos de carga y OBC</p></div></div>
+        <div class="ev-feat"><div class="ev-feat-ico"></div><div><h4>Motor Eléctrico</h4><p>Diagnóstico y reparación de motores de tracción e inversores</p></div></div>
+        <div class="ev-feat"><div class="ev-feat-ico"></div><div><h4>Gestión Térmica</h4><p>Refrigeración de batería y mantenimiento de refrigerante dieléctrico</p></div></div>
+        <div class="ev-feat"><div class="ev-feat-ico"></div><div><h4>Software & BMS</h4><p>Calibración de ECUs y sistemas de gestión de energía</p></div></div>
+      </div>
+      <div class="ev-brand-logos">
+        <div class="ev-logo-chip"><img src="https://i.ibb.co/XfqfjzVG/BYD.jpg" alt="BYD"><span>BYD</span></div>
+        <div class="ev-logo-chip"><img src="https://i.ibb.co/MxSzvztx/Jac.jpg" alt="JAC"><span>JAC EV</span></div>
+        <div class="ev-logo-chip"><img src="https://i.ibb.co/9HhKh48g/Chery.jpg" alt="Chery EV"><span>Chery EV</span></div>
+        <div class="ev-logo-chip"><img src="https://i.ibb.co/XxbMWJf4/GWM.jpg" alt="GWM EV"><span>GWM EV</span></div>
+        <div class="ev-logo-chip"><img src="https://i.ibb.co/S4L2d1K6/Toyota.jpg" alt="Toyota HV"><span>Toyota HV</span></div>
+        <div class="ev-logo-chip"><img src="https://i.ibb.co/C30yKJbn/Kia.jpg" alt="Kia HV"><span>Kia HV</span></div>
+        <div class="ev-logo-chip"><img src="https://i.ibb.co/TDgh0DrQ/Hyundai.jpg" alt="Hyundai HV"><span>Hyundai HV</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARCAS — mensaje de estándares -->
+<section id="marcas" class="brands-section">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">Cobertura Total</div><h2 class="title">Todas las marcas<br>del <em>Ecuador.</em></h2></div>
+    <div class="reveal" style="margin-top:48px;position:relative;overflow:hidden">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,61,122,.08) 0%,rgba(74,124,200,.04) 50%,rgba(176,192,216,.06) 100%);border:1px solid rgba(74,124,200,.12)"></div>
+      <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom,#1a3d7a,#4a7cc8,#b0c0d8)"></div>
+      <div style="position:relative;padding:52px 60px;text-align:left">
+        <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:2px;text-transform:uppercase;line-height:1.15;color:#fff;margin-bottom:14px">Estándares de concesionario<br>en taller independiente.</p>
+        <div style="width:48px;height:2px;background:linear-gradient(to right,#1a3d7a,#4a7cc8,#b0c0d8);margin-bottom:18px"></div>
+        <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(1rem,1.8vw,1.25rem);font-weight:400;letter-spacing:3px;text-transform:uppercase;color:var(--muted);line-height:1.5">Con repuestos originales o genéricos según tu presupuesto.<br>Todas las marcas. Sin excepción.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALES -->
+<section class="testi-section">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">Testimoniales</div><h2 class="title">Lo que dicen<br>nuestros <em>clientes.</em></h2></div>
+    <div class="testi-grid reveal">
+      <div class="testi-card"><div class="testi-quote">"</div><div class="stars">★★★★★</div><p class="testi-text">Llevé mi Chevrolet Tracker después de un accidente. Pintura impecable, proceso 100% transparente. Me informaron en cada paso y el precio fue justo.</p><div class="testi-divider"></div><div class="testi-name">Carlos M.</div><div class="testi-car">Chevrolet Tracker 2022 · Mayo 2026</div></div>
+      <div class="testi-card"><div class="testi-quote">"</div><div class="stars">★★★★★</div><p class="testi-text">Tengo un BYD Dolphin y no encontraba taller confiable. En Autonation diagnosticaron la batería gratis y el servicio fue perfecto. ¡Los únicos que entienden los eléctricos en Guayaquil!</p><div class="testi-divider"></div><div class="testi-name">Gabriela T.</div><div class="testi-car">BYD Dolphin 2023 · Junio 2026</div></div>
+      <div class="testi-card"><div class="testi-quote">"</div><div class="stars">★★★★★</div><p class="testi-text">Mi Toyota tenía un problema en la caja automática que nadie supo identificar. Aquí lo resolvieron de inmediato. Calidad de concesionario a precio razonable.</p><div class="testi-divider"></div><div class="testi-name">Andrés R.</div><div class="testi-car">Toyota Corolla 2020 · Julio 2026</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contact-section">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">Contacto</div><h2 class="title">Agenda tu cita<br><em>hoy mismo.</em></h2></div>
+    <div class="contact-grid reveal">
+      <div>
+        <div class="cinfo-group">
+          <div class="cinfo-item"><div class="cinfo-ico">📍</div><div><strong>Ubicación</strong><span>Detrás del Edificio Milenium<br>La Aurora, Guayaquil, Ecuador</span></div></div>
+          <div class="cinfo-item"><div class="cinfo-ico">📞</div><div><strong>Teléfono / WhatsApp</strong><span><a href="tel:+593990246733" style="color:var(--muted);text-decoration:none">+593 99 024 6733</a></span></div></div>
+          <div class="cinfo-item"><div class="cinfo-ico">✉️</div><div><strong>Correo</strong><span><a href="mailto:Info@autonation.com.ec" style="color:var(--muted);text-decoration:none">Info@autonation.com.ec</a></span></div></div>
+        </div>
+        <div class="hours-table">
+          <div class="hours-row"><span>Lunes – Viernes</span><span>08:00 – 18:00</span></div>
+          <div class="hours-row"><span>Sábado</span><span>08:00 – 13:00</span></div>
+          <div class="hours-row"><span>Domingo</span><span>Cerrado</span></div>
+        </div>
+      </div>
+      <div class="form-panel">
+        <div class="form-title">Solicitar Cita</div>
+        <div class="frow">
+          <div class="fg"><label>Nombre</label><input type="text" placeholder="Tu nombre completo"></div>
+          <div class="fg"><label>Teléfono</label><input type="text" placeholder="+593..."></div>
+        </div>
+        <div class="fg"><label>Marca del Vehículo</label>
+          <select><option>Seleccionar marca...</option><option>Chevrolet</option><option>Toyota</option><option>Kia</option><option>Hyundai</option><option>Mazda</option><option>Nissan</option><option>Ford</option><option>Volkswagen</option><option>Renault</option><option>BYD (Eléctrico)</option><option>JAC EV (Eléctrico)</option><option>Chery EV (Eléctrico)</option><option>Mitsubishi</option><option>Suzuki</option><option>Honda</option><option>Otra</option></select>
+        </div>
+        <div class="fg"><label>Servicio Requerido</label>
+          <select><option>Seleccionar servicio...</option><option>Mantenimiento Preventivo</option><option>Reparación de Motor</option><option>Caja de Cambios</option><option>Pintura / Carrocería</option><option>Sistema de Frenos</option><option>Vehículo Eléctrico / Híbrido</option><option>Sistema Eléctrico</option><option>Diagnóstico General</option></select>
+        </div>
+        <div class="fg"><label>Mensaje (opcional)</label><textarea placeholder="Cuéntanos el problema o lo que necesitas..."></textarea></div>
+        <button class="submit-btn" onclick="alert('¡Solicitud enviada! Te contactaremos pronto.')">Enviar Solicitud</button>
+        <button class="wa-btn" onclick="window.open('https://wa.me/593990246733','_blank')">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escribir por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <div class="logo" style="margin-bottom:12px">
+          <img src="https://i.ibb.co/ccmpJK94/Logo-fondo-negro-2.png" alt="Autonation" style="height:70px;width:auto">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;letter-spacing:8px;font-weight:600;text-transform:uppercase;background:linear-gradient(135deg,#3a6cc0 0%,#8aa8d4 50%,#c0cee0 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Taller Multimarca</span>
+        </div>
+        <p>Estándares de concesionario en taller independiente. Con repuestos originales o genéricos según tu presupuesto. La Aurora, Guayaquil.</p>
+        <div class="f-gold-badge">★ 7× Premio Presidente Chevrolet</div>
+      </div>
+      <div class="f-col"><h5>Servicios</h5><ul><li><a href="#servicios">Pintura Automotriz</a></li><li><a href="#servicios">Reparación de Motores</a></li><li><a href="#servicios">Cajas de Cambio</a></li><li><a href="#mantenimiento">Mantenimiento</a></li><li><a href="#electricos">Eléctricos e Híbridos</a></li></ul></div>
+      <div class="f-col"><h5>Contacto</h5><ul><li><a href="#">La Aurora, Guayaquil</a></li><li><a href="#">Edificio Milenium (atrás)</a></li><li><a href="#">+593 99 XXX XXXX</a></li><li><a href="#">info@autonationec.com</a></li><li><a href="#contacto">Agendar Cita</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Autonation Taller Multimarca · Guayaquil, Ecuador</p><span>Respaldados por 7 Premios Presidente Chevrolet</span></div>
+  </div>
+</footer>
+
+<div class="wa-float" onclick="window.open('https://wa.me/593990246733','_blank')">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</div>
+
+<script>
+const obs = new IntersectionObserver(e => e.forEach(i => {
+  if(i.isIntersecting){ i.target.classList.add('visible'); obs.unobserve(i.target); }
+}), {threshold:.1});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('mainNav');
+  const ni = document.getElementById('navInner');
+  const logo = document.getElementById('logoImg');
+  if(window.scrollY > 80){
+    nav.style.top = '0';
+    ni.style.height = '72px';
+    logo.style.height = '56px';
+  } else {
+    nav.style.top = '35px';
+    ni.style.height = '110px';
+    logo.style.height = '90px';
+  }
+});
+</script>
+</body>
+</html>
