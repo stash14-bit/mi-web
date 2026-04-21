@@ -2,7 +2,15 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://api.whatsapp.com https://wa.me; frame-ancestors 'none'; form-action 'self' https://wa.me; base-uri 'self'; upgrade-insecure-requests">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Autonation - Taller Multimarca en La Aurora, Guayaquil. Estándares de concesionario, precios accesibles. 20+ años de experiencia. 7 Premios Presidente Chevrolet.">
+  <meta name="theme-color" content="#0f1e4a">
+
 <title>Autonation — Taller Multimarca</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
@@ -229,6 +237,96 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
+
+/* =========== RESPONSIVE DESIGN =========== */
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;z-index:1000}
+.nav-toggle span{display:block;width:28px;height:3px;background:#fff;margin:5px 0;transition:all .3s;border-radius:2px}
+.nav-toggle.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}
+.nav-toggle.active span:nth-child(2){opacity:0}
+.nav-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
+
+@media (max-width: 900px){
+  .topbar{font-size:.7rem;padding:6px 10px;letter-spacing:.5px;text-align:center}
+  nav{top:32px}
+  .nav-inner{padding:0 16px !important;height:80px !important}
+  #logoImg{height:70px !important}
+  .logo-sub{display:none}
+  .nav-toggle{display:block}
+  .nav-links, .nav-menu{position:fixed;top:112px;left:0;right:0;background:rgba(8,8,8,.98);flex-direction:column;padding:20px;gap:10px !important;display:none !important;border-bottom:1px solid #222;max-height:calc(100vh - 112px);overflow-y:auto}
+  .nav-links.open, .nav-menu.open{display:flex !important}
+  .nav-links li, .nav-menu li{width:100%;text-align:center}
+  .nav-links a, .nav-menu a{display:block;padding:14px 0;font-size:1.1rem;border-bottom:1px solid #1a1a1a}
+  
+  .hero-content{grid-template-columns:1fr !important;gap:30px;padding:100px 20px 40px !important}
+  .hero h1, .hero-title, h1{font-size:2.4rem !important;line-height:1.1 !important}
+  .hero-sub, .hero-lead{font-size:1rem !important}
+  .hero-badges, .hero-stats{flex-wrap:wrap;gap:10px}
+  .hero-cta-row, .hero-ctas{flex-direction:column;gap:12px}
+  .hero-cta-row button, .hero-cta-row .btn, .hero-ctas button{width:100%}
+  
+  .trust-grid{grid-template-columns:repeat(2,1fr) !important}
+  .trust-item{padding:24px 16px}
+  
+  .svc-grid{grid-template-columns:1fr !important;margin-top:32px !important}
+  .proc-grid, .process-grid{grid-template-columns:repeat(2,1fr) !important;margin-top:32px !important}
+  
+  .mant-inner{grid-template-columns:1fr !important;gap:32px;margin-top:32px !important}
+  
+  .awards-inner{grid-template-columns:1fr !important;gap:40px}
+  .awards-grid{grid-template-columns:1fr !important}
+  
+  .ev-split{grid-template-columns:1fr !important;margin-top:32px !important}
+  .ev-content-col{padding:32px 20px !important}
+  .ev-img-col{min-height:300px}
+  
+  .brands-logos-grid{grid-template-columns:repeat(3,1fr) !important;margin-top:32px !important}
+  
+  .testi-grid{grid-template-columns:1fr !important;margin-top:32px !important}
+  
+  .contact-grid{grid-template-columns:1fr !important;gap:32px;margin-top:32px !important}
+  .frow{grid-template-columns:1fr !important}
+  .form-panel, .info-panel{padding:24px 20px !important}
+  
+  .footer-grid{grid-template-columns:1fr !important;gap:32px}
+  
+  section{padding:60px 0 !important}
+  .wrap{padding:0 20px !important}
+  h2, .section-title{font-size:2rem !important;line-height:1.15 !important}
+  h3{font-size:1.3rem !important}
+  .section-kicker, .eyebrow{font-size:.75rem !important}
+  
+  nav.scrolled .nav-inner{height:65px !important}
+  nav.scrolled #logoImg{height:52px !important}
+}
+
+@media (max-width: 480px){
+  .topbar{font-size:.65rem;padding:5px 8px}
+  nav{top:28px}
+  .nav-inner{height:70px !important;padding:0 12px !important}
+  #logoImg{height:58px !important}
+  .nav-links, .nav-menu{top:98px}
+  
+  .hero-content{padding:90px 16px 30px !important}
+  .hero h1, .hero-title, h1{font-size:2rem !important}
+  .hero-sub, .hero-lead{font-size:.95rem !important}
+  
+  .trust-grid{grid-template-columns:1fr !important}
+  .proc-grid, .process-grid{grid-template-columns:1fr !important}
+  .brands-logos-grid{grid-template-columns:repeat(2,1fr) !important}
+  
+  h2, .section-title{font-size:1.7rem !important}
+  h3{font-size:1.15rem !important}
+  .wrap{padding:0 16px !important}
+  section{padding:48px 0 !important}
+  
+  .btn, button{font-size:.9rem;padding:12px 20px}
+  
+  .svc-card, .service-card{padding:24px 20px}
+  .testi-card, .testimonial{padding:24px 20px}
+  
+  .wa-fab, .whatsapp-float{width:56px !important;height:56px !important;bottom:16px !important;right:16px !important}
+}
+
 </style>
 </head>
 <body>
@@ -241,7 +339,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
       <img id="logoImg" src="Logo.png" alt="Autonation">
       <span class="logo-sub">Taller Multimarca</span>
     </div>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navMenu">
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#mantenimiento">Mantenimiento</a></li>
       <li><a href="#electricos">Eléctricos</a></li>
@@ -477,7 +575,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
         </div>
         <div class="fg"><label>Mensaje (opcional)</label><textarea placeholder="Cuéntanos el problema o lo que necesitas..."></textarea></div>
         <button class="submit-btn" onclick="alert('¡Solicitud enviada! Te contactaremos pronto.')">Enviar Solicitud</button>
-        <button class="wa-btn" onclick="window.open('https://wa.me/593990246733','_blank')">
+        <button class="wa-btn" onclick="window.open('https://wa.me/593990246733','_blank','noopener,noreferrer')">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Escribir por WhatsApp
         </button>
@@ -505,7 +603,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
   </div>
 </footer>
 
-<div class="wa-float" onclick="window.open('https://wa.me/593990246733','_blank')">
+<div class="wa-float" onclick="window.open('https://wa.me/593990246733','_blank','noopener,noreferrer')">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </div>
 
@@ -530,5 +628,34 @@ window.addEventListener('scroll', () => {
   }
 });
 </script>
+
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('navMenu');
+  if(toggle && menu){
+    toggle.addEventListener('click', function(){
+      var isOpen = menu.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        menu.classList.remove('open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+  window.addEventListener('scroll', function(){
+    var nav = document.getElementById('mainNav');
+    if(nav){
+      if(window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
