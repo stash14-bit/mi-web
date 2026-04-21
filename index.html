@@ -22,7 +22,7 @@ nav{position:fixed;top:35px;width:100%;z-index:999;transition:top .3s}
 
 /* LOGO */
 .logo{display:flex;align-items:center;gap:14px}
-#logoImg{height:180px;width:auto;object-fit:contain;display:block;transition:height .3s}
+#logoImg{height:110px;width:auto;object-fit:contain;display:block;transition:height .3s}
 /* "Taller Multimarca" — tipografía azul/plateada en armonía con el logo:
    azul marino oscuro del texto AUTONATION + plateado de la silueta del auto */
 .logo-sub{
@@ -238,7 +238,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
 <nav id="mainNav">
   <div class="nav-inner" id="navInner">
     <div class="logo">
-      <svg id="logoImg" class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" aria-label="Autonation">
+      <svg id="logoImg" xmlns="http://www.w3.org/2000/svg" viewBox="210 90 310 260" aria-label="Autonation">
   <defs>
     <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#3a6cc0"/>
@@ -260,22 +260,20 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
       <stop offset="100%" stop-color="#8a94a6"/>
     </linearGradient>
   </defs>
-  <g transform="translate(0,-40)">
-    <path d="M 230 280 L 295 100 L 330 100 L 395 280 L 355 280 L 340 235 L 285 235 L 270 280 Z M 295 210 L 330 210 L 312 155 Z" fill="url(#gA)"/>
-    <path d="M 260 170 Q 240 165 225 175 Q 235 180 248 180 Q 255 178 260 170 Z" fill="url(#gA)"/>
-    <path d="M 220 260 Q 330 195 440 255 Q 335 220 225 280 Z" fill="url(#gArc)"/>
-    <path d="M 340 175 Q 360 150 400 148 Q 440 146 475 160 Q 495 168 505 180 L 510 210 L 345 215 Q 338 195 340 175 Z" fill="url(#gAuto)"/>
-    <path d="M 360 175 Q 380 158 410 156 Q 440 155 465 166 Q 480 172 485 183 L 355 186 Q 355 180 360 175 Z" fill="url(#gP)" opacity="0.9"/>
-    <path d="M 340 200 L 510 200 L 505 215 L 345 218 Z" fill="url(#gP)"/>
-    <circle cx="470" cy="215" r="14" fill="#0f1e4a"/>
-    <circle cx="470" cy="215" r="8" fill="url(#gP)"/>
-    <circle cx="470" cy="215" r="3" fill="#0f1e4a"/>
-    <circle cx="365" cy="215" r="12" fill="#0f1e4a"/>
-    <circle cx="365" cy="215" r="6" fill="url(#gP)"/>
-    <circle cx="365" cy="215" r="2" fill="#0f1e4a"/>
-    <path d="M 380 160 Q 410 153 445 160 Q 420 157 395 158 Z" fill="#ffffff" opacity="0.5"/>
-  </g>
-  <text x="300" y="245" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="56" font-weight="900" fill="url(#gA)" letter-spacing="2">AUTONATION</text>
+  <path d="M 230 280 L 295 100 L 330 100 L 395 280 L 355 280 L 340 235 L 285 235 L 270 280 Z M 295 210 L 330 210 L 312 155 Z" fill="url(#gA)"/>
+  <path d="M 260 170 Q 240 165 225 175 Q 235 180 248 180 Q 255 178 260 170 Z" fill="url(#gA)"/>
+  <path d="M 220 260 Q 330 195 440 255 Q 335 220 225 280 Z" fill="url(#gArc)"/>
+  <path d="M 340 175 Q 360 150 400 148 Q 440 146 475 160 Q 495 168 505 180 L 510 210 L 345 215 Q 338 195 340 175 Z" fill="url(#gAuto)"/>
+  <path d="M 360 175 Q 380 158 410 156 Q 440 155 465 166 Q 480 172 485 183 L 355 186 Q 355 180 360 175 Z" fill="url(#gP)" opacity="0.9"/>
+  <path d="M 340 200 L 510 200 L 505 215 L 345 218 Z" fill="url(#gP)"/>
+  <circle cx="470" cy="215" r="14" fill="#0f1e4a"/>
+  <circle cx="470" cy="215" r="8" fill="url(#gP)"/>
+  <circle cx="470" cy="215" r="3" fill="#0f1e4a"/>
+  <circle cx="365" cy="215" r="12" fill="#0f1e4a"/>
+  <circle cx="365" cy="215" r="6" fill="url(#gP)"/>
+  <circle cx="365" cy="215" r="2" fill="#0f1e4a"/>
+  <path d="M 380 160 Q 410 153 445 160 Q 420 157 395 158 Z" fill="#ffffff" opacity="0.5"/>
+  <text x="365" y="335" text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="48" font-weight="900" fill="url(#gA)" letter-spacing="1.5">AUTONATION</text>
 </svg>
       <span class="logo-sub">Taller Multimarca</span>
     </div>
@@ -560,11 +558,11 @@ window.addEventListener('scroll', () => {
   if(window.scrollY > 80){
     nav.style.top = '0';
     ni.style.height = '72px';
-    logo.style.height = '110px';
+    logo.style.height = '75px';
   } else {
     nav.style.top = '35px';
     ni.style.height = '110px';
-    logo.style.height = '180px';
+    logo.style.height = '110px';
   }
 });
 </script>
