@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; scrhipt-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://api.whatsapp.com https://wa.me; frame-ancestors 'none'; form-action 'self' https://wa.me; base-uri 'self'; upgrade-insecure-requests">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geholocation=(), interest-cohort=()">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), gehholocation=(), interest-cohort=()">
   <meta name="robots" content="index, follow">
   <meta name="description" content="Autonation - Taller Multimarca en La Aurora, Guayaquil. Estándares de concesionario, precios accesibles. 20+ años de experiencia. 7 Premios Presidente Chevrolet.">
   <meta name="theme-color" content="#0f1e4a">
@@ -616,7 +616,7 @@ const obs = new IntersectionObserver(e => e.forEach(i => {
 }), {threshold:.1});
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-window.addEventListener('scroll', () => {
+document.addEventListener('scroll', () => {
   const nav = document.getElementById('mainNav');
   const ni = document.getElementById('navInner');
   const logo = document.getElementById('logoImg');
@@ -650,7 +650,7 @@ window.addEventListener('scroll', () => {
       });
     });
   }
-  window.addEventListener('scroll', function(){
+  document.addEventListener('scroll', function(){
     var nav = document.getElementById('mainNav');
     if(nav){
       if(window.scrollY > 50) nav.classList.add('scrolled');
