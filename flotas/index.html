@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18291866000"></script>
+<script src="/ga-init.js"></script>
+<script src="/analytics.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autonation — Servicio Corporativo de Flotas</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800;900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --red:#D42B2B;
+  --red-dark:#a81f1f;
+  --gold:#C8A951;
+  --bg1:#0a0a0a;
+  --bg2:#0d0d0d;
+  --bg3:#111;
+  --bg4:#141414;
+  --muted:#9a9a9a;
+  --text:#e8e8e8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg1);color:var(--text);font-family:'Barlow',sans-serif;overflow:hidden}
+h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase}
+em{font-family:'Playfair Display',serif;font-style:italic;color:var(--red)}
+
+.slide-deck{position:relative;width:100vw;height:100vh;overflow:hidden}
+@media (min-width:769px){
+  .slide-deck{max-width:calc(100vh * 16 / 9);max-height:calc(100vw * 9 / 16);margin:auto;position:absolute;inset:0}
+}
+.slide{
+  position:absolute;width:100%;height:100%;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+  padding:70px 90px;opacity:0;visibility:hidden;transition:opacity .4s;
+  background:var(--bg1);overflow:hidden;
+}
+.slide.active{opacity:1;visibility:visible}
+.slide-content{width:100%;max-width:1000px;max-height:100%;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px}
+
+.eyebrow{font-size:.85rem;letter-spacing:4px;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:12px;font-family:'Barlow Condensed',sans-serif;font-weight:700}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--red)}
+
+.slide-title{font-size:clamp(30px,5.5vw,68px);font-weight:900;line-height:1.02;letter-spacing:-1px;color:#fff}
+.slide-title .accent{background:linear-gradient(135deg,var(--gold),#e8cf8f);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+h2.section-title{font-size:clamp(26px,4.2vw,46px);font-weight:800;color:#fff;line-height:1.05}
+p.lede{font-size:clamp(15px,1.7vw,20px);color:var(--muted);max-width:760px;line-height:1.6}
+p.body{font-size:clamp(14px,1.5vw,17px);color:var(--text);line-height:1.65}
+
+/* logo */
+.logo-wrap{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.logo-wrap img{height:46px;filter:brightness(0) invert(1)}
+.brand-word{font-family:'Barlow Condensed',sans-serif;font-weight:800;letter-spacing:3px;font-size:1rem;color:var(--muted)}
+
+/* grids */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;width:100%}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:36px;width:100%;align-items:center}
+@media (max-width:768px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+
+.card{background:var(--bg3);border:1px solid rgba(255,255,255,.06);border-radius:4px;padding:26px 22px;text-align:left}
+.card .ico{font-size:1.6rem;margin-bottom:10px}
+.card h3{font-size:1.05rem;color:#fff;margin-bottom:8px;text-transform:none;font-family:'Barlow',sans-serif;font-weight:700}
+.card p{font-size:.92rem;color:var(--muted);line-height:1.55}
+.card.accent{border-left:3px solid var(--red)}
+
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;width:100%}
+@media (max-width:768px){.metrics{grid-template-columns:repeat(2,1fr)}}
+.metric{text-align:center}
+.metric .num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);color:var(--gold);line-height:1}
+.metric .lbl{font-size:.78rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:6px}
+
+.list-check{list-style:none;text-align:left;width:100%;max-width:640px}
+.list-check li{position:relative;padding-left:34px;margin-bottom:14px;font-size:1rem;color:var(--text);line-height:1.5}
+.list-check li::before{content:'✓';position:absolute;left:0;top:0;color:var(--red);font-weight:800}
+
+.pill{display:inline-block;background:rgba(212,43,43,.12);border:1px solid rgba(212,43,43,.35);color:var(--red);padding:5px 16px;border-radius:999px;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;font-family:'Barlow Condensed',sans-serif}
+
+.cta-btn{display:inline-block;background:var(--red);color:#fff;padding:16px 36px;font-family:'Barlow Condensed',sans-serif;font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:1rem;border-radius:2px;text-decoration:none}
+.contact-row{display:flex;gap:34px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.contact-row div{font-size:.92rem;color:var(--muted)}
+.contact-row strong{display:block;color:#fff;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;font-size:.78rem;text-transform:uppercase;margin-bottom:4px}
+
+.chart-container{width:min(75%,560px);height:clamp(180px,32vh,300px)}
+
+/* footer badge */
+.slide-badge{position:absolute;top:26px;right:34px;font-size:.7rem;letter-spacing:2px;color:rgba(255,255,255,.25);text-transform:uppercase;font-family:'Barlow Condensed',sans-serif}
+
+/* animation */
+.animate-stagger > *{opacity:0;animation:fadeUp .5s ease-out forwards}
+.animate-stagger > *:nth-child(1){animation-delay:.1s}
+.animate-stagger > *:nth-child(2){animation-delay:.2s}
+.animate-stagger > *:nth-child(3){animation-delay:.3s}
+.animate-stagger > *:nth-child(4){animation-delay:.4s}
+.animate-fade-up{animation:fadeUp .6s ease-out forwards;opacity:0}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* nav */
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--red);transition:width .3s;z-index:1000}
+.nav-controls{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:20px;z-index:1000}
+.nav-btn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:16px}
+.nav-btn:hover{background:rgba(255,255,255,.18)}
+.slide-counter{color:rgba(255,255,255,.5);font-size:13px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px}
+
+@media (max-width:768px){
+  .slide{padding:36px 26px}
+  .grid-3,.grid-2,.metrics{gap:14px}
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+<div class="slide-deck">
+
+<!-- 1. TITLE / HOOK -->
+<div class="slide active">
+  <div class="slide-content animate-fade-up">
+    <div class="logo-wrap"><img src="/img/logo.png" alt="Autonation"><span class="brand-word">AUTONATION · FLOTAS</span></div>
+    <h1 class="slide-title">Su flota no puede darse el lujo de <span class="accent">parar.</span></h1>
+    <p class="lede">Servicio de mantenimiento corporativo para camiones pequeños y camionetas de servicio — estándares de concesionario, precio de taller independiente, en La Aurora, a minutos de Guayaquil y Samborondón.</p>
+  </div>
+  <div class="slide-badge">Autonation Taller Multimarca · Propuesta Comercial</div>
+</div>
+
+<!-- 2. PROBLEM -->
+<div class="slide">
+  <div class="slide-content">
+    <div class="eyebrow">El problema</div>
+    <h2 class="section-title">Cada unidad parada es plata que su empresa deja de facturar</h2>
+    <div class="grid-3 animate-stagger" style="margin-top:10px">
+      <div class="card accent"><div class="ico">🕐</div><h3>Talleres sin agenda real</h3><p>Se pierden horas esperando turno, sin saber cuándo estará listo el vehículo.</p></div>
+      <div class="card accent"><div class="ico">📋</div><h3>Cero historial por unidad</h3><p>Sin registro digital, cada camión repite diagnósticos y se pierde trazabilidad de mantenimiento.</p></div>
+      <div class="card accent"><div class="ico">🧾</div><h3>Facturación desordenada</h3><p>Una factura por cada visita, de cada unidad, sin consolidado mensual para contabilidad.</p></div>
+    </div>
+  </div>
+  <div class="slide-badge">Autonation Taller Multimarca · Propuesta Comercial</div>
+</div>
+
+<!-- 3. COST OF INACTION -->
+<div class="slide">
+  <div class="slide-content">
+    <div class="eyebrow">Costo de la inacción</div>
+    <h2 class="section-title">Un camión parado un día no es un gasto de taller.<br>Es una entrega que no se hizo.</h2>
+    <div class="chart-container">
+      <canvas id="downtimeChart"></canvas>
+    </div>
+    <p class="body" style="max-width:600px">Sin turnos programados ni prioridad de flota, el tiempo de inmovilización se multiplica con cada unidad que suma la empresa.</p>
+  </div>
+  <div class="slide-badge">Autonation Taller Multimarca · Propuesta Comercial</div>
+</div>
+
+<!-- 4. SOLUTION -->
+<div class="slide">
+  <div class="slide-content animate-scale">
+    <div class="eyebrow">La solución</div>
+    <h2 class="section-title">Un solo taller de confianza para <span style="color:var(--gold)">toda</span> su flota</h2>
+    <p class="lede">Autonation Flotas centraliza el mantenimiento preventivo y correctivo de camionetas y camiones pequeños en una sola cuenta corporativa: turnos coordinados, historial digital por placa y factura consolidada.</p>
+    <span class="pill">Servicio corporativo · Cuenta única</span>
+  </div>
+  <div class="slide-badge">Autonation Taller Multimarca · Propuesta Comercial</div>
+</div>
+
+<!-- 5. PROOF / DIFFERENTIATORS -->
+<div class="slide">
+  <div class="slide-content">
+    <div class="eyebrow">Por qué Autonation</div>
+    <h2 class="section-title">20 años de experiencia, estándares de concesionario</h2>
+    <div class="metrics animate-stagger" style="margin-top:12px">
+      <div class="metric"><div class="num">20+</div><div class="lbl">Años de experiencia del equipo</div></div>
+      <div class="metric"><div class="num">7</div><div class="lbl">Premios Presidente Chevrolet</div></div>
+      <div class="metric"><div class="num">100%</div><div class="lbl">Diagnóstico gratis por unidad</div></div>
+      <div class="metric"><div class="num">$$</div><div class="lbl">Precio de taller independiente</div></div>
+    </div>
+    <p class="body" style="margin-top:8px">Repuestos originales o genéricos según lo que la empresa decida, garantía por escrito en cada trabajo.</p>
+  </div>
+  <div class="slide-badge">Autonation Taller Multimarca · Propuesta Comercial</div>
+</div>
+
+<!-- 6. HOW IT WORKS -->
+<div class="slide">
+  <div class="slide-content">
+    <div class="eyebrow">Cómo funciona</div>
+    <h2 class="section-title">Lo que su cuenta corporativa incluye</h2>
+    <ul class="list-check animate-stagger" style="margin-top:10px">
+      <li><strong>Turnos programados sin choque de horarios</strong> — la empresa reserva por unidad, sin doble booking ni esperas.</li>
+      <li><strong>Historial digital por placa</strong> — cada camión con su registro de servicios, kilometraje y trabajos realizados.</li>
+      <li><strong>Orden de trabajo firmada</strong> — documento con términos claros antes de autorizar cualquier reparación.</li>
+      <li><strong>Facturación consolidada mensual</strong> — una sola factura para contabilidad en vez de una por visita.</li>
+    </ul>
+  </div>
+  <div class="slide-badge">Autonation Taller Multimarca · Propuesta Comercial</div>
+</div>
+
+<!-- 7. SERVICES COVERED -->
+<div class="slide">
+  <div class="slide-content">
+    <div class="eyebrow">Cobertura</div>
+    <h2 class="section-title">Todo lo que su flota necesita, en un solo lugar</h2>
+    <div class="grid-3 animate-stagger" style="margin-top:10px">
+      <div class="card"><h3>🛠️ Mantenimiento preventivo</h3><p>Aceite, filtros, frenos, suspensión — según kilometraje de cada unidad.</p></div>
+      <div class="card"><h3>⚙️ Motor y transmisión</h3><p>Diagnóstico computarizado, reparación parcial o total, cajas manuales y automáticas.</p></div>
+      <div class="card"><h3>🛑 Sistema de frenos</h3><p>Revisión y reparación completa, crítico para unidades de carga y reparto.</p></div>
+      <div class="card"><h3>⚡ Sistema eléctrico</h3><p>Diagnóstico y reparación de fallas eléctricas y electrónicas.</p></div>
+      <div class="card"><h3>🎨 Latonería y pintura</h3><p>Cabina de pintura con corrección computarizada de color, acabado de fábrica.</p></div>
+      <div class="card"><h3>📦 Accesorios y equipamiento</h3><p>Kit de seguridad, llantas, herramientas — todo registrado en la orden de trabajo.</p></div>
+    </div>
+  </div>
+  <div class="slide-badge">Autonation Taller Multimarca · Propuesta Comercial</div>
+</div>
+
+<!-- 8. PRICING / PLAN -->
+<div class="slide">
+  <div class="slide-content">
+    <div class="eyebrow">Inversión</div>
+    <h2 class="section-title">Cotización a medida del tamaño de su flota</h2>
+    <p class="lede">No manejamos un precio fijo de flotas — cada empresa tiene distinta cantidad de unidades, marcas y frecuencia de uso. Con un diagnóstico inicial gratuito armamos una cotización de mantenimiento anual con condiciones preferenciales de cuenta corporativa.</p>
+    <div class="grid-3 animate-stagger" style="margin-top:6px">
+      <div class="card"><div class="ico">📅</div><h3>Turnos prioritarios</h3><p>Franja horaria reservada para las unidades de la empresa.</p></div>
+      <div class="card"><div class="ico">🧾</div><h3>Crédito corporativo</h3><p>Facturación consolidada a fin de mes, sin pago por visita.</p></div>
+      <div class="card"><div class="ico">👤</div><h3>Contacto directo</h3><p>Un solo número de WhatsApp para coordinar toda la flota.</p></div>
+    </div>
+  </div>
+  <div class="slide-badge">Autonation Taller Multimarca · Propuesta Comercial</div>
+</div>
+
+<!-- 9. CTA -->
+<div class="slide">
+  <div class="slide-content animate-fade-up">
+    <div class="logo-wrap"><img src="/img/logo.png" alt="Autonation"><span class="brand-word">AUTONATION · FLOTAS</span></div>
+    <h2 class="section-title">Agendemos el diagnóstico gratuito de su flota</h2>
+    <p class="lede">Sin compromiso. Evaluamos las unidades y le entregamos una propuesta de mantenimiento corporativo en 48 horas.</p>
+    <a class="cta-btn" href="https://wa.me/593939057454?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20flotas%20de%20Autonation" target="_blank" rel="noopener">Hablar por WhatsApp →</a>
+    <div class="contact-row">
+      <div><strong>Teléfono / WhatsApp</strong>+593 939 057 454</div>
+      <div><strong>Correo</strong>info@autonation.com.ec</div>
+      <div><strong>Ubicación</strong>Detrás del Edif. Milenium, La Aurora, Daule</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /.slide-deck -->
+
+<div class="nav-controls">
+  <button class="nav-btn" onclick="prevSlide()">←</button>
+  <span class="slide-counter"><span id="current">1</span> / <span id="total">9</span></span>
+  <button class="nav-btn" onclick="nextSlide()">→</button>
+</div>
+
+<script>
+let current = 1;
+const total = document.querySelectorAll('.slide').length;
+document.getElementById('total').textContent = total;
+
+function showSlide(n){
+  if(n < 1) n = 1;
+  if(n > total) n = total;
+  current = n;
+  document.querySelectorAll('.slide').forEach((s,i)=>{ s.classList.toggle('active', i === n-1); });
+  document.getElementById('current').textContent = n;
+  document.getElementById('progressBar').style.width = (n/total*100)+'%';
+}
+function nextSlide(){ showSlide(current+1); }
+function prevSlide(){ showSlide(current-1); }
+
+document.addEventListener('keydown', (e)=>{
+  if(e.key === 'ArrowRight' || e.key === ' '){ e.preventDefault(); nextSlide(); }
+  if(e.key === 'ArrowLeft'){ e.preventDefault(); prevSlide(); }
+});
+document.addEventListener('click', (e)=>{
+  if(!e.target.closest('.nav-controls') && !e.target.closest('a')) nextSlide();
+});
+
+new Chart(document.getElementById('downtimeChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Sin agenda\ncorporativa', 'Con Autonation\nFlotas'],
+    datasets: [{
+      label: 'Horas de inmovilización promedio por visita',
+      data: [6, 1.5],
+      backgroundColor: ['rgba(212,43,43,0.65)', 'rgba(200,169,81,0.75)'],
+      borderRadius: 4,
+      barThickness: 70
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { display:false }, ticks: { color: '#B8B8D0', font:{family:"'Barlow Condensed', sans-serif", size:12} } },
+      y: { grid: { color: 'rgba(255,255,255,0.06)' }, ticks: { color: '#B8B8D0' }, title:{display:true,text:'Horas',color:'#9a9a9a'} }
+    }
+  }
+});
+
+showSlide(1);
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Si encontraste una vulnerabilidad en autonation.com.ec,
+# por favor repórtala de forma responsable.
+Contact: mailto:admin@autonation.com.ec
+Preferred-Languages: es, en
+Canonical: https://autonation.com.ec/security.txt

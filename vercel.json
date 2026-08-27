@@ -1,0 +1,154 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin-allow-popups"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://www.googletagmanager.com https://www.google.com https://www.google.com.ec https://www.googleadservices.com https://googleads.g.doubleclick.net; connect-src 'self' https://www.googletagmanager.com https://www.google.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://ad.doubleclick.net; frame-src 'self' https://www.google.com https://maps.google.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+        }
+      ]
+    },
+
+    {
+      "source": "/img/:path*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/main.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/ga-init.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/analytics.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/site.webmanifest",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" },
+        { "key": "Content-Type",  "value": "application/manifest+json" }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
+        { "key": "Pragma",        "value": "no-cache" },
+        { "key": "Expires",       "value": "0" }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" }
+      ]
+    }
+  ],
+
+  "redirects": [
+    { "source": "/resena",               "destination": "https://www.google.com/maps/search/?api=1&query=Autonation+Taller+Multimarca+La+Aurora+Daule", "permanent": false },
+    { "source": "/login",                "destination": "https://app.autonation.com.ec/login",               "permanent": false },
+    { "source": "/register",             "destination": "https://app.autonation.com.ec/register",            "permanent": false },
+    { "source": "/client",               "destination": "https://app.autonation.com.ec/client",              "permanent": false },
+    { "source": "/client/:p*",           "destination": "https://app.autonation.com.ec/client/:p*",          "permanent": false },
+    { "source": "/mechanic",             "destination": "https://app.autonation.com.ec/mechanic",            "permanent": false },
+    { "source": "/mechanic/:p*",         "destination": "https://app.autonation.com.ec/mechanic/:p*",        "permanent": false },
+    { "source": "/admin",                "destination": "https://app.autonation.com.ec/admin",               "permanent": false },
+    { "source": "/admin/:p*",            "destination": "https://app.autonation.com.ec/admin/:p*",           "permanent": false },
+    { "source": "/billing",              "destination": "https://app.autonation.com.ec/billing",             "permanent": false },
+    { "source": "/billing/:p*",          "destination": "https://app.autonation.com.ec/billing/:p*",         "permanent": false },
+    { "source": "/reception",            "destination": "https://app.autonation.com.ec/reception",           "permanent": false },
+    { "source": "/reception/:p*",        "destination": "https://app.autonation.com.ec/reception/:p*",       "permanent": false },
+    { "source": "/scan",                 "destination": "https://app.autonation.com.ec/",                    "permanent": false },
+    { "source": "/scan/:p*",             "destination": "https://app.autonation.com.ec/scan/:p*",            "permanent": false },
+    { "source": "/app",                  "destination": "https://app.autonation.com.ec/",                    "permanent": false },
+    { "source": "/app/:p*",              "destination": "https://app.autonation.com.ec/:p*",                 "permanent": false },
+    { "source": "/manifest.webmanifest", "destination": "https://app.autonation.com.ec/manifest.webmanifest","permanent": false },
+    { "source": "/registerSW.js",        "destination": "https://app.autonation.com.ec/registerSW.js",       "permanent": false },
+    { "source": "/sw.js",                "destination": "https://app.autonation.com.ec/sw.js",               "permanent": false },
+    { "source": "/ingresar",             "destination": "https://app.autonation.com.ec/",                    "permanent": false },
+    { "source": "/entrar",               "destination": "https://app.autonation.com.ec/",                    "permanent": false },
+
+    { "source": "/wp-admin",             "destination": "/", "permanent": false },
+    { "source": "/wp-admin/:p*",         "destination": "/", "permanent": false },
+    { "source": "/wp-login.php",         "destination": "/", "permanent": false },
+    { "source": "/wp-content/:p*",       "destination": "/", "permanent": false },
+    { "source": "/wp-includes/:p*",      "destination": "/", "permanent": false },
+    { "source": "/wordpress/:p*",        "destination": "/", "permanent": false },
+    { "source": "/phpmyadmin",           "destination": "/", "permanent": false },
+    { "source": "/phpmyadmin/:p*",       "destination": "/", "permanent": false },
+    { "source": "/pma",                  "destination": "/", "permanent": false },
+    { "source": "/pma/:p*",              "destination": "/", "permanent": false },
+    { "source": "/myadmin/:p*",          "destination": "/", "permanent": false },
+    { "source": "/.env",                 "destination": "/", "permanent": false },
+    { "source": "/.env.local",           "destination": "/", "permanent": false },
+    { "source": "/.env.production",      "destination": "/", "permanent": false },
+    { "source": "/.git/:p*",             "destination": "/", "permanent": false },
+    { "source": "/config.php",           "destination": "/", "permanent": false },
+    { "source": "/config.json",          "destination": "/", "permanent": false },
+    { "source": "/config.yml",           "destination": "/", "permanent": false },
+    { "source": "/xmlrpc.php",           "destination": "/", "permanent": false },
+    { "source": "/shell.php",            "destination": "/", "permanent": false },
+    { "source": "/info.php",             "destination": "/", "permanent": false },
+    { "source": "/phpinfo.php",          "destination": "/", "permanent": false },
+    { "source": "/backup/:p*",           "destination": "/", "permanent": false },
+    { "source": "/backups/:p*",          "destination": "/", "permanent": false },
+    { "source": "/sql/:p*",              "destination": "/", "permanent": false },
+    { "source": "/db/:p*",               "destination": "/", "permanent": false },
+    { "source": "/database/:p*",         "destination": "/", "permanent": false },
+    { "source": "/panel",                "destination": "/", "permanent": false },
+    { "source": "/panel/:p*",            "destination": "/", "permanent": false },
+    { "source": "/cpanel",               "destination": "/", "permanent": false },
+    { "source": "/cpanel/:p*",           "destination": "/", "permanent": false },
+    { "source": "/cgi-bin/:p*",          "destination": "/", "permanent": false },
+    { "source": "/old/:p*",              "destination": "/", "permanent": false },
+    { "source": "/test",                 "destination": "/", "permanent": false },
+    { "source": "/test/:p*",             "destination": "/", "permanent": false },
+    { "source": "/tmp/:p*",              "destination": "/", "permanent": false },
+    { "source": "/upload/:p*",           "destination": "/", "permanent": false },
+    { "source": "/uploads/:p*",          "destination": "/", "permanent": false },
+    { "source": "/api/:p*",              "destination": "/", "permanent": false },
+    { "source": "/console",              "destination": "/", "permanent": false },
+    { "source": "/server-status",        "destination": "/", "permanent": false },
+    { "source": "/server-info",          "destination": "/", "permanent": false }
+  ]
+}

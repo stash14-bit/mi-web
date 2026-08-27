@@ -1,0 +1,9 @@
+{
+  "name": "autonation-web",
+  "private": true,
+  "type": "module",
+  "description": "Sitio estatico de Autonation Taller Multimarca (autonation.com.ec). Sin build step; middleware.mjs agrega negociacion de contenido Accept: text/markdown.",
+  "dependencies": {
+    "@vercel/functions": "^3.9.5"
+  }
+}
