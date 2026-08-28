@@ -10,6 +10,9 @@ import {
   markdownPathFor,
   parseAccept,
   MARKDOWN_ROUTES,
+  KNOWN_PAGES,
+  MARKDOWN_CAPABLE_PAGES,
+  NOT_FOUND_MARKDOWN,
 } from '../lib/content-negotiation.mjs';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -99,7 +102,15 @@ if (fs.existsSync(notFoundPath)) {
   check('404.html linkea a /llms.txt', body.includes('/llms.txt'));
   check('404.html tiene un H1', /<h1[^>]*>/i.test(body));
   check('404.html no tiene <style> inline (ruido para extractores simples)', !/<style/i.test(body));
+  check('404.html no linkea a /blog (esa ruta no existe, ver KNOWN_PAGES)', !/href="\/blog"/.test(body));
 }
+
+// ── 404 en markdown (Accept: text/markdown en ruta inexistente) ─
+check('NOT_FOUND_MARKDOWN tiene heading', /^# /.test(NOT_FOUND_MARKDOWN));
+check('NOT_FOUND_MARKDOWN linkea a sitemap.xml', NOT_FOUND_MARKDOWN.includes('sitemap.xml'));
+check('NOT_FOUND_MARKDOWN linkea a llms.txt', NOT_FOUND_MARKDOWN.includes('llms.txt'));
+check('NOT_FOUND_MARKDOWN no linkea a /blog (ruta inexistente)', !NOT_FOUND_MARKDOWN.includes('](https://www.autonation.com.ec/blog)'));
+check('NOT_FOUND_MARKDOWN es corto (<1500 caracteres)', NOT_FOUND_MARKDOWN.length < 1500);
 
 // ── Trust anchor pages: about, contact, privacy ──────────────
 const aboutPath = path.join(ROOT, 'about', 'index.html');
@@ -115,6 +126,38 @@ if (fs.existsSync(aboutPath)) {
   check('about/index.html tiene 500+ caracteres de texto visible', visibleText.length >= 500);
   check('about/index.html tiene un H1', /<h1[^>]*>/i.test(aboutHtml));
 }
+
+// ── KNOWN_PAGES coincide con las paginas reales del filesystem ──
+// Si se agrega una carpeta con index.html y no se suma a KNOWN_PAGES
+// (lib/content-negotiation.mjs), el middleware la trataria como 404 para
+// agentes que pidan markdown. Esto lo detecta automaticamente.
+const IGNORED_DIRS = new Set(['node_modules', 'lib', 'tests', '.vercel', '.git']);
+function findPageDirs(dir, base = '') {
+  const results = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.name.startsWith('.') || IGNORED_DIRS.has(entry.name)) continue;
+    if (entry.isDirectory()) {
+      const rel = `${base}/${entry.name}`;
+      if (fs.existsSync(path.join(dir, entry.name, 'index.html'))) results.push(rel);
+      results.push(...findPageDirs(path.join(dir, entry.name), rel));
+    }
+  }
+  return results;
+}
+const realPagePaths = ['/', ...findPageDirs(ROOT)];
+for (const p of realPagePaths) {
+  check(`KNOWN_PAGES incluye la pagina real ${p}`, KNOWN_PAGES.has(p));
+}
+check(
+  'KNOWN_PAGES no tiene entradas huerfanas (sin HTML real ni rewrite)',
+  [...KNOWN_PAGES].every(
+    (p) => realPagePaths.includes(p) || p === '/contact' || p === '/privacy'
+  )
+);
+check(
+  'MARKDOWN_CAPABLE_PAGES es subconjunto de KNOWN_PAGES',
+  [...MARKDOWN_CAPABLE_PAGES].every((p) => KNOWN_PAGES.has(p))
+);
 
 const vercelConfig = JSON.parse(fs.readFileSync(path.join(ROOT, 'vercel.json'), 'utf8'));
 const rewrites = vercelConfig.rewrites || [];
