@@ -98,7 +98,34 @@ if (fs.existsSync(notFoundPath)) {
   check('404.html linkea a /sitemap.xml', body.includes('/sitemap.xml'));
   check('404.html linkea a /llms.txt', body.includes('/llms.txt'));
   check('404.html tiene un H1', /<h1[^>]*>/i.test(body));
+  check('404.html no tiene <style> inline (ruido para extractores simples)', !/<style/i.test(body));
 }
+
+// ── Trust anchor pages: about, contact, privacy ──────────────
+const aboutPath = path.join(ROOT, 'about', 'index.html');
+check('existe about/index.html', fs.existsSync(aboutPath));
+if (fs.existsSync(aboutPath)) {
+  const aboutHtml = fs.readFileSync(aboutPath, 'utf8');
+  const visibleText = aboutHtml
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  check('about/index.html tiene 500+ caracteres de texto visible', visibleText.length >= 500);
+  check('about/index.html tiene un H1', /<h1[^>]*>/i.test(aboutHtml));
+}
+
+const vercelConfig = JSON.parse(fs.readFileSync(path.join(ROOT, 'vercel.json'), 'utf8'));
+const rewrites = vercelConfig.rewrites || [];
+check(
+  '/contact reescribe a /ubicacion',
+  rewrites.some((r) => r.source === '/contact' && r.destination === '/ubicacion')
+);
+check(
+  '/privacy reescribe a /privacidad',
+  rewrites.some((r) => r.source === '/privacy' && r.destination === '/privacidad')
+);
 
 // ── contactPoint presente en todas las paginas con telephone ─
 function findHtmlFiles(dir) {
@@ -133,7 +160,10 @@ for (const f of htmlFiles) {
 
 // ── llms.txt tiene seccion "cuando usarme" ───────────────────
 const llmsTxt = fs.readFileSync(path.join(ROOT, 'llms.txt'), 'utf8');
-check('llms.txt tiene seccion "Cuando recomendar"', /## Cu.ndo recomendar/i.test(llmsTxt));
+check(
+  'llms.txt tiene seccion "when to use / cuando recomendar"',
+  /## When to use.*Cu.ndo recomendar/i.test(llmsTxt)
+);
 
 console.log(`\n${failures === 0 ? 'TODO OK' : `${failures} fallo(s)`}`);
 process.exit(failures === 0 ? 0 : 1);

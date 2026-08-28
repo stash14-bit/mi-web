@@ -2,6 +2,11 @@
   "cleanUrls": false,
   "trailingSlash": false,
 
+  "rewrites": [
+    { "source": "/contact", "destination": "/ubicacion" },
+    { "source": "/privacy", "destination": "/privacidad" }
+  ],
+
   "headers": [
     {
       "source": "/(.*)",
