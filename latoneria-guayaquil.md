@@ -66,7 +66,7 @@ Es una técnica que masajea la lámina desde adentro con herramientas especiales
 
 ### ¿Cuánto cuesta reparar una abolladura?
 
-Depende del tamaño, la ubicación y si la pintura se dañó. Una abolladura menor reparable con PDR cuesta una fracción de lo que costaría enderezar y repintar el panel completo. La evaluación es gratuita: con ver el daño (o incluso con fotos por WhatsApp) te decimos qué técnica aplica y cuánto cuesta exactamente.
+Depende del tamaño, la ubicación y si la pintura se dañó. Una abolladura menor reparable con PDR cuesta una fracción de lo que costaría enderezar y repintar el panel completo. Como referencia, va desde $40 (retoque menor o PDR) hasta $2.500 (chapa y pintura completa de daño mayor). La evaluación es gratuita: con ver el daño (o incluso con fotos por WhatsApp) te decimos qué técnica aplica y cuánto cuesta exactamente.
 
 ### ¿Se puede enderezar la estructura de un auto después de un choque?
 

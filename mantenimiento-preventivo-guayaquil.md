@@ -104,7 +104,7 @@ En Autonation cada ingreso incluye diagnóstico computarizado gratuito y check-l
 
 ### ¿Cuánto cuesta un cambio de aceite en Guayaquil?
 
-Depende del tipo de aceite (mineral, semisintético o sintético), la cantidad que lleva el motor y el filtro. La diferencia real entre talleres no suele estar en el precio del aceite sino en lo que se revisa junto con el cambio: en Autonation el cambio de aceite incluye inspección de frenos, suspensión, niveles y escaneo — el mismo protocolo de un concesionario, a precio de taller independiente. Pedí tu cotización exacta por WhatsApp.
+Depende del tipo de aceite (mineral, semisintético o sintético), la cantidad que lleva el motor y el filtro. La diferencia real entre talleres no suele estar en el precio del aceite sino en lo que se revisa junto con el cambio: en Autonation el cambio de aceite incluye inspección de frenos, suspensión, niveles y escaneo — el mismo protocolo de un concesionario, a precio de taller independiente. El mantenimiento preventivo completo suele estar entre $60 y $350 según el kilometraje y los repuestos que correspondan. Pedí tu cotización exacta por WhatsApp.
 
 ### ¿Puedo hacer el servicio por kilometraje de mi Chevrolet fuera del concesionario?
 

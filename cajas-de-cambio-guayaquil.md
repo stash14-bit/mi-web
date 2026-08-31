@@ -82,6 +82,10 @@ Sí. Diagnosticamos y reparamos transmisiones CVT — comunes en Nissan, Honda, 
 
 Referencia general: caja manual cada 40.000–60.000 km; automática y CVT entre 40.000 y 80.000 km según el fabricante — aunque el tráfico pesado de Guayaquil califica como uso severo y acorta esos intervalos. El "aceite de por vida" que mencionan algunos manuales asume condiciones ideales que aquí no existen. Revisamos la pauta exacta de tu marca y modelo sin costo.
 
+### ¿Cuánto cuesta reparar una caja de cambios en Ecuador?
+
+Depende del tipo de falla y de transmisión. Como referencia del mercado en Guayaquil, va desde $120 (ajuste o cambio de aceite y kit) hasta $1.800 (reconstrucción completa de caja automática o CVT). El diagnóstico es gratuito y el presupuesto exacto sale de ahí, con garantía escrita.
+
 ### Servicios relacionados
 
 ## Cuanto antes lo atendés, menor es el costo

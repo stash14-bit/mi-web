@@ -68,7 +68,7 @@ En Autonation la revisión del sistema de frenos es gratuita con cada ingreso al
 
 ### ¿Cuánto cuesta el cambio de pastillas de freno en Ecuador?
 
-Depende del modelo del vehículo y del tipo de pastilla (cerámica, semimetálica u orgánica). Como referencia del mercado en Guayaquil, un cambio de pastillas por eje con repuestos de primera línea suele estar entre $40 y $120 incluyendo mano de obra; vehículos europeos o de mayor gama pueden superar ese rango.
+Depende del modelo del vehículo y del tipo de pastilla (cerámica, semimetálica u orgánica). Como referencia del mercado en Guayaquil, un cambio de pastillas por eje con repuestos de primera línea suele estar entre $40 y $120 incluyendo mano de obra; vehículos europeos o de mayor gama pueden superar ese rango. Para trabajos más allá de pastillas — discos, mordazas, cilindro maestro — el rango sube, entre $50 y $350 según el trabajo.
 
 En frenos no ofrecemos opción "económica": usamos siempre repuestos de primera línea y te damos el presupuesto exacto tras el diagnóstico gratuito, con garantía escrita.
 

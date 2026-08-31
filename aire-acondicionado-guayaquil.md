@@ -80,7 +80,7 @@ Con el escáner y una prueba de presión determinamos en minutos si el problema 
 
 ### ¿Cuánto cuesta la recarga de gas del aire acondicionado en Guayaquil?
 
-Como referencia del mercado en Guayaquil, una recarga simple de gas suele estar entre $35 y $70 dependiendo del tipo de refrigerante (R134a o R1234yf) y la capacidad del sistema; si hay que reparar una fuga o cambiar componentes el valor sube según el repuesto necesario.
+Como referencia del mercado en Guayaquil, una recarga simple de gas suele estar entre $35 y $70 dependiendo del tipo de refrigerante (R134a o R1234yf) y la capacidad del sistema; si hay que reparar una fuga o cambiar componentes el valor sube según el repuesto necesario. Si hay que reparar compresor u otros componentes mayores, el rango sube hasta $800.
 
 En Autonation usamos siempre refrigerante certificado — no gas adulterado o de origen dudoso, un problema común en talleres informales que termina dañando el compresor. Presupuesto exacto después del diagnóstico gratuito, con garantía escrita.
 

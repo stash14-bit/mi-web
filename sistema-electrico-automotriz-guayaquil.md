@@ -86,7 +86,7 @@ En Autonation, nada: el diagnóstico computarizado es gratuito con cada ingreso 
 
 ### ¿Reparan alternadores, arneses y módulos electrónicos?
 
-Sí. Reparamos alternadores y sistemas de carga, motores de arranque, arneses eléctricos dañados (cortes, sulfatación, roedores) y configuramos módulos electrónicos de vehículos modernos. Trabajamos todas las marcas del Ecuador, incluidas las chinas (JAC, Jetour, Chery, Dongfeng), con garantía escrita.
+Sí. Reparamos alternadores y sistemas de carga, motores de arranque, arneses eléctricos dañados (cortes, sulfatación, roedores) y configuramos módulos electrónicos de vehículos modernos. Los trabajos eléctricos suelen ir de $30 (reparaciones simples) a $450 (alternador, módulos, arneses complejos). Trabajamos todas las marcas del Ecuador, incluidas las chinas (JAC, Jetour, Chery, Dongfeng), con garantía escrita.
 
 ### Servicios relacionados
 
