@@ -4,6 +4,7 @@
 
   "rewrites": [
     { "source": "/contact", "destination": "/ubicacion" },
+    { "source": "/contacto", "destination": "/ubicacion" },
     { "source": "/privacy", "destination": "/privacidad" }
   ],
 

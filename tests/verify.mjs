@@ -151,7 +151,7 @@ for (const p of realPagePaths) {
 check(
   'KNOWN_PAGES no tiene entradas huerfanas (sin HTML real ni rewrite)',
   [...KNOWN_PAGES].every(
-    (p) => realPagePaths.includes(p) || p === '/contact' || p === '/privacy'
+    (p) => realPagePaths.includes(p) || p === '/contact' || p === '/contacto' || p === '/privacy'
   )
 );
 check(
@@ -164,6 +164,10 @@ const rewrites = vercelConfig.rewrites || [];
 check(
   '/contact reescribe a /ubicacion',
   rewrites.some((r) => r.source === '/contact' && r.destination === '/ubicacion')
+);
+check(
+  '/contacto reescribe a /ubicacion',
+  rewrites.some((r) => r.source === '/contacto' && r.destination === '/ubicacion')
 );
 check(
   '/privacy reescribe a /privacidad',
