@@ -912,17 +912,19 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
       <div class="form-panel">
         <div class="form-title">Solicitar Cita</div>
         <div class="frow">
-          <div class="fg"><label>Nombre</label><input type="text" placeholder="Tu nombre completo"></div>
-          <div class="fg"><label>Teléfono</label><input type="text" placeholder="+593..."></div>
+          <div class="fg"><label for="f-nombre">Nombre</label><input id="f-nombre" type="text" placeholder="Tu nombre completo"></div>
+          <div class="fg"><label for="f-telefono">Teléfono</label><input id="f-telefono" type="text" placeholder="+593..."></div>
         </div>
-        <div class="fg"><label>Marca del Vehículo</label>
-          <select><option>Seleccionar marca...</option><option>Chevrolet</option><option>Toyota</option><option>Kia</option><option>Hyundai</option><option>Mazda</option><option>Nissan</option><option>Ford</option><option>Volkswagen</option><option>Renault</option><option>BYD (Eléctrico)</option><option>JAC EV (Eléctrico)</option><option>Chery EV (Eléctrico)</option><option>Mitsubishi</option><option>Suzuki</option><option>Honda</option><option>Otra</option></select>
+        <div class="fg"><label for="f-marca">Marca del Vehículo</label>
+          <select id="f-marca"><option>Seleccionar marca...</option><option>Chevrolet</option><option>Toyota</option><option>Kia</option><option>Hyundai</option><option>Mazda</option><option>Nissan</option><option>Ford</option><option>Volkswagen</option><option>Renault</option><option>BYD (Eléctrico)</option><option>JAC EV (Eléctrico)</option><option>Chery EV (Eléctrico)</option><option>Mitsubishi</option><option>Suzuki</option><option>Honda</option><option>Otra</option></select>
         </div>
-        <div class="fg"><label>Servicio Requerido</label>
-          <select><option>Seleccionar servicio...</option><option>Mantenimiento Preventivo</option><option>Reparación de Motor</option><option>Caja de Cambios</option><option>Pintura / Carrocería</option><option>Sistema de Frenos</option><option>Vehículo Eléctrico / Híbrido</option><option>Sistema Eléctrico</option><option>Diagnóstico General</option></select>
+        <div class="fg"><label for="f-servicio">Servicio Requerido</label>
+          <select id="f-servicio"><option>Seleccionar servicio...</option><option>Mantenimiento Preventivo</option><option>Reparación de Motor</option><option>Caja de Cambios</option><option>Pintura / Carrocería</option><option>Sistema de Frenos</option><option>Vehículo Eléctrico / Híbrido</option><option>Sistema Eléctrico</option><option>Diagnóstico General</option></select>
         </div>
-        <div class="fg"><label>Mensaje (opcional)</label><textarea placeholder="Cuéntanos el problema o lo que necesitas..."></textarea></div>
-        <button class="submit-btn" onclick="alert('¡Solicitud enviada! Te contactaremos pronto.')">Enviar Solicitud</button>
+        <div class="fg"><label for="f-mensaje">Mensaje (opcional)</label><textarea id="f-mensaje" placeholder="Cuéntanos el problema o lo que necesitas..."></textarea></div>
+        <div style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label for="cf-website">No llenar este campo</label><input id="cf-website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div id="cf-status" role="status" aria-live="polite" style="min-height:1.2em;margin:0 0 12px;font-size:.9rem;color:var(--muted)"></div>
+        <button id="cf-submit" type="button" class="submit-btn">Enviar Solicitud</button>
         <button class="wa-btn">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Escribir por WhatsApp
@@ -998,6 +1000,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
 </a>
 
 <script src="/main.js" defer></script>
+<script src="/contact-form.js" defer></script>
 <script>
 // Año dinámico en footer
 document.getElementById('fyear').textContent = new Date().getFullYear();
