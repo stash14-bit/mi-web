@@ -434,3 +434,5 @@ footer{background:#060606;border-top:3px solid var(--red);padding:60px 0 28px}
 /* ── BLOG h2 (jerarquía correcta, mismo estilo que h3) ──── */
 .blog-content h2{font-family:'Barlow Condensed',sans-serif;font-size:1.9rem;font-weight:900;letter-spacing:.5px;text-transform:uppercase;color:#fff;margin:44px 0 16px;padding-top:16px;border-top:1px solid #1c1c1c}
 .blog-content h2:first-child{border-top:none;margin-top:0;padding-top:0}
+
+.hv-gold-link:hover{border-color:rgba(200,169,81,.9)!important}

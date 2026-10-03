@@ -476,6 +476,9 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
   transition:background .15s,color .15s,padding-left .15s;white-space:nowrap
 }
 .nav-dropdown a:hover{background:rgba(212,43,43,.1);color:#fff;padding-left:26px}
+.hv-card-gold:hover{background:#111!important;border-color:var(--gold)!important}
+.hv-card-red:hover{background:#111!important;border-color:var(--red)!important}
+.hv-gold-link:hover{border-color:rgba(200,169,81,.9)!important}
 </style>
 </head>
 <body>
@@ -527,10 +530,10 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
       <div class="hero-eyebrow">La Aurora, Guayaquil · A minutos de Samborondón y Daule</div>
       <h1 style="font-size:clamp(2.8rem,6vw,5.5rem)">Taller multimarca<br>en La Aurora</h1>
       <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#aaa;margin-bottom:20px;line-height:1.2">A minutos de Guayaquil<br>y Samborondón</h2>
-      <p class="hero-desc">Estándares de concesionario, precios accesibles. Más de 20 años de experiencia y <a href="/blog/premio-presidente-chevrolet-que-significa" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(200,169,81,.4);transition:border-color .2s" onmouseover="this.style.borderColor='rgba(200,169,81,.9)'" onmouseout="this.style.borderColor='rgba(200,169,81,.4)'">7 Premios Presidente Chevrolet</a>, con repuestos originales y genéricos.</p>
+      <p class="hero-desc">Estándares de concesionario, precios accesibles. Más de 20 años de experiencia y <a href="/blog/premio-presidente-chevrolet-que-significa" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(200,169,81,.4);transition:border-color .2s" class="hv-gold-link">7 Premios Presidente Chevrolet</a>, con repuestos originales y genéricos.</p>
       <div class="hero-btns">
         <a href="https://wa.me/593939057454" target="_blank" rel="noopener" class="btn-red" style="display:inline-block;text-decoration:none">Agendar Cita →</a>
-        <button class="btn-ghost" onclick="document.getElementById('servicios').scrollIntoView({behavior:'smooth'})">Ver Servicios</button>
+        <button class="btn-ghost" data-scroll-to="servicios">Ver Servicios</button>
       </div>
     </div>
     <div>
@@ -645,7 +648,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
           <div class="mant-row"><div class="mant-row-left"><strong>Diagnóstico de Fallas</strong></div><span class="badge corr">Correctivo</span></div>
           <div class="mant-row"><div class="mant-row-left"><strong>Reparación de Fugas</strong></div><span class="badge corr">Correctivo</span></div>
         </div>
-        <button class="btn-red" style="margin-top:24px" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Consultar mi Plan →</button>
+        <button class="btn-red" style="margin-top:24px" data-scroll-to="contacto">Consultar mi Plan →</button>
       </div>
     </div>
   </div>
@@ -816,73 +819,73 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
       <p class="lead" style="margin-bottom:56px">Información técnica honesta para que tomes mejores decisiones con tu auto.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#1c1c1c" class="reveal">
-      <a href="/blog/garantia-taller-independiente-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" onmouseover="this.style.background='#111';this.style.borderColor='var(--red)'" onmouseout="this.style.background='#0d0d0d';this.style.borderColor='transparent'">
+      <a href="/blog/garantia-taller-independiente-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Garantía · Derechos del Consumidor</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Perdés la garantía si no vas al concesionario?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">La respuesta es No. En Ecuador está legalmente prohibido exigirte que hagas el mantenimiento en un concesionario específico. Te explicamos el marco legal.</p>
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
-      <a href="/blog/mantenimiento-10000-km-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" onmouseover="this.style.background='#111';this.style.borderColor='var(--red)'" onmouseout="this.style.background='#0d0d0d';this.style.borderColor='transparent'">
+      <a href="/blog/mantenimiento-10000-km-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Mantenimiento · Guía Práctica</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Qué le hacen a tu auto en el mantenimiento de 10.000 km</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Aceite, filtros, frenos, suspensión. Todo lo que el concesionario hace — y lo que muchos talleres se saltean. Guía completa para Guayaquil.</p>
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
-      <a href="/blog/mantenimiento-jac-jetour-chery-dongfeng-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" onmouseover="this.style.background='#111';this.style.borderColor='var(--red)'" onmouseout="this.style.background='#0d0d0d';this.style.borderColor='transparent'">
+      <a href="/blog/mantenimiento-jac-jetour-chery-dongfeng-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Marcas Chinas · Especialización</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">JAC, Jetour, Chery y Dongfeng: mantenimiento en Guayaquil</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Las marcas chinas crecen en Ecuador pero pocos talleres las atienden bien. Todo sobre intervalos, repuestos y lo que necesitás saber.</p>
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
-      <a href="/blog/premio-presidente-chevrolet-que-significa" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" onmouseover="this.style.background='#111';this.style.borderColor='var(--gold)'" onmouseout="this.style.background='#0d0d0d';this.style.borderColor='transparent'">
+      <a href="/blog/premio-presidente-chevrolet-que-significa" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-gold">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Premio Presidente · Distinción</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Qué significa el Premio Presidente Chevrolet</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">El máximo reconocimiento de Chevrolet a sus mejores talleres. Qué criterios evalúa, por qué es difícil obtenerlo y qué te garantiza como cliente.</p>
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
-      <a href="/blog/taller-multimarca-vs-concesionario-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" onmouseover="this.style.background='#111';this.style.borderColor='var(--red)'" onmouseout="this.style.background='#0d0d0d';this.style.borderColor='transparent'">
+      <a href="/blog/taller-multimarca-vs-concesionario-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Guía de Decisión · Sin Marketing</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Taller multimarca o concesionario?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">La comparación honesta escrita por gente que trabajó 20 años del lado del concesionario. Costos, calidad, garantía y cuándo conviene cada uno.</p>
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
-      <a href="/blog/repuestos-originales-vs-genericos-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" onmouseover="this.style.background='#111';this.style.borderColor='var(--red)'" onmouseout="this.style.background='#0d0d0d';this.style.borderColor='transparent'">
+      <a href="/blog/repuestos-originales-vs-genericos-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Repuestos · Guía Honesta</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Repuestos originales o genéricos?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Ni siempre original ni siempre lo más barato. Dónde no se negocia la calidad y dónde el genérico premium es la compra inteligente.</p>
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
-      <a href="/blog/reparar-o-cambiar-motor-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" onmouseover="this.style.background='#111';this.style.borderColor='var(--red)'" onmouseout="this.style.background='#0d0d0d';this.style.borderColor='transparent'">
+      <a href="/blog/reparar-o-cambiar-motor-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Motor · Guía de Decisión</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Reparar o cambiar el motor de tu auto?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">La regla del 50-60%, motor reconstruido vs nuevo vs usado importado, y cuánto cuesta rectificar un motor en Ecuador.</p>
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
-      <a href="/blog/luz-check-engine-encendida-que-hacer" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" onmouseover="this.style.background='#111';this.style.borderColor='var(--red)'" onmouseout="this.style.background='#0d0d0d';this.style.borderColor='transparent'">
+      <a href="/blog/luz-check-engine-encendida-que-hacer" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Diagnóstico · Guía Rápida</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Luz de check engine: ¿qué hago ahora?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Fija o parpadeando — la diferencia importa. Causas comunes, cuándo es urgente y por qué cambiar piezas a ciegas sale caro.</p>
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
-      <a href="/blog/mantenimiento-preventivo-por-kilometraje-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" onmouseover="this.style.background='#111';this.style.borderColor='var(--red)'" onmouseout="this.style.background='#0d0d0d';this.style.borderColor='transparent'">
+      <a href="/blog/mantenimiento-preventivo-por-kilometraje-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Mantenimiento · Tabla Completa</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Mantenimiento por kilometraje: la tabla completa</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Qué toca a los 5.000, 10.000, 20.000, 40.000 y 80.000 km — y por qué Guayaquil cuenta como uso severo.</p>
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
-      <a href="/blog/cuando-cambiar-pastillas-de-freno" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" onmouseover="this.style.background='#111';this.style.borderColor='var(--red)'" onmouseout="this.style.background='#0d0d0d';this.style.borderColor='transparent'">
+      <a href="/blog/cuando-cambiar-pastillas-de-freno" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Frenos · Seguridad</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Cuándo cambiar las pastillas de freno?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Señales de desgaste, kilometrajes reales y costos referenciales. El repuesto de seguridad que más gente posterga.</p>
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
-      <a href="/blog/cuanto-cuesta-pintar-un-auto-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" onmouseover="this.style.background='#111';this.style.borderColor='var(--red)'" onmouseout="this.style.background='#0d0d0d';this.style.borderColor='transparent'">
+      <a href="/blog/cuanto-cuesta-pintar-un-auto-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Pintura · Precios Reales</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Cuánto cuesta pintar un auto en Guayaquil?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Del retoque de $40 a la pintura completa de $2.500: qué incluye cada precio y por qué la pintura barata sale carísima.</p>
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
-      <a href="/blog/taller-vehiculos-electricos-hibridos-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" onmouseover="this.style.background='#111';this.style.borderColor='var(--gold)'" onmouseout="this.style.background='#0d0d0d';this.style.borderColor='transparent'">
+      <a href="/blog/taller-vehiculos-electricos-hibridos-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-gold">
         <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Eléctricos · El Futuro</div>
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Eléctricos e híbridos: ¿quién los atiende?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Qué necesita un taller para trabajar EVs de verdad, qué podés atender hoy fuera del concesionario y dónde estamos nosotros.</p>
@@ -968,7 +971,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
           <span class="logo-sub" style="font-size:1.1rem">Taller Multimarca</span>
         </div>
         <p>Estándares de concesionario en taller independiente. Con repuestos originales o genéricos según tu presupuesto. La Aurora, Guayaquil.</p>
-        <div class="f-gold-badge">★ <a href="/blog/premio-presidente-chevrolet-que-significa" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(200,169,81,.4);transition:border-color .2s" onmouseover="this.style.borderColor='rgba(200,169,81,.9)'" onmouseout="this.style.borderColor='rgba(200,169,81,.4)'">7× Premio Presidente Chevrolet</a></div>
+        <div class="f-gold-badge">★ <a href="/blog/premio-presidente-chevrolet-que-significa" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(200,169,81,.4);transition:border-color .2s" class="hv-gold-link">7× Premio Presidente Chevrolet</a></div>
       </div>
       <div class="f-col"><h3>Servicios</h3><ul>
         <li><a href="/mantenimiento-preventivo-guayaquil">Mantenimiento Preventivo</a></li>
@@ -991,7 +994,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
         <li><a href="#contacto">Agendar Cita</a></li>
       </ul></div>
     </div>
-    <div class="footer-bottom"><p>© <span id="fyear"></span> Autonation Taller Multimarca · La Aurora, Ecuador</p><span>Respaldados por <a href="/blog/premio-presidente-chevrolet-que-significa" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(200,169,81,.4);transition:border-color .2s" onmouseover="this.style.borderColor='rgba(200,169,81,.9)'" onmouseout="this.style.borderColor='rgba(200,169,81,.4)'">7 Premios Presidente Chevrolet</a> · <a href="/about" style="color:inherit">Quiénes somos</a> · <a href="/privacidad" style="color:inherit">Privacidad</a></span></div>
+    <div class="footer-bottom"><p>© <span id="fyear"></span> Autonation Taller Multimarca · La Aurora, Ecuador</p><span>Respaldados por <a href="/blog/premio-presidente-chevrolet-que-significa" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(200,169,81,.4);transition:border-color .2s" class="hv-gold-link">7 Premios Presidente Chevrolet</a> · <a href="/about" style="color:inherit">Quiénes somos</a> · <a href="/privacidad" style="color:inherit">Privacidad</a></span></div>
   </div>
 </footer>
 
@@ -1000,16 +1003,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
 </a>
 
 <script src="/main.js" defer></script>
+<script src="/site.js" defer></script>
 <script src="/contact-form.js" defer></script>
-<script>
-// Año dinámico en footer
-document.getElementById('fyear').textContent = new Date().getFullYear();
-// Lazy-load imágenes below-the-fold
-if('IntersectionObserver' in window){
-  document.querySelectorAll('img[data-src]').forEach(img=>{
-    new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){img.src=img.dataset.src;o.disconnect()}},{rootMargin:'200px'}).observe(img);
-  });
-}
-</script>
 </body>
 </html>
