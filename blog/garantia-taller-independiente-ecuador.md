@@ -42,7 +42,7 @@ El taller debe entregar factura o recibo con detalle de lo que se hizo, qué rep
 
 Los concesionarios tienen incentivo económico directo en que los servicios se realicen con ellos. Por eso, en muchos casos, sus asesores comunican —a veces de forma vaga— que "perderías la garantía" si vas a otro taller.
 
-Esto no es exactamente falso, pero es incompleto. La garantía se afecta por el cómo se hace el mantenimiento, no por dónde se hace.
+La afirmación de que perderías la garantía por ir a otro taller no es exactamente falsa, pero es incompleta. La garantía se afecta por el cómo se hace el mantenimiento, no por dónde se hace.
 
 Un taller independiente que usa los repuestos correctos, respeta los intervalos y documenta todo correctamente protege tu garantía igual que el concesionario — y generalmente a menor costo.
 

@@ -33,9 +33,9 @@
         "AutoRepair",
         "LocalBusiness"
       ],
+      "@id": "https://www.autonation.com.ec/#business",
       "name": "Autonation Taller Multimarca",
       "url": "https://www.autonation.com.ec/",
-      "image": "https://www.autonation.com.ec/img/og-image.jpg",
       "telephone": "+593939057454",
       "email": "info@autonation.com.ec",
       "contactPoint": {
@@ -46,7 +46,7 @@
         "areaServed": "EC",
         "availableLanguage": "Spanish"
       },
-      "priceRange": "$$",
+      "image": "https://www.autonation.com.ec/img/og-image.jpg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Detrás del Edificio Milenium, La Aurora",
@@ -55,20 +55,6 @@
         "postalCode": "090902",
         "addressCountry": "EC"
       },
-      "award": "7 Premios Presidente Chevrolet",
-      "sameAs": [
-        "https://www.google.com/maps?cid=8697484014688679554",
-        "https://www.instagram.com/autonationec/",
-        "https://www.tiktok.com/@autonation860"
-      ],
-      "logo": "https://www.autonation.com.ec/img/logo.png",
-      "description": "Taller automotriz multimarca en La Aurora, cerca de Guayaquil y Samborondón. El equipo de Autolasa con más de 20 años de experiencia y 7 Premios Presidente Chevrolet. Mantenimiento preventivo, pintura automotriz, reparación de motores y servicio completo.",
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -2.0562824080552344,
-        "longitude": -79.8808631898719
-      },
-      "hasMap": "https://www.google.com/maps?cid=8697484014688679554",
       "areaServed": [
         "La Aurora",
         "Daule",
@@ -97,11 +83,26 @@
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "30",
-        "bestRating": "5",
-        "worstRating": "1"
+        "ratingValue": 4.9,
+        "reviewCount": 30,
+        "bestRating": 5,
+        "worstRating": 1
       },
+      "sameAs": [
+        "https://www.google.com/maps?cid=8697484014688679554",
+        "https://www.instagram.com/autonationec/",
+        "https://www.tiktok.com/@autonation860"
+      ],
+      "logo": "https://www.autonation.com.ec/img/logo.png",
+      "description": "Taller automotriz multimarca en La Aurora, cerca de Guayaquil y Samborondón. El equipo de Autolasa con más de 20 años de experiencia y 7 Premios Presidente Chevrolet. Mantenimiento preventivo, pintura automotriz, reparación de motores y servicio completo.",
+      "priceRange": "$$",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -2.0562824080552344,
+        "longitude": -79.8808631898719
+      },
+      "hasMap": "https://www.google.com/maps?cid=8697484014688679554",
+      "award": "7 Premios Presidente Chevrolet",
       "knowsAbout": [
         "Mantenimiento preventivo automotriz",
         "Pintura automotriz",
@@ -130,8 +131,7 @@
         "Servicio Renault",
         "Servicio Ford",
         "Servicio Volkswagen"
-      ],
-      "@id": "https://www.autonation.com.ec/#business"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -148,7 +148,35 @@
           "name": "Quiénes somos",
           "item": "https://www.autonation.com.ec/about"
         }
-      ]
+      ],
+      "@id": "https://www.autonation.com.ec/about#breadcrumb"
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.autonation.com.ec/about#webpage",
+      "url": "https://www.autonation.com.ec/about",
+      "name": "Quiénes somos · Autonation Taller Multimarca",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://www.autonation.com.ec/#website"
+      },
+      "about": {
+        "@id": "https://www.autonation.com.ec/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://www.autonation.com.ec/about#breadcrumb"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.autonation.com.ec/about#luciano-arteaga",
+      "name": "Luciano Arteaga",
+      "jobTitle": "Mecánico automotriz",
+      "description": "Mecánico con más de 30 años de experiencia",
+      "worksFor": {
+        "@id": "https://www.autonation.com.ec/#business"
+      },
+      "url": "https://www.autonation.com.ec/about#luciano-arteaga"
     }
   ]
 }
@@ -199,6 +227,9 @@ footer a:hover{color:#fff}
   <h2>Nuestra historia</h2>
   <p>Autonation nació del mismo equipo técnico que trabajó más de 20 años en Autolasa, el concesionario oficial Chevrolet en Guayaquil. En ese tiempo, el taller ganó <strong>7 Premios Presidente Chevrolet</strong> — el máximo reconocimiento que la marca entrega a talleres por excelencia en gestión, calidad y procesos.</p>
   <p>Decidimos aplicar esa misma disciplina de concesionario, pero para todas las marcas y a precios de taller independiente: diagnóstico computarizado antes de presupuestar, repuestos originales o genéricos a elección del cliente, y garantía por escrito en cada trabajo. <a href="/blog/premio-presidente-chevrolet-que-significa" style="color:var(--gold)">Qué significa en la práctica el Premio Presidente Chevrolet →</a></p>
+
+  <h2 id="luciano-arteaga">Luciano Arteaga</h2>
+  <p>Mecánico automotriz con más de 30 años de experiencia. Es el autor de las guías y artículos del blog de Autonation.</p>
 
   <h2>Qué nos diferencia</h2>
   <p>Nos diferencian los 7 Premios Presidente Chevrolet, el diagnóstico computarizado gratuito con cada ingreso, los repuestos originales o genéricos de primera línea a tu elección y la garantía por escrito en todos los trabajos.</p>

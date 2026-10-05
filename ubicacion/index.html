@@ -48,9 +48,9 @@
         "AutoRepair",
         "LocalBusiness"
       ],
+      "@id": "https://www.autonation.com.ec/#business",
       "name": "Autonation Taller Multimarca",
       "url": "https://www.autonation.com.ec/",
-      "image": "https://www.autonation.com.ec/img/og-image.jpg",
       "telephone": "+593939057454",
       "email": "info@autonation.com.ec",
       "contactPoint": {
@@ -61,7 +61,7 @@
         "areaServed": "EC",
         "availableLanguage": "Spanish"
       },
-      "priceRange": "$$",
+      "image": "https://www.autonation.com.ec/img/og-image.jpg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Detrás del Edificio Milenium, La Aurora",
@@ -70,12 +70,6 @@
         "postalCode": "090902",
         "addressCountry": "EC"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -2.0562824080552344,
-        "longitude": -79.8808631898719
-      },
-      "hasMap": "https://www.google.com/maps?cid=8697484014688679554",
       "areaServed": [
         "La Aurora",
         "Daule",
@@ -104,10 +98,10 @@
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "30",
-        "bestRating": "5",
-        "worstRating": "1"
+        "ratingValue": 4.9,
+        "reviewCount": 30,
+        "bestRating": 5,
+        "worstRating": 1
       },
       "sameAs": [
         "https://www.google.com/maps?cid=8697484014688679554",
@@ -116,6 +110,13 @@
       ],
       "logo": "https://www.autonation.com.ec/img/logo.png",
       "description": "Taller automotriz multimarca en La Aurora, cerca de Guayaquil y Samborondón. El equipo de Autolasa con más de 20 años de experiencia y 7 Premios Presidente Chevrolet. Mantenimiento preventivo, pintura automotriz, reparación de motores y servicio completo.",
+      "priceRange": "$$",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -2.0562824080552344,
+        "longitude": -79.8808631898719
+      },
+      "hasMap": "https://www.google.com/maps?cid=8697484014688679554",
       "award": "7 Premios Presidente Chevrolet",
       "knowsAbout": [
         "Mantenimiento preventivo automotriz",
@@ -145,8 +146,7 @@
         "Servicio Renault",
         "Servicio Ford",
         "Servicio Volkswagen"
-      ],
-      "@id": "https://www.autonation.com.ec/#business"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -163,7 +163,24 @@
           "name": "Ubicación",
           "item": "https://www.autonation.com.ec/ubicacion"
         }
-      ]
+      ],
+      "@id": "https://www.autonation.com.ec/ubicacion#breadcrumb"
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://www.autonation.com.ec/ubicacion#webpage",
+      "url": "https://www.autonation.com.ec/ubicacion",
+      "name": "Cómo llegar a Autonation · Taller Multimarca en La Aurora",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://www.autonation.com.ec/#website"
+      },
+      "about": {
+        "@id": "https://www.autonation.com.ec/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://www.autonation.com.ec/ubicacion#breadcrumb"
+      }
     }
   ]
 }
