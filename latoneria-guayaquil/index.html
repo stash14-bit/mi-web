@@ -25,7 +25,10 @@
  "@context": "https://schema.org",
  "@graph": [
   {
-   "@type": "AutoRepair",
+   "@type": [
+    "AutoRepair",
+    "LocalBusiness"
+   ],
    "@id": "https://www.autonation.com.ec/#business",
    "name": "Autonation Taller Multimarca",
    "url": "https://www.autonation.com.ec/",
@@ -42,16 +45,17 @@
    "image": "https://www.autonation.com.ec/img/og-image.jpg",
    "address": {
     "@type": "PostalAddress",
-    "streetAddress": "La Aurora, detrás del Edificio Milenium",
+    "streetAddress": "Detrás del Edificio Milenium, La Aurora",
     "addressLocality": "Daule",
     "addressRegion": "Guayas",
+    "postalCode": "090902",
     "addressCountry": "EC"
    },
    "areaServed": [
-    "Guayaquil",
-    "Samborondón",
+    "La Aurora",
     "Daule",
-    "La Aurora"
+    "Samborondón",
+    "Guayaquil"
    ],
    "openingHoursSpecification": [
     {
@@ -81,7 +85,48 @@
     "worstRating": "1"
    },
    "sameAs": [
-    "https://www.google.com/maps?cid=8697484014688679554"
+    "https://www.google.com/maps?cid=8697484014688679554",
+    "https://www.instagram.com/autonationec/",
+    "https://www.tiktok.com/@autonation860"
+   ],
+   "logo": "https://www.autonation.com.ec/img/logo.png",
+   "description": "Taller automotriz multimarca en La Aurora, cerca de Guayaquil y Samborondón. El equipo de Autolasa con más de 20 años de experiencia y 7 Premios Presidente Chevrolet. Mantenimiento preventivo, pintura automotriz, reparación de motores y servicio completo.",
+   "priceRange": "$$",
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -2.0562824080552344,
+    "longitude": -79.8808631898719
+   },
+   "hasMap": "https://www.google.com/maps?cid=8697484014688679554",
+   "award": "7 Premios Presidente Chevrolet",
+   "knowsAbout": [
+    "Mantenimiento preventivo automotriz",
+    "Pintura automotriz",
+    "Reparación de motores",
+    "Cajas de cambio automática y manual",
+    "Latonería y chapa",
+    "Sistema de frenos ABS",
+    "Sistema eléctrico automotriz",
+    "Aire acondicionado automotriz",
+    "Recarga de gas refrigerante",
+    "Servicio Chevrolet",
+    "Servicio Toyota",
+    "Servicio Kia",
+    "Servicio Hyundai",
+    "Servicio Mazda",
+    "Servicio Nissan",
+    "Servicio JAC",
+    "Servicio Jetour",
+    "Servicio Chery",
+    "Servicio Dongfeng",
+    "Servicio BYD",
+    "Servicio DFSK",
+    "Servicio Great Wall",
+    "Servicio Haval",
+    "Servicio Mitsubishi",
+    "Servicio Renault",
+    "Servicio Ford",
+    "Servicio Volkswagen"
    ]
   },
   {
@@ -113,12 +158,6 @@
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Servicios",
-     "item": "https://www.autonation.com.ec/#servicios"
-    },
-    {
-     "@type": "ListItem",
-     "position": 3,
      "name": "Latonería & Chapa",
      "item": "https://www.autonation.com.ec/latoneria-guayaquil"
     }

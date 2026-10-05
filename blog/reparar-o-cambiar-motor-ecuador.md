@@ -4,6 +4,8 @@
 
 La decisión más cara que vas a tomar con tu vehículo. La respuesta corta: depende del daño, del costo relativo y del valor del auto. Acá está la guía completa.
 
+Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
+
 "El mecánico me dijo que el motor está fundido. Uno me dice que lo repare, otro que mejor consiga un motor usado. ¿A quién le creo?"
 
 Es la consulta más difícil que recibe cualquier taller serio. Y la respuesta honesta empieza con un diagnóstico real — no con una opinión al oído. Pero hay reglas claras que te ayudan a decidir.

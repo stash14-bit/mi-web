@@ -4,6 +4,10 @@
 
 Lo que debería hacer cualquier taller — y lo que muchos omiten. Guía completa para Guayaquil y el clima ecuatoriano.
 
+Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
+
+> **Resumen:** El service de 10.000 km en Autonation incluye cambio de aceite y filtro, revisión de frenos, batería, fluidos, neumáticos e iluminación, e informe técnico. El intervalo depende del vehículo y del aceite. El calor y la humedad de Guayaquil también influyen en el estado de los sistemas.
+
 El service de 10.000 km es el mantenimiento preventivo más común en el Ecuador. Pero "service de 10k" no significa lo mismo en todos los talleres. Algunos hacen solo el cambio de aceite. Otros hacen una revisión completa del vehículo. La diferencia en precio puede ser mínima — pero la diferencia en valor es enorme.
 
 ## Lo que incluye el service de 10.000 km en Autonation
@@ -26,6 +30,8 @@ El service de 10.000 km es el mantenimiento preventivo más común en el Ecuador
 "Pagué $90 en el concesionario por el service de 10k. Solo me cambiaron el aceite y el filtro. En Autonation pagué $75 y me entregaron un informe completo con el estado de todos los sistemas. Descubrieron que tenía las pastillas de freno al 20% — lo que el concesionario había ignorado dos veces."
 
 ## ¿Cada cuántos km hacer el service?
+
+El service depende del vehículo y el tipo de aceite: con mineral, generalmente cada 5.000 km; con semisintético, entre 7.500 y 10.000 km; con aceite 100% sintético, puede llegar a 10.000-15.000 km. En este último caso, el intervalo depende del fabricante y del uso del vehículo.
 
 El intervalo depende del vehículo y el tipo de aceite:
 

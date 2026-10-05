@@ -1,4 +1,4 @@
-> Recepción de vehículos con grúa las 24 horas, los 365 días del año, en Guayaquil, Samborondón y Daule. Gratis si tu vehículo se repara con nosotros. Escríbenos por WhatsApp.
+> Recepción de vehículos con grúa las 24 horas, los 365 días del año, en Guayaquil, Samborondón y Daule. Si tu vehículo se repara con nosotros, cubrimos el 50% o el 100% del costo de la grúa. Escríbenos por WhatsApp.
 
 # Grúa 24 Horas en Guayaquil
 
@@ -26,9 +26,9 @@ Trabajamos con una grúa de confianza — vos solo nos escribís y coordinamos e
 
 Guayaquil, Samborondón, Daule y La Aurora. Consultanos si estás fuera de esta zona.
 
-### Gratis al Reparar Con Nosotros
+### 50% o 100% al Reparar Con Nosotros
 
-Si tu vehículo se queda a reparar en Autonation, la grúa no tiene costo para vos.
+Si tu vehículo se queda a reparar en Autonation, cubrimos parte o todo el costo de la grúa según el daño.
 
 ### Vehículo Seguro
 
@@ -66,7 +66,7 @@ Ojo: recibir el vehículo no es lo mismo que atenderlo — el diagnóstico y la 
 
 ### ¿La grúa tiene costo?
 
-Si tu vehículo se queda a reparar en Autonation, la grúa no tiene costo para vos. Si finalmente no reparas con nosotros, el servicio de grúa tiene un costo, que se informa al momento de coordinarlo.
+Si tu vehículo se queda a reparar en Autonation, cubrimos el 50% o el 100% del costo de la grúa según el daño — se define al evaluar el vehículo. Si finalmente no reparas con nosotros, el servicio de grúa tiene costo completo, que se informa al momento de coordinarlo.
 
 ### ¿En qué zonas dan servicio de grúa?
 

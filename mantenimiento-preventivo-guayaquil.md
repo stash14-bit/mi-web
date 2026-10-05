@@ -4,6 +4,8 @@
 
 Mismos procesos de concesionario. Sin el precio de concesionario. El equipo que durante 20 años ganó 7 Premios Presidente en Autolasa — ahora en taller propio.
 
+> **Resumen:** En Autonation el mantenimiento preventivo se adapta a tu marca, modelo y kilometraje. Incluye aceite y filtros, revisión de frenos, suspensión, niveles y escaneo computarizado. Cada ingreso tiene diagnóstico gratuito y check-list documentado. Recibís garantía por escrito y la experiencia del equipo que trabajó en Autolasa.
+
 WhatsApp 🏆7 Premios PresidenteChevrolet — Máxima distinción 🔬Diagnóstico GratuitoCon cada ingreso al taller 📋Garantía por EscritoEn todos los trabajos ⚙️20 Años de ExperienciaEl equipo de Autolasa El mantenimiento que postergás hoy se convierte en la reparación costosa del mes que viene. Un motor que falla por falta de aceite, una caja automática quemada por no cambiar el fluido a tiempo, un motor de arranque que muere porque nadie revisó la batería. Todo eso es evitable.
 
 No es know-how transferido a empleados nuevos. Es el mismo equipo completo — gerencia, jefes de taller, técnicos y pintores — que construyó esos procesos desde adentro. Ahora en taller propio.

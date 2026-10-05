@@ -4,6 +4,8 @@
 
 Cada cuántos kilómetros toca cada cosa — sin misterio y sin services inflados. La guía que aplican los concesionarios, explicada para que la entiendas vos.
 
+Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
+
 "Cada vez que llevo el auto me dicen que 'toca' algo distinto. ¿Cómo sé qué corresponde de verdad a mi kilometraje?"
 
 Todos los fabricantes publican una pauta de mantenimiento por kilometraje. Los talleres serios la siguen; los otros inventan. Esta es la estructura general — tu marca y modelo pueden variar en detalles, y en Autonation armamos tu plan exacto gratis.

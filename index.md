@@ -42,7 +42,7 @@ Recarga de gas, diagnóstico de fugas y reparación de compresor. Nuevo en Auton
 
 ### Grúa 24 Horas
 
-Recibimos tu vehículo con grúa a cualquier hora, cualquier día del año. Gratis si reparas con nosotros. Atención el siguiente día hábil.
+Recibimos tu vehículo con grúa a cualquier hora, cualquier día del año. Si reparas con nosotros, cubrimos el 50% o el 100% del costo de la grúa según el daño. Atención el siguiente día hábil.
 
 ## Simple, rápido y transparente.
 

@@ -4,6 +4,10 @@
 
 Las marcas chinas ya representan más del 35% del mercado ecuatoriano. Aquí lo que necesitás saber sobre su mantenimiento — y por qué el concesionario no es la única opción.
 
+Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
+
+> **Resumen:** El mantenimiento de JAC, Jetour, Chery y Dongfeng requiere aceite y repuestos adecuados, intervalos respetados y documentación. Los repuestos de consumo se consiguen fuera del concesionario; algunos módulos y piezas de carrocería pueden ser más difíciles. En Autonation diagnosticamos estas marcas con equipos profesionales.
+
 JAC, Jetour, Chery, Dongfeng, DFSK, Haval, BYD — las marcas de origen chino llegaron al Ecuador y se quedaron. En 2024 representan más de un tercio de las ventas nuevas. Pero cuando llega el primer service, muchos propietarios no saben a dónde ir fuera del concesionario.
 
 "Compré un Jetour hace 8 meses. Llegué a los 10.000 km y fui al concesionario. Me cobraron $230 por el service. Mi cuñado con un Chevrolet paga $90 por el mismo kilometraje. ¿Siempre va a ser así?"
@@ -15,6 +19,8 @@ La respuesta técnica es no. Los motores de las marcas chinas actuales — espec
 Lo que sí pueden tener diferencias es en la disponibilidad de repuestos originales y en la curva de aprendizaje de los talleres — porque son marcas más nuevas en el mercado local.
 
 ## Qué aceite usan los principales modelos
+
+La tabla incluye viscosidades 0W-20, 5W-30, 5W-40 y 10W-40, con normas API SN, SN Plus, SP y CF/SN según el modelo. Los intervalos van de 5.000 a 10.000 km. Para los híbridos BYD indica aceite 0W-20 sintético, según especificación BYD, cada 10.000 km.
 
 #### Especificaciones de aceite — marcas chinas populares en Ecuador
 

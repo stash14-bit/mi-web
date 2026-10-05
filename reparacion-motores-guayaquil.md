@@ -4,6 +4,8 @@
 
 Diagnóstico computarizado antes de tocar nada. Rectificación, culata, distribución y turbo — con repuestos originales o genéricos según tu presupuesto. Garantía escrita.
 
+> **Resumen:** En Autonation diagnosticamos el motor antes de presupuestar: lectura de códigos, medición de compresión y análisis de su estado. Realizamos rectificación, reparación de culata, distribución y turbo. Elegís repuestos originales o genéricos según tu presupuesto; el trabajo comienza con tu aprobación y se entrega con garantía escrita.
+
 "Me dijeron que era solo la culata. Abrieron el motor y me dijeron que había más cosas. Al final pagué el doble de lo presupuestado y el auto siguió fallando. Nadie me mostró qué falló ni qué repuesto pusieron."
 
 ## Primero el diagnóstico. Después el presupuesto.

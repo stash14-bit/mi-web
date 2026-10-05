@@ -4,6 +4,8 @@
 
 Cabina profesional, corrección de color computarizada y pintores con más de 20 años de experiencia concesionaria. El resultado que no se distingue del original de fábrica.
 
+> **Resumen:** Autonation realiza pintura de paneles y vehículos completos con cabina profesional y corrección de color computarizada. El proceso incluye recepción documentada, medición del tono, preparación, pulido e inspección final. Los trabajos se entregan con garantía por escrito contra defectos de aplicación, con pintores de experiencia concesionaria.
+
 "Fui a un lugar barato a pintar una puerta. El color quedó diferente, se notaba a metros. Tuve que volver a pintarla dos veces más para que quedara aceptable — terminé gastando tres veces lo que hubiera costado hacerlo bien desde el principio."
 
 ## Una pintura mal hecha devalúa el auto

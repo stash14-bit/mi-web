@@ -4,6 +4,8 @@
 
 Se encendió la luz del motor y no sabés si seguir manejando o parar ya. Guía directa: qué significa, cuándo es urgente y cómo se diagnostica de verdad.
 
+Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
+
 "Se prendió la lucecita del motor. El auto anda normal... ¿será grave o puedo seguir? No quiero pagar por algo que no es."
 
 La luz de check engine (o "luz del motor") significa una sola cosa: la computadora del vehículo detectó algo fuera de rango y guardó un código de falla. Ese código dice exactamente por dónde empezar — por eso el diagnóstico con escáner es el primer paso, no el último.

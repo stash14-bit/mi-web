@@ -4,6 +4,8 @@
 
 La comparación que nadie te hace honestamente — escrita por gente que trabajó 20 años del lado del concesionario y hoy está del otro lado.
 
+Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
+
 "El concesionario me cobra $180 por el service. El taller de la esquina, $45. ¿Qué me están cobrando de más — o qué me están haciendo de menos?"
 
 Podemos responder esto mejor que nadie: nuestro equipo trabajó más de 20 años en Autolasa, concesionario Chevrolet, y ganó 7 Premios Presidente ahí. Conocemos exactamente qué hace bien un concesionario, qué cobra de más, y qué hace mal el taller promedio. Vamos por partes.

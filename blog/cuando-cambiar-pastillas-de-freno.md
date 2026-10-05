@@ -4,6 +4,8 @@
 
 El repuesto de seguridad más importante de tu auto — y el que más gente posterga. Señales claras, kilometrajes reales y lo que cuesta hacerlo bien.
 
+Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
+
 "Chirriaba un poquito al frenar, pero como frenaba bien lo dejé pasar. Al mes, el ruido era metal contra metal. Terminé cambiando pastillas Y discos."
 
 Historia repetida: la pastilla avisó, nadie escuchó, y el arreglo costó el doble. Así funciona el desgaste de frenos y así se detecta a tiempo:

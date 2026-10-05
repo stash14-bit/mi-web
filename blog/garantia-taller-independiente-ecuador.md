@@ -4,6 +4,10 @@
 
 La respuesta corta es no. La respuesta completa tiene matices que tenés que conocer antes de decidir dónde llevás el auto.
 
+Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
+
+> **Resumen:** La garantía de fábrica se protege con repuestos que cumplan las especificaciones del fabricante, mantenimiento en los intervalos indicados y documentación completa. Guardá las facturas con el detalle de los trabajos, repuestos y kilometraje. En Autonation documentamos el mantenimiento y registramos el próximo service recomendado.
+
 Esta información es de carácter orientativo. En caso de conflicto con tu concesionario, consultá con la Defensoría del Pueblo o un abogado especialista en derechos del consumidor.
 
 "El concesionario me dijo que si llevaba el auto a otro taller perdía la garantía. ¿Es eso verdad? Pagan $180 por un service que en otro taller cuesta $60."
@@ -52,7 +56,7 @@ También registramos el próximo service recomendado en kilómetros para que ten
 
 ### ¿Cómo exijo la garantía en un taller independiente en Ecuador?
 
-Primero, reclamá directamente al taller presentando la factura y la garantía escrita del trabajo. Un taller serio responde reparando sin costo. Si no responde, tenés la vía de la Defensoría del Pueblo y los mecanismos de la Ley Orgánica de Defensa del Consumidor. Por eso la regla de oro: trabajá solo con talleres que entreguen garantía por escrito.
+Reclamá directamente al taller con la factura y la garantía escrita del trabajo. Si no responde, tenés la vía de la Defensoría del Pueblo y los mecanismos de la Ley Orgánica de Defensa del Consumidor. La regla de oro es trabajar solo con talleres que entreguen garantía por escrito.
 
 ### ¿Qué garantía debe dar un taller mecánico por su trabajo?
 

@@ -4,6 +4,8 @@
 
 Ni 'siempre original' ni 'siempre lo más barato'. La respuesta correcta depende del componente — y un taller honesto te dice cuál es cuál.
 
+Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
+
 "En el concesionario el repuesto cuesta el triple que en la calle. ¿Me están robando, o el genérico me va a dejar botado?"
 
 Las dos cosas pueden ser ciertas — depende de qué repuesto hablemos. Aclaremos primero los términos, porque hay mucha confusión:

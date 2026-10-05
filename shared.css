@@ -83,6 +83,8 @@ nav{position:fixed;top:40px;width:100%;z-index:999;transition:top .3s}
 .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:900;line-height:.9;letter-spacing:-2px;text-transform:uppercase;color:#fff;margin-bottom:22px;max-width:800px}
 .page-hero h1 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;text-transform:none;color:var(--red)}
 .page-hero .lead{font-size:1.15rem;color:#ccc;line-height:1.75;max-width:600px;margin-bottom:32px}
+.byline{font-size:.9rem;color:#ccc;line-height:1.6;margin:0 0 24px}
+.tldr{max-width:800px;margin:0 0 28px;padding:16px 20px;border-left:3px solid var(--gold);background:rgba(10,10,10,.75);color:#ddd;font-size:1rem;line-height:1.75}
 .hero-cta-row{display:flex;gap:14px;flex-wrap:wrap}
 
 /* ── TRUST BAR ──────────────────────────────────────────── */

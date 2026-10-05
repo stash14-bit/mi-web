@@ -4,6 +4,8 @@
 
 Reparación de cajas manuales y automáticas con diagnóstico computarizado. Cuando la caja empieza a fallar, cada kilómetro que esperás multiplica el daño.
 
+> **Resumen:** Autonation diagnostica y repara cajas manuales, automáticas y CVT. El proceso incluye escáner de transmisión, análisis del fluido y prueba en ruta para identificar el problema. Recibís un presupuesto detallado antes de aprobar la reparación, con repuestos acordados, prueba de manejo posterior y garantía escrita.
+
 "Mi caja automática empezó a tirar de forma rara al cambiar de segunda a tercera. Esperé dos meses porque pensé que era algo menor. Cuando finalmente la llevé, el daño era el triple de lo que hubiera costado atenderlo antes."
 
 ## Una caja dañada no da aviso dos veces.

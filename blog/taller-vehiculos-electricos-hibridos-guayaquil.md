@@ -4,6 +4,8 @@
 
 BYD, JAC EV, Chery EV y los híbridos crecen en Ecuador más rápido que los talleres capaces de atenderlos. Esto es lo que un taller necesita de verdad — y dónde estamos nosotros.
 
+Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
+
 "Compré un eléctrico chino y el concesionario es el único que lo toca. ¿Y cuando se acabe la garantía, quién me lo atiende?"
 
 Es la pregunta correcta — y en Ecuador todavía tiene pocas respuestas buenas. Un vehículo eléctrico o híbrido no se puede atender con las herramientas y la formación de un taller convencional. Esto es lo que se necesita:

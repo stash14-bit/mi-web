@@ -4,6 +4,8 @@
 
 Precios referenciales reales, qué incluye cada trabajo, y por qué la pintura barata sale carísima. Sin letra chica.
 
+Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
+
 "Me pasaron precios de $400 a $2.800 por pintar el mismo auto. ¿Por qué una diferencia tan brutal?"
 
 Porque "pintar un auto" puede significar cosas completamente distintas. La diferencia está en la preparación, los materiales y dónde se aplica la pintura. Vamos a los números y a lo que hay detrás de cada uno.
