@@ -1,0 +1,237 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Autonation Public Contact API",
+    "version": "1.0.0",
+    "description": "Send an appointment request to Autonation Taller Multimarca. Alternative contact: WhatsApp +593 939 057 454 or info@autonation.com.ec. Hours: Mon-Fri 08:00-18:00, Sat 08:00-13:00 (Ecuador local time).",
+    "contact": {
+      "name": "Autonation Taller Multimarca",
+      "url": "https://www.autonation.com.ec/",
+      "email": "info@autonation.com.ec"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://app.autonation.com.ec"
+    }
+  ],
+  "paths": {
+    "/api/public/contact-form": {
+      "post": {
+        "operationId": "submitContactForm",
+        "summary": "Send an appointment request",
+        "description": "Sends an appointment-request email to info@autonation.com.ec; it does not create a confirmed booking. JSON body limit: 8 KB. Unknown fields are stripped. Agents MUST OMIT both website and elapsed_ms: these are website anti-bot fields. A non-empty website or elapsed_ms < 2500 returns 200 {\"ok\":true} without sending anything. Rate limit: 5 requests per hour per IP. Browser CORS allows only https://www.autonation.com.ec and https://autonation.com.ec; server-side agent calls are not affected.",
+        "security": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "nombre",
+                  "telefono"
+                ],
+                "properties": {
+                  "nombre": {
+                    "type": "string",
+                    "minLength": 2,
+                    "maxLength": 80,
+                    "description": "Contact name; trimmed before length validation.",
+                    "examples": [
+                      "María Pérez"
+                    ]
+                  },
+                  "telefono": {
+                    "type": "string",
+                    "pattern": "^[+\\d][\\d\\s().-]{6,19}$",
+                    "description": "Contact phone number.",
+                    "examples": [
+                      "+593939057454"
+                    ]
+                  },
+                  "marca": {
+                    "type": "string",
+                    "enum": [
+                      "",
+                      "Chevrolet",
+                      "Toyota",
+                      "Kia",
+                      "Hyundai",
+                      "Mazda",
+                      "Nissan",
+                      "Ford",
+                      "Volkswagen",
+                      "Renault",
+                      "BYD (Eléctrico)",
+                      "JAC EV (Eléctrico)",
+                      "Chery EV (Eléctrico)",
+                      "Mitsubishi",
+                      "Suzuki",
+                      "Honda",
+                      "Otra"
+                    ],
+                    "description": "Vehicle brand; empty string means unspecified.",
+                    "examples": [
+                      "Chevrolet"
+                    ]
+                  },
+                  "servicio": {
+                    "type": "string",
+                    "enum": [
+                      "",
+                      "Mantenimiento Preventivo",
+                      "Reparación de Motor",
+                      "Caja de Cambios",
+                      "Pintura / Carrocería",
+                      "Sistema de Frenos",
+                      "Vehículo Eléctrico / Híbrido",
+                      "Sistema Eléctrico",
+                      "Diagnóstico General"
+                    ],
+                    "description": "Requested service; empty string means unspecified.",
+                    "examples": [
+                      "Mantenimiento Preventivo"
+                    ]
+                  },
+                  "mensaje": {
+                    "type": "string",
+                    "maxLength": 500,
+                    "description": "Optional message; trimmed before length validation.",
+                    "examples": [
+                      "Quisiera solicitar una cita para mantenimiento."
+                    ]
+                  }
+                }
+              },
+              "example": {
+                "nombre": "María Pérez",
+                "telefono": "+593939057454",
+                "marca": "Chevrolet",
+                "servicio": "Mantenimiento Preventivo",
+                "mensaje": "Quisiera solicitar una cita para mantenimiento."
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Request accepted; this is not a confirmed booking.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "ok"
+                  ],
+                  "properties": {
+                    "ok": {
+                      "type": "boolean",
+                      "const": true
+                    }
+                  }
+                },
+                "example": {
+                  "ok": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "error": "Datos invalidos"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded: 5 requests per hour per IP.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "error": "Demasiados intentos. Intenta mas tarde o escribenos por WhatsApp."
+                }
+              }
+            },
+            "headers": {
+              "RateLimit-Limit": {
+                "description": "Maximum requests per window.",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 5
+              },
+              "RateLimit-Remaining": {
+                "description": "Requests remaining in the current window.",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 0
+              },
+              "RateLimit-Reset": {
+                "description": "Seconds until the current window resets.",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 3600
+              },
+              "RateLimit-Policy": {
+                "description": "Request quota and window in seconds.",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "5;w=3600"
+              }
+            }
+          },
+          "502": {
+            "description": "Email delivery failed; contact the shop via WhatsApp.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "error": "No se pudo enviar. Escribenos por WhatsApp."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

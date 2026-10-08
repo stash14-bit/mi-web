@@ -188,6 +188,6 @@ Qué necesita un taller para trabajar EVs de verdad, qué podés atender hoy fue
 WhatsApp: +593 939 057 454 · Email: info@autonation.com.ec
 Horario: Lunes a Viernes 08:00–18:00, Sábado 08:00–13:00. Grúa 24/7.
 
-Más contenido: [Inicio](https://www.autonation.com.ec/) · [Mapa del sitio](https://www.autonation.com.ec/sitemap.xml) · [llms.txt](https://www.autonation.com.ec/llms.txt)
+Más contenido: [Inicio](https://www.autonation.com.ec/) · [Mapa del sitio](https://www.autonation.com.ec/sitemap.xml) · [llms.txt](https://www.autonation.com.ec/llms.txt) · [OpenAPI spec](https://www.autonation.com.ec/openapi.json)
 
 URL canónica: https://www.autonation.com.ec/

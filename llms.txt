@@ -51,3 +51,7 @@ Cómo contactar: WhatsApp +593 939 057 454, email info@autonation.com.ec, o form
 
 ## Contacto
 - [Agendar cita](https://www.autonation.com.ec/#contacto): formulario, WhatsApp +593 939 057 454 o llamada directa
+
+## API
+- [OpenAPI spec](https://www.autonation.com.ec/openapi.json)
+- `POST https://app.autonation.com.ec/api/public/contact-form`: envía una solicitud de cita por email; no confirma una reserva. Los agentes deben omitir `website` y `elapsed_ms`.

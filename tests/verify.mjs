@@ -212,5 +212,52 @@ check(
   /## When to use.*Cu.ndo recomendar/i.test(llmsTxt)
 );
 
+// ── Public API discovery ────────────────────────────────────
+let openapi;
+try {
+  openapi = JSON.parse(fs.readFileSync(path.join(ROOT, 'openapi.json'), 'utf8'));
+  check('openapi.json parses', true);
+} catch {
+  check('openapi.json parses', false);
+}
+check('OpenAPI version is 3.1', openapi?.openapi?.startsWith('3.1'));
+const contactPost = openapi?.paths?.['/api/public/contact-form']?.post;
+check('contact-form has POST operation', !!contactPost);
+const contactSchema = contactPost?.requestBody?.content?.['application/json']?.schema;
+check('contact-form requires exactly nombre and telefono',
+  JSON.stringify([...(contactSchema?.required || [])].sort()) === JSON.stringify(['nombre', 'telefono']));
+const expectedMarcas = [
+  '', 'Chevrolet', 'Toyota', 'Kia', 'Hyundai', 'Mazda', 'Nissan', 'Ford',
+  'Volkswagen', 'Renault', 'BYD (Eléctrico)', 'JAC EV (Eléctrico)',
+  'Chery EV (Eléctrico)', 'Mitsubishi', 'Suzuki', 'Honda', 'Otra',
+];
+const expectedServicios = [
+  '', 'Mantenimiento Preventivo', 'Reparación de Motor', 'Caja de Cambios',
+  'Pintura / Carrocería', 'Sistema de Frenos', 'Vehículo Eléctrico / Híbrido',
+  'Sistema Eléctrico', 'Diagnóstico General',
+];
+check('marca enum matches backend exactly',
+  JSON.stringify(contactSchema?.properties?.marca?.enum) === JSON.stringify(expectedMarcas));
+check('servicio enum matches backend exactly',
+  JSON.stringify(contactSchema?.properties?.servicio?.enum) === JSON.stringify(expectedServicios));
+check('request schema does not advertise anti-bot properties',
+  !!contactSchema?.properties &&
+  !Object.hasOwn(contactSchema.properties, 'website') &&
+  !Object.hasOwn(contactSchema.properties, 'elapsed_ms'));
+for (const status of ['200', '400', '429', '502']) {
+  check(`contact-form documents ${status}`, !!contactPost?.responses?.[status]);
+}
+const globalHeaders = vercelConfig.headers?.find((entry) => entry.source === '/(.*)')?.headers || [];
+check('global Link header advertises OpenAPI service description',
+  globalHeaders.some((header) => header.key.toLowerCase() === 'link' &&
+    header.value === '</openapi.json>; rel="service-desc"; type="application/openapi+json"'));
+check('global Content-Security-Policy header remains present',
+  globalHeaders.some((header) => header.key === 'Content-Security-Policy' &&
+    header.value.includes("default-src 'self'") && header.value.includes('https://app.autonation.com.ec')));
+check('/api/:p* redirect to / remains unchanged',
+  vercelConfig.redirects?.some((redirect) => redirect.source === '/api/:p*' &&
+    redirect.destination === '/' && redirect.permanent === false));
+check('llms.txt links to /openapi.json', llmsTxt.includes('https://www.autonation.com.ec/openapi.json'));
+
 console.log(`\n${failures === 0 ? 'TODO OK' : `${failures} fallo(s)`}`);
 process.exit(failures === 0 ? 0 : 1);

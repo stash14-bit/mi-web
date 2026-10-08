@@ -13,6 +13,10 @@
       "source": "/(.*)",
       "headers": [
         {
+          "key": "Link",
+          "value": "</openapi.json>; rel=\"service-desc\"; type=\"application/openapi+json\""
+        },
+        {
           "key": "Strict-Transport-Security",
           "value": "max-age=63072000; includeSubDomains; preload"
         },
