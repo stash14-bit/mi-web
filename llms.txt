@@ -54,4 +54,6 @@ Cómo contactar: WhatsApp +593 939 057 454, email info@autonation.com.ec, o form
 
 ## API
 - [OpenAPI spec](https://www.autonation.com.ec/openapi.json)
-- `POST https://app.autonation.com.ec/api/public/contact-form`: envía una solicitud de cita por email; no confirma una reserva. Los agentes deben omitir `website` y `elapsed_ms`.
+- `POST https://app.autonation.com.ec/api/v1/public/contact-form` (endpoint canónico): envía una solicitud de cita por email; no confirma una reserva. Los agentes deben omitir `website` y `elapsed_ms`.
+- Errores JSON tipados: `{ error, code, hint }`.
+- Versiones: v1 estable; `/api/public/...` es un alias permanente del comportamiento compatible de v1; cambios incompatibles en `/api/v2/...`; aviso de al menos 6 meses antes de retirar una versión, con headers `Deprecation` y `Sunset` y `deprecated: true` cuando se depreque; actualmente nada está deprecado.

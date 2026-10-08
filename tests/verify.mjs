@@ -221,9 +221,23 @@ try {
   check('openapi.json parses', false);
 }
 check('OpenAPI version is 3.1', openapi?.openapi?.startsWith('3.1'));
-const contactPost = openapi?.paths?.['/api/public/contact-form']?.post;
+function resolveOpenapi(value) {
+  const seen = new Set();
+  while (value?.$ref) {
+    const ref = value.$ref;
+    if (!ref.startsWith('#/') || seen.has(ref)) return undefined;
+    seen.add(ref);
+    value = ref.slice(2).split('/').reduce((node, key) => node?.[key], openapi);
+  }
+  return value;
+}
+const contactPost = openapi?.paths?.['/api/v1/public/contact-form']?.post;
+const aliasPost = openapi?.paths?.['/api/public/contact-form']?.post;
+const requestSchema = (post) => resolveOpenapi(
+  resolveOpenapi(post?.requestBody)?.content?.['application/json']?.schema
+);
 check('contact-form has POST operation', !!contactPost);
-const contactSchema = contactPost?.requestBody?.content?.['application/json']?.schema;
+const contactSchema = requestSchema(contactPost);
 check('contact-form requires exactly nombre and telefono',
   JSON.stringify([...(contactSchema?.required || [])].sort()) === JSON.stringify(['nombre', 'telefono']));
 const expectedMarcas = [
@@ -244,9 +258,62 @@ check('request schema does not advertise anti-bot properties',
   !!contactSchema?.properties &&
   !Object.hasOwn(contactSchema.properties, 'website') &&
   !Object.hasOwn(contactSchema.properties, 'elapsed_ms'));
-for (const status of ['200', '400', '429', '502']) {
-  check(`contact-form documents ${status}`, !!contactPost?.responses?.[status]);
+check('unversioned alias has POST operation', !!aliasPost);
+check('both paths reuse the same request component',
+  !!contactPost?.requestBody?.$ref && contactPost.requestBody.$ref === aliasPost?.requestBody?.$ref);
+check('resolved request schemas match without drift',
+  !!contactSchema && JSON.stringify(contactSchema) === JSON.stringify(requestSchema(aliasPost)));
+check('canonical and alias operation IDs are distinct and stable',
+  contactPost?.operationId === 'submitContactForm' && aliasPost?.operationId === 'submitContactFormUnversioned');
+for (const [label, post] of [['v1', contactPost], ['unversioned', aliasPost]]) {
+  const schema = requestSchema(post);
+  check(`${label} marca and servicio enums match backend`,
+    JSON.stringify(schema?.properties?.marca?.enum) === JSON.stringify(expectedMarcas) &&
+    JSON.stringify(schema?.properties?.servicio?.enum) === JSON.stringify(expectedServicios));
+  check(`${label} omits anti-bot properties and retains guidance`,
+    !!schema?.properties && !Object.hasOwn(schema.properties, 'website') &&
+    !Object.hasOwn(schema.properties, 'elapsed_ms') &&
+    post?.description?.includes('Agents MUST OMIT both website and elapsed_ms'));
+  for (const status of ['200', '400', '405', '429', '502', '4XX', '5XX']) {
+    const response = post?.responses?.[status];
+    check(`${label} documents ${status} via shared response component`,
+      !!response?.$ref?.startsWith('#/components/responses/') && !!resolveOpenapi(response));
+    check(`${label} ${status} response matches canonical component`,
+      !!response?.$ref && response.$ref === contactPost?.responses?.[status]?.$ref);
+  }
+  for (const [status, response] of Object.entries(post?.responses || {})) {
+    if (!/^[45](?:\d{2}|XX)$/.test(status)) continue;
+    check(`${label} ${status} references a component using Error`,
+      !!response?.$ref?.startsWith('#/components/responses/') &&
+      resolveOpenapi(response)?.content?.['application/json']?.schema?.$ref === '#/components/schemas/Error');
+  }
+  check(`${label} 405 documents Allow: POST`,
+    resolveOpenapi(post?.responses?.['405'])?.headers?.Allow?.schema?.const === 'POST');
+  const rateHeaders = resolveOpenapi(post?.responses?.['429'])?.headers;
+  check(`${label} 429 documents Retry-After and RateLimit headers`,
+    ['Retry-After', 'RateLimit-Limit', 'RateLimit-Remaining', 'RateLimit-Reset', 'RateLimit-Policy']
+      .every((header) => !!rateHeaders?.[header]?.schema));
 }
+const errorSchema = openapi?.components?.schemas?.Error;
+check('Error requires exactly error, code, hint as strings',
+  errorSchema?.type === 'object' &&
+  JSON.stringify([...(errorSchema?.required || [])].sort()) === JSON.stringify(['code', 'error', 'hint']) &&
+  ['error', 'code', 'hint'].every((key) => errorSchema?.properties?.[key]?.type === 'string'));
+check('Error code enum covers all backend errors',
+  ['INVALID_REQUEST', 'INVALID_JSON', 'PAYLOAD_TOO_LARGE', 'METHOD_NOT_ALLOWED',
+    'RATE_LIMITED', 'EMAIL_DELIVERY_FAILED', 'NOT_FOUND', 'INTERNAL_ERROR']
+    .every((code) => errorSchema?.properties?.code?.enum?.includes(code)));
+check('NotFound component documents typed JSON 404',
+  openapi?.components?.responses?.NotFound?.content?.['application/json']?.schema?.$ref === '#/components/schemas/Error' &&
+  openapi?.components?.responses?.NotFound?.content?.['application/json']?.example?.code === 'NOT_FOUND');
+check('API lifecycle documents stable v1 and future Sunset policy',
+  openapi?.info?.version === '1.0.0' &&
+  openapi?.info?.['x-api-lifecycle']?.currentVersion === 'v1' &&
+  openapi?.info?.['x-api-lifecycle']?.deprecation?.includes('Sunset'));
+check('API server remains app.autonation.com.ec',
+  JSON.stringify(openapi?.servers) === JSON.stringify([{ url: 'https://app.autonation.com.ec' }]));
+check('llms.txt mentions canonical v1 endpoint',
+  llmsTxt.includes('POST https://app.autonation.com.ec/api/v1/public/contact-form'));
 const globalHeaders = vercelConfig.headers?.find((entry) => entry.source === '/(.*)')?.headers || [];
 check('global Link header advertises OpenAPI service description',
   globalHeaders.some((header) => header.key.toLowerCase() === 'link' &&

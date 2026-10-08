@@ -3,11 +3,18 @@
   "info": {
     "title": "Autonation Public Contact API",
     "version": "1.0.0",
-    "description": "Send an appointment request to Autonation Taller Multimarca. Alternative contact: WhatsApp +593 939 057 454 or info@autonation.com.ec. Hours: Mon-Fri 08:00-18:00, Sat 08:00-13:00 (Ecuador local time).",
+    "description": "Send an appointment request to Autonation Taller Multimarca. Alternative contact: WhatsApp +593 939 057 454 or info@autonation.com.ec. Hours: Mon-Fri 08:00-18:00, Sat 08:00-13:00 (Ecuador local time).\n\n## Versioning and deprecation policy\nThe canonical endpoint uses /api/v1/...; /api/public/... is a permanent unversioned alias of the latest compatible v1 behavior, with identical behavior and a shared rate limit. Breaking changes will be published as a new path version (/api/v2/...). Removal requires at least 6 months notice. When a version is deprecated, its deprecated operations will send the Deprecation header (RFC 9745) and Sunset header (RFC 8594) and will be marked deprecated: true in this spec. v1 is stable; nothing is deprecated.",
     "contact": {
       "name": "Autonation Taller Multimarca",
       "url": "https://www.autonation.com.ec/",
       "email": "info@autonation.com.ec"
+    },
+    "x-api-lifecycle": {
+      "currentVersion": "v1",
+      "versioning": "URL path (/api/v1/...); unversioned /api/public/... is a permanent alias of the latest compatible v1 behavior",
+      "breakingChanges": "published as a new path version (/api/v2/...)",
+      "deprecation": "at least 6 months notice before removal; deprecated operations get the Deprecation header (RFC 9745) and Sunset header (RFC 8594) and are marked deprecated: true in this spec",
+      "currentStatus": "v1 is stable; nothing deprecated"
     }
   },
   "servers": [
@@ -16,218 +23,374 @@
     }
   ],
   "paths": {
-    "/api/public/contact-form": {
+    "/api/v1/public/contact-form": {
       "post": {
         "operationId": "submitContactForm",
-        "summary": "Send an appointment request",
-        "description": "Sends an appointment-request email to info@autonation.com.ec; it does not create a confirmed booking. JSON body limit: 8 KB. Unknown fields are stripped. Agents MUST OMIT both website and elapsed_ms: these are website anti-bot fields. A non-empty website or elapsed_ms < 2500 returns 200 {\"ok\":true} without sending anything. Rate limit: 5 requests per hour per IP. Browser CORS allows only https://www.autonation.com.ec and https://autonation.com.ec; server-side agent calls are not affected.",
+        "summary": "Send an appointment request (canonical v1 endpoint)",
+        "description": "Sends an appointment-request email to info@autonation.com.ec; it does not create a confirmed booking. JSON body limit: 8 KB. Unknown fields are stripped. Agents MUST OMIT both website and elapsed_ms: these are website anti-bot fields. A non-empty website or elapsed_ms < 2500 returns 200 {\"ok\":true} without sending anything. Rate limit: 5 requests per hour per IP. Browser CORS allows only https://www.autonation.com.ec and https://autonation.com.ec; server-side agent calls are not affected. Both paths share the same rate limit. Non-POST methods return 405 with Allow: POST, except CORS OPTIONS preflight. Unknown paths under /api/* return typed JSON 404 NOT_FOUND.",
         "security": [],
         "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "required": [
-                  "nombre",
-                  "telefono"
-                ],
-                "properties": {
-                  "nombre": {
-                    "type": "string",
-                    "minLength": 2,
-                    "maxLength": 80,
-                    "description": "Contact name; trimmed before length validation.",
-                    "examples": [
-                      "María Pérez"
-                    ]
-                  },
-                  "telefono": {
-                    "type": "string",
-                    "pattern": "^[+\\d][\\d\\s().-]{6,19}$",
-                    "description": "Contact phone number.",
-                    "examples": [
-                      "+593939057454"
-                    ]
-                  },
-                  "marca": {
-                    "type": "string",
-                    "enum": [
-                      "",
-                      "Chevrolet",
-                      "Toyota",
-                      "Kia",
-                      "Hyundai",
-                      "Mazda",
-                      "Nissan",
-                      "Ford",
-                      "Volkswagen",
-                      "Renault",
-                      "BYD (Eléctrico)",
-                      "JAC EV (Eléctrico)",
-                      "Chery EV (Eléctrico)",
-                      "Mitsubishi",
-                      "Suzuki",
-                      "Honda",
-                      "Otra"
-                    ],
-                    "description": "Vehicle brand; empty string means unspecified.",
-                    "examples": [
-                      "Chevrolet"
-                    ]
-                  },
-                  "servicio": {
-                    "type": "string",
-                    "enum": [
-                      "",
-                      "Mantenimiento Preventivo",
-                      "Reparación de Motor",
-                      "Caja de Cambios",
-                      "Pintura / Carrocería",
-                      "Sistema de Frenos",
-                      "Vehículo Eléctrico / Híbrido",
-                      "Sistema Eléctrico",
-                      "Diagnóstico General"
-                    ],
-                    "description": "Requested service; empty string means unspecified.",
-                    "examples": [
-                      "Mantenimiento Preventivo"
-                    ]
-                  },
-                  "mensaje": {
-                    "type": "string",
-                    "maxLength": 500,
-                    "description": "Optional message; trimmed before length validation.",
-                    "examples": [
-                      "Quisiera solicitar una cita para mantenimiento."
-                    ]
-                  }
-                }
-              },
-              "example": {
-                "nombre": "María Pérez",
-                "telefono": "+593939057454",
-                "marca": "Chevrolet",
-                "servicio": "Mantenimiento Preventivo",
-                "mensaje": "Quisiera solicitar una cita para mantenimiento."
-              }
-            }
-          }
+          "$ref": "#/components/requestBodies/ContactRequest"
         },
         "responses": {
           "200": {
-            "description": "Request accepted; this is not a confirmed booking.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "required": [
-                    "ok"
-                  ],
-                  "properties": {
-                    "ok": {
-                      "type": "boolean",
-                      "const": true
-                    }
-                  }
-                },
-                "example": {
-                  "ok": true
-                }
-              }
-            }
+            "$ref": "#/components/responses/Accepted"
           },
           "400": {
-            "description": "Invalid request data.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "required": [
-                    "error"
-                  ],
-                  "properties": {
-                    "error": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "example": {
-                  "error": "Datos invalidos"
-                }
-              }
-            }
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "405": {
+            "$ref": "#/components/responses/MethodNotAllowed"
           },
           "429": {
-            "description": "Rate limit exceeded: 5 requests per hour per IP.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "required": [
-                    "error"
-                  ],
-                  "properties": {
-                    "error": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "example": {
-                  "error": "Demasiados intentos. Intenta mas tarde o escribenos por WhatsApp."
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "502": {
+            "$ref": "#/components/responses/BadGateway"
+          },
+          "4XX": {
+            "$ref": "#/components/responses/ClientError"
+          },
+          "5XX": {
+            "$ref": "#/components/responses/ServerError"
+          }
+        }
+      }
+    },
+    "/api/public/contact-form": {
+      "post": {
+        "operationId": "submitContactFormUnversioned",
+        "summary": "Unversioned alias of v1 with identical behavior",
+        "description": "Sends an appointment-request email to info@autonation.com.ec; it does not create a confirmed booking. JSON body limit: 8 KB. Unknown fields are stripped. Agents MUST OMIT both website and elapsed_ms: these are website anti-bot fields. A non-empty website or elapsed_ms < 2500 returns 200 {\"ok\":true} without sending anything. Rate limit: 5 requests per hour per IP. Browser CORS allows only https://www.autonation.com.ec and https://autonation.com.ec; server-side agent calls are not affected. Both paths share the same rate limit. Non-POST methods return 405 with Allow: POST, except CORS OPTIONS preflight. Unknown paths under /api/* return typed JSON 404 NOT_FOUND.",
+        "security": [],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/ContactRequest"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Accepted"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "405": {
+            "$ref": "#/components/responses/MethodNotAllowed"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "502": {
+            "$ref": "#/components/responses/BadGateway"
+          },
+          "4XX": {
+            "$ref": "#/components/responses/ClientError"
+          },
+          "5XX": {
+            "$ref": "#/components/responses/ServerError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ContactRequest": {
+        "type": "object",
+        "required": [
+          "nombre",
+          "telefono"
+        ],
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 80,
+            "description": "Contact name; trimmed before length validation.",
+            "examples": [
+              "María Pérez"
+            ]
+          },
+          "telefono": {
+            "type": "string",
+            "pattern": "^[+\\d][\\d\\s().-]{6,19}$",
+            "description": "Contact phone number.",
+            "examples": [
+              "+593939057454"
+            ]
+          },
+          "marca": {
+            "type": "string",
+            "enum": [
+              "",
+              "Chevrolet",
+              "Toyota",
+              "Kia",
+              "Hyundai",
+              "Mazda",
+              "Nissan",
+              "Ford",
+              "Volkswagen",
+              "Renault",
+              "BYD (Eléctrico)",
+              "JAC EV (Eléctrico)",
+              "Chery EV (Eléctrico)",
+              "Mitsubishi",
+              "Suzuki",
+              "Honda",
+              "Otra"
+            ],
+            "description": "Vehicle brand; empty string means unspecified.",
+            "examples": [
+              "Chevrolet"
+            ]
+          },
+          "servicio": {
+            "type": "string",
+            "enum": [
+              "",
+              "Mantenimiento Preventivo",
+              "Reparación de Motor",
+              "Caja de Cambios",
+              "Pintura / Carrocería",
+              "Sistema de Frenos",
+              "Vehículo Eléctrico / Híbrido",
+              "Sistema Eléctrico",
+              "Diagnóstico General"
+            ],
+            "description": "Requested service; empty string means unspecified.",
+            "examples": [
+              "Mantenimiento Preventivo"
+            ]
+          },
+          "mensaje": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "Optional message; trimmed before length validation.",
+            "examples": [
+              "Quisiera solicitar una cita para mantenimiento."
+            ]
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "description": "Typed JSON error returned by the API. Hint text illustrates how to resolve the error.",
+        "required": [
+          "error",
+          "code",
+          "hint"
+        ],
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Human-readable error message."
+          },
+          "code": {
+            "type": "string",
+            "description": "Machine-readable UPPER_SNAKE error code.",
+            "enum": [
+              "INVALID_REQUEST",
+              "INVALID_JSON",
+              "PAYLOAD_TOO_LARGE",
+              "METHOD_NOT_ALLOWED",
+              "RATE_LIMITED",
+              "EMAIL_DELIVERY_FAILED",
+              "NOT_FOUND",
+              "INTERNAL_ERROR"
+            ]
+          },
+          "hint": {
+            "type": "string",
+            "description": "Resolution hint for the caller."
+          }
+        },
+        "example": {
+          "error": "Datos invalidos",
+          "code": "INVALID_REQUEST",
+          "hint": "Revisa los campos requeridos y sus formatos."
+        }
+      }
+    },
+    "requestBodies": {
+      "ContactRequest": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ContactRequest"
+            },
+            "example": {
+              "nombre": "María Pérez",
+              "telefono": "+593939057454",
+              "marca": "Chevrolet",
+              "servicio": "Mantenimiento Preventivo",
+              "mensaje": "Quisiera solicitar una cita para mantenimiento."
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "Accepted": {
+        "description": "Request accepted; this is not a confirmed booking.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "ok"
+              ],
+              "properties": {
+                "ok": {
+                  "type": "boolean",
+                  "const": true
                 }
               }
             },
-            "headers": {
-              "RateLimit-Limit": {
-                "description": "Maximum requests per window.",
-                "schema": {
-                  "type": "integer"
-                },
-                "example": 5
-              },
-              "RateLimit-Remaining": {
-                "description": "Requests remaining in the current window.",
-                "schema": {
-                  "type": "integer"
-                },
-                "example": 0
-              },
-              "RateLimit-Reset": {
-                "description": "Seconds until the current window resets.",
-                "schema": {
-                  "type": "integer"
-                },
-                "example": 3600
-              },
-              "RateLimit-Policy": {
-                "description": "Request quota and window in seconds.",
-                "schema": {
-                  "type": "string"
-                },
-                "example": "5;w=3600"
-              }
+            "example": {
+              "ok": true
             }
+          }
+        }
+      },
+      "BadRequest": {
+        "description": "Invalid request: INVALID_REQUEST for schema validation failure, INVALID_JSON for malformed JSON, or PAYLOAD_TOO_LARGE for a body over 8 KB (also HTTP 400).",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "example": {
+              "error": "Datos invalidos",
+              "code": "INVALID_REQUEST",
+              "hint": "Revisa los campos requeridos y sus formatos."
+            }
+          }
+        }
+      },
+      "MethodNotAllowed": {
+        "description": "Any non-POST method except the CORS OPTIONS preflight returns HTTP 405.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "example": {
+              "error": "Metodo no permitido",
+              "code": "METHOD_NOT_ALLOWED",
+              "hint": "Usa el metodo POST."
+            }
+          }
+        },
+        "headers": {
+          "Allow": {
+            "description": "Allowed method for this endpoint.",
+            "schema": {
+              "type": "string",
+              "const": "POST"
+            },
+            "example": "POST"
+          }
+        }
+      },
+      "RateLimited": {
+        "description": "Rate limit exceeded: 5 requests per hour per IP, shared by the canonical path and unversioned alias.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "example": {
+              "error": "Demasiados intentos. Intenta mas tarde o escribenos por WhatsApp.",
+              "code": "RATE_LIMITED",
+              "hint": "Espera antes de reintentar o escribenos por WhatsApp."
+            }
+          }
+        },
+        "headers": {
+          "RateLimit-Limit": {
+            "description": "Maximum requests per window.",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 5
           },
-          "502": {
-            "description": "Email delivery failed; contact the shop via WhatsApp.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "required": [
-                    "error"
-                  ],
-                  "properties": {
-                    "error": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "example": {
-                  "error": "No se pudo enviar. Escribenos por WhatsApp."
-                }
-              }
+          "RateLimit-Remaining": {
+            "description": "Requests remaining in the current window.",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 0
+          },
+          "RateLimit-Reset": {
+            "description": "Seconds until the current window resets.",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 3600
+          },
+          "RateLimit-Policy": {
+            "description": "Request quota and window in seconds.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "5;w=3600"
+          },
+          "Retry-After": {
+            "description": "Seconds to wait before retrying.",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 3600
+          }
+        }
+      },
+      "BadGateway": {
+        "description": "Email delivery failed; contact the shop via WhatsApp.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "example": {
+              "error": "No se pudo enviar. Escribenos por WhatsApp.",
+              "code": "EMAIL_DELIVERY_FAILED",
+              "hint": "Escribenos por WhatsApp."
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "Any unknown path under /api/* returns HTTP 404 with this JSON body.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "example": {
+              "error": "No encontrado",
+              "code": "NOT_FOUND",
+              "hint": "Revisa la ruta de la API."
+            }
+          }
+        }
+      },
+      "ClientError": {
+        "description": "Fallback for other HTTP 4xx errors. Unknown paths under /api/* return 404 NOT_FOUND; see the NotFound response component.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "ServerError": {
+        "description": "Fallback for other HTTP 5xx errors.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
             }
           }
         }
