@@ -306,6 +306,36 @@ check('Error code enum covers all backend errors',
 check('NotFound component documents typed JSON 404',
   openapi?.components?.responses?.NotFound?.content?.['application/json']?.schema?.$ref === '#/components/schemas/Error' &&
   openapi?.components?.responses?.NotFound?.content?.['application/json']?.example?.code === 'NOT_FOUND');
+// Los ejemplos deben calcar el texto que devuelve el backend (publicContactForm.js / apiError.js).
+const backendErrorExamples = {
+  BadRequest: {
+    error: 'Datos invalidos',
+    code: 'INVALID_REQUEST',
+    hint: 'Los campos nombre y telefono son requeridos. Valores permitidos de marca y servicio en OpenAPI: https://www.autonation.com.ec/openapi.json',
+  },
+  MethodNotAllowed: { error: 'Metodo no permitido', code: 'METHOD_NOT_ALLOWED', hint: 'Use POST with a JSON body' },
+  RateLimited: {
+    error: 'Demasiados intentos. Intenta mas tarde o escribenos por WhatsApp.',
+    code: 'RATE_LIMITED',
+    hint: 'Limite de 5 solicitudes por hora por IP. Espera y reintenta o usa WhatsApp +593 939 057 454.',
+  },
+  BadGateway: {
+    error: 'No se pudo enviar. Escribenos por WhatsApp.',
+    code: 'EMAIL_DELIVERY_FAILED',
+    hint: 'Reintenta mas tarde o contactanos por WhatsApp +593 939 057 454.',
+  },
+  NotFound: {
+    error: 'No encontrado',
+    code: 'NOT_FOUND',
+    hint: 'Revisa la ruta. Documentacion: https://www.autonation.com.ec/openapi.json',
+  },
+};
+for (const [name, expected] of Object.entries(backendErrorExamples)) {
+  check(`${name} example matches the backend response text exactly`,
+    JSON.stringify(openapi?.components?.responses?.[name]?.content?.['application/json']?.example) === JSON.stringify(expected));
+}
+check('Error schema example matches the backend 400 response',
+  JSON.stringify(errorSchema?.example) === JSON.stringify(backendErrorExamples.BadRequest));
 check('API lifecycle documents stable v1 and future Sunset policy',
   openapi?.info?.version === '1.0.0' &&
   openapi?.info?.['x-api-lifecycle']?.currentVersion === 'v1' &&

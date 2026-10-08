@@ -207,7 +207,7 @@
         "example": {
           "error": "Datos invalidos",
           "code": "INVALID_REQUEST",
-          "hint": "Revisa los campos requeridos y sus formatos."
+          "hint": "Los campos nombre y telefono son requeridos. Valores permitidos de marca y servicio en OpenAPI: https://www.autonation.com.ec/openapi.json"
         }
       }
     },
@@ -263,7 +263,7 @@
             "example": {
               "error": "Datos invalidos",
               "code": "INVALID_REQUEST",
-              "hint": "Revisa los campos requeridos y sus formatos."
+              "hint": "Los campos nombre y telefono son requeridos. Valores permitidos de marca y servicio en OpenAPI: https://www.autonation.com.ec/openapi.json"
             }
           }
         }
@@ -278,7 +278,7 @@
             "example": {
               "error": "Metodo no permitido",
               "code": "METHOD_NOT_ALLOWED",
-              "hint": "Usa el metodo POST."
+              "hint": "Use POST with a JSON body"
             }
           }
         },
@@ -303,7 +303,7 @@
             "example": {
               "error": "Demasiados intentos. Intenta mas tarde o escribenos por WhatsApp.",
               "code": "RATE_LIMITED",
-              "hint": "Espera antes de reintentar o escribenos por WhatsApp."
+              "hint": "Limite de 5 solicitudes por hora por IP. Espera y reintenta o usa WhatsApp +593 939 057 454."
             }
           }
         },
@@ -355,7 +355,7 @@
             "example": {
               "error": "No se pudo enviar. Escribenos por WhatsApp.",
               "code": "EMAIL_DELIVERY_FAILED",
-              "hint": "Escribenos por WhatsApp."
+              "hint": "Reintenta mas tarde o contactanos por WhatsApp +593 939 057 454."
             }
           }
         }
@@ -370,7 +370,7 @@
             "example": {
               "error": "No encontrado",
               "code": "NOT_FOUND",
-              "hint": "Revisa la ruta de la API."
+              "hint": "Revisa la ruta. Documentacion: https://www.autonation.com.ec/openapi.json"
             }
           }
         }
