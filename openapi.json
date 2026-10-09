@@ -168,7 +168,7 @@
             }
           },
           "4XX": {
-            "description": "Fallback for other HTTP 4xx errors. Unknown paths under /api/* return 404 NOT_FOUND. Any unknown path under /api/* returns HTTP 404 with this JSON body.",
+            "description": "Fallback for other HTTP 4xx errors. Unknown paths under /api/* return 404 NOT_FOUND with this JSON body.",
             "content": {
               "application/json": {
                 "schema": {
@@ -340,7 +340,7 @@
             }
           },
           "4XX": {
-            "description": "Fallback for other HTTP 4xx errors. Unknown paths under /api/* return 404 NOT_FOUND. Any unknown path under /api/* returns HTTP 404 with this JSON body.",
+            "description": "Fallback for other HTTP 4xx errors. Unknown paths under /api/* return 404 NOT_FOUND with this JSON body.",
             "content": {
               "application/json": {
                 "schema": {
