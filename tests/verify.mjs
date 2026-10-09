@@ -3,6 +3,8 @@
 // mas la presencia de contactPoint en el JSON-LD y del 404.html.
 // Uso: node tests/verify.mjs
 import fs from 'node:fs';
+import { isDeepStrictEqual } from 'node:util';
+import { isApiPath, API_NOT_FOUND_BODY, apiNotFoundResponse } from '../lib/api-not-found.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -234,7 +236,7 @@ function resolveOpenapi(value) {
 const contactPost = openapi?.paths?.['/api/v1/public/contact-form']?.post;
 const aliasPost = openapi?.paths?.['/api/public/contact-form']?.post;
 const requestSchema = (post) => resolveOpenapi(
-  resolveOpenapi(post?.requestBody)?.content?.['application/json']?.schema
+  post?.requestBody?.content?.['application/json']?.schema
 );
 check('contact-form has POST operation', !!contactPost);
 const contactSchema = requestSchema(contactPost);
@@ -259,8 +261,15 @@ check('request schema does not advertise anti-bot properties',
   !Object.hasOwn(contactSchema.properties, 'website') &&
   !Object.hasOwn(contactSchema.properties, 'elapsed_ms'));
 check('unversioned alias has POST operation', !!aliasPost);
-check('both paths reuse the same request component',
-  !!contactPost?.requestBody?.$ref && contactPost.requestBody.$ref === aliasPost?.requestBody?.$ref);
+check('unused response and requestBody components are absent',
+  !!openapi?.components && !Object.hasOwn(openapi.components, 'responses') &&
+  !Object.hasOwn(openapi.components, 'requestBodies'));
+check('both operations have identical inline responses',
+  !!contactPost?.responses && isDeepStrictEqual(contactPost.responses, aliasPost?.responses));
+const acceptedSchema = openapi?.components?.schemas?.ContactAccepted;
+check('ContactAccepted documents ok: true', isDeepStrictEqual(acceptedSchema, {
+  type: 'object', required: ['ok'], properties: { ok: { type: 'boolean', const: true } },
+}));
 check('resolved request schemas match without drift',
   !!contactSchema && JSON.stringify(contactSchema) === JSON.stringify(requestSchema(aliasPost)));
 check('canonical and alias operation IDs are distinct and stable',
@@ -274,25 +283,31 @@ for (const [label, post] of [['v1', contactPost], ['unversioned', aliasPost]]) {
     !!schema?.properties && !Object.hasOwn(schema.properties, 'website') &&
     !Object.hasOwn(schema.properties, 'elapsed_ms') &&
     post?.description?.includes('Agents MUST OMIT both website and elapsed_ms'));
+  check(`${label} requestBody is inline and required with ContactRequest schema`,
+    !!post?.requestBody && !Object.hasOwn(post.requestBody, '$ref') &&
+    post.requestBody.required === true &&
+    post.requestBody.content?.['application/json']?.schema?.$ref === '#/components/schemas/ContactRequest');
+  check(`${label} has no response-level refs`,
+    !!post?.responses && Object.values(post.responses).every((response) => !Object.hasOwn(response, '$ref')));
   for (const status of ['200', '400', '405', '429', '502', '4XX', '5XX']) {
     const response = post?.responses?.[status];
-    check(`${label} documents ${status} via shared response component`,
-      !!response?.$ref?.startsWith('#/components/responses/') && !!resolveOpenapi(response));
-    check(`${label} ${status} response matches canonical component`,
-      !!response?.$ref && response.$ref === contactPost?.responses?.[status]?.$ref);
+    const expectedSchema = status === '200' ? 'ContactAccepted' : 'Error';
+    check(`${label} ${status} has inline content referencing ${expectedSchema}`,
+      !!response && !Object.hasOwn(response, '$ref') &&
+      response.content?.['application/json']?.schema?.$ref === `#/components/schemas/${expectedSchema}`);
   }
-  for (const [status, response] of Object.entries(post?.responses || {})) {
-    if (!/^[45](?:\d{2}|XX)$/.test(status)) continue;
-    check(`${label} ${status} references a component using Error`,
-      !!response?.$ref?.startsWith('#/components/responses/') &&
-      resolveOpenapi(response)?.content?.['application/json']?.schema?.$ref === '#/components/schemas/Error');
-  }
+  check(`${label} 200 example is ok: true`,
+    isDeepStrictEqual(post?.responses?.['200']?.content?.['application/json']?.example, { ok: true }));
   check(`${label} 405 documents Allow: POST`,
-    resolveOpenapi(post?.responses?.['405'])?.headers?.Allow?.schema?.const === 'POST');
-  const rateHeaders = resolveOpenapi(post?.responses?.['429'])?.headers;
-  check(`${label} 429 documents Retry-After and RateLimit headers`,
+    post?.responses?.['405']?.headers?.Allow?.schema?.type === 'string' &&
+    post?.responses?.['405']?.headers?.Allow?.schema?.const === 'POST');
+  const rateHeaders = post?.responses?.['429']?.headers;
+  check(`${label} 429 documents typed Retry-After and RateLimit headers`,
     ['Retry-After', 'RateLimit-Limit', 'RateLimit-Remaining', 'RateLimit-Reset', 'RateLimit-Policy']
-      .every((header) => !!rateHeaders?.[header]?.schema));
+      .every((header) => rateHeaders?.[header]?.schema?.type === (header === 'RateLimit-Policy' ? 'string' : 'integer')));
+  check(`${label} range fallbacks document unknown API paths returning 404 NOT_FOUND`,
+    ['4XX', '5XX'].every((status) => post?.responses?.[status]?.description?.includes('Unknown paths under /api/* return 404 NOT_FOUND')));
+
 }
 const errorSchema = openapi?.components?.schemas?.Error;
 check('Error requires exactly error, code, hint as strings',
@@ -303,9 +318,6 @@ check('Error code enum covers all backend errors',
   ['INVALID_REQUEST', 'INVALID_JSON', 'PAYLOAD_TOO_LARGE', 'METHOD_NOT_ALLOWED',
     'RATE_LIMITED', 'EMAIL_DELIVERY_FAILED', 'NOT_FOUND', 'INTERNAL_ERROR']
     .every((code) => errorSchema?.properties?.code?.enum?.includes(code)));
-check('NotFound component documents typed JSON 404',
-  openapi?.components?.responses?.NotFound?.content?.['application/json']?.schema?.$ref === '#/components/schemas/Error' &&
-  openapi?.components?.responses?.NotFound?.content?.['application/json']?.example?.code === 'NOT_FOUND');
 // Los ejemplos deben calcar el texto que devuelve el backend (publicContactForm.js / apiError.js).
 const backendErrorExamples = {
   BadRequest: {
@@ -330,9 +342,12 @@ const backendErrorExamples = {
     hint: 'Revisa la ruta. Documentacion: https://www.autonation.com.ec/openapi.json',
   },
 };
-for (const [name, expected] of Object.entries(backendErrorExamples)) {
-  check(`${name} example matches the backend response text exactly`,
-    JSON.stringify(openapi?.components?.responses?.[name]?.content?.['application/json']?.example) === JSON.stringify(expected));
+const backendExampleStatuses = { BadRequest: '400', MethodNotAllowed: '405', RateLimited: '429', BadGateway: '502', NotFound: '4XX' };
+for (const [label, post] of [['v1', contactPost], ['unversioned', aliasPost]]) {
+  for (const [name, expected] of Object.entries(backendErrorExamples)) {
+    check(`${label} ${name} example matches the backend response text exactly`,
+      isDeepStrictEqual(post?.responses?.[backendExampleStatuses[name]]?.content?.['application/json']?.example, expected));
+  }
 }
 check('Error schema example matches the backend 400 response',
   JSON.stringify(errorSchema?.example) === JSON.stringify(backendErrorExamples.BadRequest));
@@ -351,9 +366,67 @@ check('global Link header advertises OpenAPI service description',
 check('global Content-Security-Policy header remains present',
   globalHeaders.some((header) => header.key === 'Content-Security-Policy' &&
     header.value.includes("default-src 'self'") && header.value.includes('https://app.autonation.com.ec')));
-check('/api/:p* redirect to / remains unchanged',
-  vercelConfig.redirects?.some((redirect) => redirect.source === '/api/:p*' &&
-    redirect.destination === '/' && redirect.permanent === false));
+check('/api/:p* redirect is absent',
+  !vercelConfig.redirects?.some((redirect) => redirect.source === '/api/:p*'));
+check('/login redirect remains unchanged',
+  vercelConfig.redirects?.some((redirect) => redirect.source === '/login' &&
+    redirect.destination === 'https://app.autonation.com.ec/login' && redirect.permanent === false));
+
+for (const pathname of ['/api', '/api/', '/api/x/y']) {
+  check(`isApiPath accepts ${pathname}`, isApiPath(pathname) === true);
+}
+for (const pathname of ['/apis', '/apiary', '/', '/blog/api', '/about']) {
+  check(`isApiPath rejects ${pathname}`, isApiPath(pathname) === false);
+}
+async function checkApiNotFound(label, response) {
+  check(`${label} status is 404`, response.status === 404);
+  check(`${label} Content-Type is JSON with UTF-8`,
+    response.headers.get('content-type') === 'application/json; charset=utf-8');
+  check(`${label} is not cached`, response.headers.get('cache-control') === 'no-store');
+  check(`${label} is noindex`, response.headers.get('x-robots-tag') === 'noindex');
+  const body = await response.json();
+  check(`${label} body matches API_NOT_FOUND_BODY`, isDeepStrictEqual(body, API_NOT_FOUND_BODY));
+  check(`${label} body has error/code/hint strings`,
+    ['error', 'code', 'hint'].every((key) => typeof body[key] === 'string'));
+}
+await checkApiNotFound('apiNotFoundResponse()', apiNotFoundResponse());
+let middleware;
+try {
+  ({ default: middleware } = await import('../middleware.js'));
+} catch (error) {
+  if (error.code !== 'ERR_MODULE_NOT_FOUND' || !error.message.includes('@vercel/functions')) throw error;
+  console.log('INFO middleware runtime checks unavailable: @vercel/functions cannot be resolved; checking source ordering instead.');
+  const source = fs.readFileSync(path.join(ROOT, 'middleware.js'), 'utf8');
+  check('middleware imports API helpers',
+    /import\s*\{\s*isApiPath,\s*apiNotFoundResponse\s*\}\s*from\s*['"]\.\/lib\/api-not-found\.mjs['"]/.test(source));
+  const body = source.slice(source.indexOf('export default function middleware(request)'));
+  check('middleware handles API paths first, before Accept and KNOWN_PAGES logic',
+    /middleware\(request\)\s*\{\s*const url = new URL\(request.url\);\s*if \(isApiPath\(url.pathname\)\) return apiNotFoundResponse\(\);/.test(body) &&
+    body.indexOf('isApiPath(url.pathname)') < body.indexOf('prefersMarkdown(accept)') &&
+    body.indexOf('isApiPath(url.pathname)') < body.indexOf('KNOWN_PAGES.has(url.pathname)'));
+}
+if (middleware) {
+  for (const method of ['GET', 'POST']) {
+    await checkApiNotFound(`middleware ${method} /api/anything`,
+      await middleware(new Request('https://www.autonation.com.ec/api/anything', {
+        method, headers: { Accept: 'text/markdown' },
+      })));
+  }
+  for (const pathname of ['/', '/about']) {
+    for (const accept of ['text/html', 'text/markdown']) {
+      const response = await middleware(new Request(`https://www.autonation.com.ec${pathname}`, {
+        headers: { Accept: accept },
+      }));
+      check(`middleware ${pathname} ${accept} remains non-404`, response.status !== 404);
+      check(`middleware ${pathname} ${accept} retains Vary`,
+        response.headers.get('vary') === 'Accept, Accept-Encoding');
+      check(`middleware ${pathname} ${accept} retains rewrite/next behavior`,
+        pathname === '/' && accept === 'text/markdown'
+          ? response.headers.get('x-middleware-rewrite') === 'https://www.autonation.com.ec/index.md'
+          : response.headers.get('x-middleware-next') === '1');
+    }
+  }
+}
 check('llms.txt links to /openapi.json', llmsTxt.includes('https://www.autonation.com.ec/openapi.json'));
 
 console.log(`\n${failures === 0 ? 'TODO OK' : `${failures} fallo(s)`}`);

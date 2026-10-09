@@ -30,29 +30,167 @@
         "description": "Sends an appointment-request email to info@autonation.com.ec; it does not create a confirmed booking. JSON body limit: 8 KB. Unknown fields are stripped. Agents MUST OMIT both website and elapsed_ms: these are website anti-bot fields. A non-empty website or elapsed_ms < 2500 returns 200 {\"ok\":true} without sending anything. Rate limit: 5 requests per hour per IP. Browser CORS allows only https://www.autonation.com.ec and https://autonation.com.ec; server-side agent calls are not affected. Both paths share the same rate limit. Non-POST methods return 405 with Allow: POST, except CORS OPTIONS preflight. Unknown paths under /api/* return typed JSON 404 NOT_FOUND.",
         "security": [],
         "requestBody": {
-          "$ref": "#/components/requestBodies/ContactRequest"
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactRequest"
+              },
+              "example": {
+                "nombre": "María Pérez",
+                "telefono": "+593939057454",
+                "marca": "Chevrolet",
+                "servicio": "Mantenimiento Preventivo",
+                "mensaje": "Quisiera solicitar una cita para mantenimiento."
+              }
+            }
+          }
         },
         "responses": {
           "200": {
-            "$ref": "#/components/responses/Accepted"
+            "description": "Request accepted; this is not a confirmed booking.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContactAccepted"
+                },
+                "example": {
+                  "ok": true
+                }
+              }
+            }
           },
           "400": {
-            "$ref": "#/components/responses/BadRequest"
+            "description": "Invalid request: INVALID_REQUEST for schema validation failure, INVALID_JSON for malformed JSON, or PAYLOAD_TOO_LARGE for a body over 8 KB (also HTTP 400).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "error": "Datos invalidos",
+                  "code": "INVALID_REQUEST",
+                  "hint": "Los campos nombre y telefono son requeridos. Valores permitidos de marca y servicio en OpenAPI: https://www.autonation.com.ec/openapi.json"
+                }
+              }
+            }
           },
           "405": {
-            "$ref": "#/components/responses/MethodNotAllowed"
+            "description": "Any non-POST method except the CORS OPTIONS preflight returns HTTP 405.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "error": "Metodo no permitido",
+                  "code": "METHOD_NOT_ALLOWED",
+                  "hint": "Use POST with a JSON body"
+                }
+              }
+            },
+            "headers": {
+              "Allow": {
+                "description": "Allowed method for this endpoint.",
+                "schema": {
+                  "type": "string",
+                  "const": "POST"
+                },
+                "example": "POST"
+              }
+            }
           },
           "429": {
-            "$ref": "#/components/responses/RateLimited"
+            "description": "Rate limit exceeded: 5 requests per hour per IP, shared by the canonical path and unversioned alias.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "error": "Demasiados intentos. Intenta mas tarde o escribenos por WhatsApp.",
+                  "code": "RATE_LIMITED",
+                  "hint": "Limite de 5 solicitudes por hora por IP. Espera y reintenta o usa WhatsApp +593 939 057 454."
+                }
+              }
+            },
+            "headers": {
+              "RateLimit-Limit": {
+                "description": "Maximum requests per window.",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 5
+              },
+              "RateLimit-Remaining": {
+                "description": "Requests remaining in the current window.",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 0
+              },
+              "RateLimit-Reset": {
+                "description": "Seconds until the current window resets.",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 3600
+              },
+              "RateLimit-Policy": {
+                "description": "Request quota and window in seconds.",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "5;w=3600"
+              },
+              "Retry-After": {
+                "description": "Seconds to wait before retrying.",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 3600
+              }
+            }
           },
           "502": {
-            "$ref": "#/components/responses/BadGateway"
+            "description": "Email delivery failed; contact the shop via WhatsApp.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "error": "No se pudo enviar. Escribenos por WhatsApp.",
+                  "code": "EMAIL_DELIVERY_FAILED",
+                  "hint": "Reintenta mas tarde o contactanos por WhatsApp +593 939 057 454."
+                }
+              }
+            }
           },
           "4XX": {
-            "$ref": "#/components/responses/ClientError"
+            "description": "Fallback for other HTTP 4xx errors. Unknown paths under /api/* return 404 NOT_FOUND. Any unknown path under /api/* returns HTTP 404 with this JSON body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "error": "No encontrado",
+                  "code": "NOT_FOUND",
+                  "hint": "Revisa la ruta. Documentacion: https://www.autonation.com.ec/openapi.json"
+                }
+              }
+            }
           },
           "5XX": {
-            "$ref": "#/components/responses/ServerError"
+            "description": "Fallback for other HTTP 5xx errors. Unknown paths under /api/* return 404 NOT_FOUND instead.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
           }
         }
       }
@@ -64,29 +202,167 @@
         "description": "Sends an appointment-request email to info@autonation.com.ec; it does not create a confirmed booking. JSON body limit: 8 KB. Unknown fields are stripped. Agents MUST OMIT both website and elapsed_ms: these are website anti-bot fields. A non-empty website or elapsed_ms < 2500 returns 200 {\"ok\":true} without sending anything. Rate limit: 5 requests per hour per IP. Browser CORS allows only https://www.autonation.com.ec and https://autonation.com.ec; server-side agent calls are not affected. Both paths share the same rate limit. Non-POST methods return 405 with Allow: POST, except CORS OPTIONS preflight. Unknown paths under /api/* return typed JSON 404 NOT_FOUND.",
         "security": [],
         "requestBody": {
-          "$ref": "#/components/requestBodies/ContactRequest"
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactRequest"
+              },
+              "example": {
+                "nombre": "María Pérez",
+                "telefono": "+593939057454",
+                "marca": "Chevrolet",
+                "servicio": "Mantenimiento Preventivo",
+                "mensaje": "Quisiera solicitar una cita para mantenimiento."
+              }
+            }
+          }
         },
         "responses": {
           "200": {
-            "$ref": "#/components/responses/Accepted"
+            "description": "Request accepted; this is not a confirmed booking.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContactAccepted"
+                },
+                "example": {
+                  "ok": true
+                }
+              }
+            }
           },
           "400": {
-            "$ref": "#/components/responses/BadRequest"
+            "description": "Invalid request: INVALID_REQUEST for schema validation failure, INVALID_JSON for malformed JSON, or PAYLOAD_TOO_LARGE for a body over 8 KB (also HTTP 400).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "error": "Datos invalidos",
+                  "code": "INVALID_REQUEST",
+                  "hint": "Los campos nombre y telefono son requeridos. Valores permitidos de marca y servicio en OpenAPI: https://www.autonation.com.ec/openapi.json"
+                }
+              }
+            }
           },
           "405": {
-            "$ref": "#/components/responses/MethodNotAllowed"
+            "description": "Any non-POST method except the CORS OPTIONS preflight returns HTTP 405.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "error": "Metodo no permitido",
+                  "code": "METHOD_NOT_ALLOWED",
+                  "hint": "Use POST with a JSON body"
+                }
+              }
+            },
+            "headers": {
+              "Allow": {
+                "description": "Allowed method for this endpoint.",
+                "schema": {
+                  "type": "string",
+                  "const": "POST"
+                },
+                "example": "POST"
+              }
+            }
           },
           "429": {
-            "$ref": "#/components/responses/RateLimited"
+            "description": "Rate limit exceeded: 5 requests per hour per IP, shared by the canonical path and unversioned alias.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "error": "Demasiados intentos. Intenta mas tarde o escribenos por WhatsApp.",
+                  "code": "RATE_LIMITED",
+                  "hint": "Limite de 5 solicitudes por hora por IP. Espera y reintenta o usa WhatsApp +593 939 057 454."
+                }
+              }
+            },
+            "headers": {
+              "RateLimit-Limit": {
+                "description": "Maximum requests per window.",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 5
+              },
+              "RateLimit-Remaining": {
+                "description": "Requests remaining in the current window.",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 0
+              },
+              "RateLimit-Reset": {
+                "description": "Seconds until the current window resets.",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 3600
+              },
+              "RateLimit-Policy": {
+                "description": "Request quota and window in seconds.",
+                "schema": {
+                  "type": "string"
+                },
+                "example": "5;w=3600"
+              },
+              "Retry-After": {
+                "description": "Seconds to wait before retrying.",
+                "schema": {
+                  "type": "integer"
+                },
+                "example": 3600
+              }
+            }
           },
           "502": {
-            "$ref": "#/components/responses/BadGateway"
+            "description": "Email delivery failed; contact the shop via WhatsApp.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "error": "No se pudo enviar. Escribenos por WhatsApp.",
+                  "code": "EMAIL_DELIVERY_FAILED",
+                  "hint": "Reintenta mas tarde o contactanos por WhatsApp +593 939 057 454."
+                }
+              }
+            }
           },
           "4XX": {
-            "$ref": "#/components/responses/ClientError"
+            "description": "Fallback for other HTTP 4xx errors. Unknown paths under /api/* return 404 NOT_FOUND. Any unknown path under /api/* returns HTTP 404 with this JSON body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "error": "No encontrado",
+                  "code": "NOT_FOUND",
+                  "hint": "Revisa la ruta. Documentacion: https://www.autonation.com.ec/openapi.json"
+                }
+              }
+            }
           },
           "5XX": {
-            "$ref": "#/components/responses/ServerError"
+            "description": "Fallback for other HTTP 5xx errors. Unknown paths under /api/* return 404 NOT_FOUND instead.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
           }
         }
       }
@@ -209,189 +485,16 @@
           "code": "INVALID_REQUEST",
           "hint": "Los campos nombre y telefono son requeridos. Valores permitidos de marca y servicio en OpenAPI: https://www.autonation.com.ec/openapi.json"
         }
-      }
-    },
-    "requestBodies": {
-      "ContactRequest": {
-        "required": true,
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/ContactRequest"
-            },
-            "example": {
-              "nombre": "María Pérez",
-              "telefono": "+593939057454",
-              "marca": "Chevrolet",
-              "servicio": "Mantenimiento Preventivo",
-              "mensaje": "Quisiera solicitar una cita para mantenimiento."
-            }
-          }
-        }
-      }
-    },
-    "responses": {
-      "Accepted": {
-        "description": "Request accepted; this is not a confirmed booking.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "object",
-              "required": [
-                "ok"
-              ],
-              "properties": {
-                "ok": {
-                  "type": "boolean",
-                  "const": true
-                }
-              }
-            },
-            "example": {
-              "ok": true
-            }
-          }
-        }
       },
-      "BadRequest": {
-        "description": "Invalid request: INVALID_REQUEST for schema validation failure, INVALID_JSON for malformed JSON, or PAYLOAD_TOO_LARGE for a body over 8 KB (also HTTP 400).",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Error"
-            },
-            "example": {
-              "error": "Datos invalidos",
-              "code": "INVALID_REQUEST",
-              "hint": "Los campos nombre y telefono son requeridos. Valores permitidos de marca y servicio en OpenAPI: https://www.autonation.com.ec/openapi.json"
-            }
-          }
-        }
-      },
-      "MethodNotAllowed": {
-        "description": "Any non-POST method except the CORS OPTIONS preflight returns HTTP 405.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Error"
-            },
-            "example": {
-              "error": "Metodo no permitido",
-              "code": "METHOD_NOT_ALLOWED",
-              "hint": "Use POST with a JSON body"
-            }
-          }
-        },
-        "headers": {
-          "Allow": {
-            "description": "Allowed method for this endpoint.",
-            "schema": {
-              "type": "string",
-              "const": "POST"
-            },
-            "example": "POST"
-          }
-        }
-      },
-      "RateLimited": {
-        "description": "Rate limit exceeded: 5 requests per hour per IP, shared by the canonical path and unversioned alias.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Error"
-            },
-            "example": {
-              "error": "Demasiados intentos. Intenta mas tarde o escribenos por WhatsApp.",
-              "code": "RATE_LIMITED",
-              "hint": "Limite de 5 solicitudes por hora por IP. Espera y reintenta o usa WhatsApp +593 939 057 454."
-            }
-          }
-        },
-        "headers": {
-          "RateLimit-Limit": {
-            "description": "Maximum requests per window.",
-            "schema": {
-              "type": "integer"
-            },
-            "example": 5
-          },
-          "RateLimit-Remaining": {
-            "description": "Requests remaining in the current window.",
-            "schema": {
-              "type": "integer"
-            },
-            "example": 0
-          },
-          "RateLimit-Reset": {
-            "description": "Seconds until the current window resets.",
-            "schema": {
-              "type": "integer"
-            },
-            "example": 3600
-          },
-          "RateLimit-Policy": {
-            "description": "Request quota and window in seconds.",
-            "schema": {
-              "type": "string"
-            },
-            "example": "5;w=3600"
-          },
-          "Retry-After": {
-            "description": "Seconds to wait before retrying.",
-            "schema": {
-              "type": "integer"
-            },
-            "example": 3600
-          }
-        }
-      },
-      "BadGateway": {
-        "description": "Email delivery failed; contact the shop via WhatsApp.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Error"
-            },
-            "example": {
-              "error": "No se pudo enviar. Escribenos por WhatsApp.",
-              "code": "EMAIL_DELIVERY_FAILED",
-              "hint": "Reintenta mas tarde o contactanos por WhatsApp +593 939 057 454."
-            }
-          }
-        }
-      },
-      "NotFound": {
-        "description": "Any unknown path under /api/* returns HTTP 404 with this JSON body.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Error"
-            },
-            "example": {
-              "error": "No encontrado",
-              "code": "NOT_FOUND",
-              "hint": "Revisa la ruta. Documentacion: https://www.autonation.com.ec/openapi.json"
-            }
-          }
-        }
-      },
-      "ClientError": {
-        "description": "Fallback for other HTTP 4xx errors. Unknown paths under /api/* return 404 NOT_FOUND; see the NotFound response component.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Error"
-            }
-          }
-        }
-      },
-      "ServerError": {
-        "description": "Fallback for other HTTP 5xx errors.",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Error"
-            }
+      "ContactAccepted": {
+        "type": "object",
+        "required": [
+          "ok"
+        ],
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "const": true
           }
         }
       }

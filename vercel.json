@@ -156,7 +156,6 @@
     { "source": "/tmp/:p*",              "destination": "/", "permanent": false },
     { "source": "/upload/:p*",           "destination": "/", "permanent": false },
     { "source": "/uploads/:p*",          "destination": "/", "permanent": false },
-    { "source": "/api/:p*",              "destination": "/", "permanent": false },
     { "source": "/console",              "destination": "/", "permanent": false },
     { "source": "/server-status",        "destination": "/", "permanent": false },
     { "source": "/server-info",          "destination": "/", "permanent": false }

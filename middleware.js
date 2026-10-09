@@ -3,6 +3,7 @@
 // >= text/html. Requisito Ora/acceptmarkdown.com: la respuesta debe declarar
 // `Vary: Accept, Accept-Encoding` para que un CDN no mezcle variantes cacheadas.
 import { rewrite, next } from '@vercel/functions';
+import { isApiPath, apiNotFoundResponse } from './lib/api-not-found.mjs';
 import {
   VARY,
   KNOWN_PAGES,
@@ -29,6 +30,7 @@ export const config = {
 
 export default function middleware(request) {
   const url = new URL(request.url);
+  if (isApiPath(url.pathname)) return apiNotFoundResponse();
   const accept = request.headers.get('accept');
   const wantsMarkdown = prefersMarkdown(accept);
   const isKnown = KNOWN_PAGES.has(url.pathname);
