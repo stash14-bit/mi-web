@@ -13,6 +13,7 @@ Datos clave:
 - Vehículos eléctricos e híbridos: sistemas convencionales atendidos hoy; servicio de alto voltaje en preparación (certificaciones en curso)
 
 ## Servicios
+- [Reparación de Autos Inundados en Guayaquil](https://www.autonation.com.ec/reparacion-autos-inundados-guayaquil): Auto inundado en Guayaquil: diagnóstico de motor, sistema eléctrico y habitáculo, presupuesto previo y garantía escrita. Coordiná el traslado con grúa.
 - [Mantenimiento Preventivo](https://www.autonation.com.ec/mantenimiento-preventivo-guayaquil): plan por marca, modelo y kilometraje con estándares de concesionario
 - [Reparación de Motores](https://www.autonation.com.ec/reparacion-motores-guayaquil): diagnóstico computarizado, rectificación y reconstrucción
 - [Cajas de Cambio](https://www.autonation.com.ec/cajas-de-cambio-guayaquil): transmisiones manuales, automáticas y CVT
@@ -24,6 +25,8 @@ Datos clave:
 - [Grúa 24 Horas](https://www.autonation.com.ec/grua-24-horas-guayaquil): recepción de vehículos con grúa las 24 horas, los 365 días del año, en Guayaquil, Samborondón y Daule; si el vehículo se repara en el taller, cubrimos 50% o 100% del costo de la grúa según el daño; atención el siguiente día hábil
 
 ## Guías y respuestas (Blog)
+- [Cómo saber si un carro usado estuvo inundado](https://www.autonation.com.ec/blog/como-saber-si-un-carro-usado-estuvo-inundado): Cómo detectar señales de inundación en un carro usado: humedad, corrosión, fallas eléctricas y revisión con escáner antes de decidir una compra.
+- [Mi carro se inundó: qué hacer paso a paso](https://www.autonation.com.ec/blog/que-hacer-si-tu-carro-se-inundo-ecuador): Qué hacer si tu carro se inundó en Ecuador: primeros pasos, daños según el nivel del agua, errores que evitar y coordinación con seguro, grúa y taller.
 - [¿Taller multimarca o concesionario?](https://www.autonation.com.ec/blog/taller-multimarca-vs-concesionario-ecuador): comparación honesta de costos, calidad y garantía
 - [¿Perdés la garantía en un taller independiente?](https://www.autonation.com.ec/blog/garantia-taller-independiente-ecuador): marco legal ecuatoriano — la garantía NO se pierde
 - [¿Repuestos originales o genéricos?](https://www.autonation.com.ec/blog/repuestos-originales-vs-genericos-ecuador): cuándo conviene cada uno según el componente

@@ -44,6 +44,10 @@ Recarga de gas, diagnóstico de fugas y reparación de compresor. Nuevo en Auton
 
 Recibimos tu vehículo con grúa a cualquier hora, cualquier día del año. Si reparas con nosotros, cubrimos el 50% o el 100% del costo de la grúa según el daño. Atención el siguiente día hábil.
 
+### [Reparación de Autos Inundados en Guayaquil](https://www.autonation.com.ec/reparacion-autos-inundados-guayaquil)
+
+Auto inundado en Guayaquil: diagnóstico de motor, sistema eléctrico y habitáculo, presupuesto previo y garantía escrita. Coordiná el traslado con grúa.
+
 ## Simple, rápido y transparente.
 
 #### Recepción
@@ -179,6 +183,14 @@ Del retoque de $40 a la pintura completa de $2.500: qué incluye cada precio y p
 ### Eléctricos e híbridos: ¿quién los atiende?
 
 Qué necesita un taller para trabajar EVs de verdad, qué podés atender hoy fuera del concesionario y dónde estamos nosotros.
+
+### [Mi carro se inundó: qué hacer paso a paso](https://www.autonation.com.ec/blog/que-hacer-si-tu-carro-se-inundo-ecuador)
+
+Qué hacer si tu carro se inundó en Ecuador: primeros pasos, daños según el nivel del agua, errores que evitar y coordinación con seguro, grúa y taller.
+
+### [Cómo saber si un carro usado estuvo inundado](https://www.autonation.com.ec/blog/como-saber-si-un-carro-usado-estuvo-inundado)
+
+Cómo detectar señales de inundación en un carro usado: humedad, corrosión, fallas eléctricas y revisión con escáner antes de decidir una compra.
 
 ## Agenda tu cita hoy mismo.
 
