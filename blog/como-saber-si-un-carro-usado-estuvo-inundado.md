@@ -2,7 +2,7 @@
 
 # Cómo saber si un carro usado estuvo inundado
 
-Para saber si un carro usado estuvo inundado, buscá varias señales juntas: humedad oculta, barro, corrosión y fallas eléctricas. Ninguna señal aislada ni un escáner sin códigos lo descartan; antes de comprar, pedí una inspección física y un diagnóstico en taller.
+Para saber si un carro usado estuvo inundado, busca varias señales juntas: humedad oculta, barro, corrosión y fallas eléctricas. Ninguna señal aislada ni un escáner sin códigos lo descartan; antes de comprar, pide una inspección física y un diagnóstico en taller.
 
 Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
 
@@ -19,23 +19,23 @@ Publicado y actualizado: 2026-10-27
 - Empañamiento persistente en faros y luces.
 - Líneas de agua o marcas de sedimento en rincones del habitáculo.
 
-Una filtración o la humedad ambiental también pueden explicar algunas marcas. Buscá un patrón y pedí permiso antes de levantar alfombras o desmontar piezas.
+Una filtración o la humedad ambiental también pueden explicar algunas marcas. Busca un patrón y pide permiso antes de levantar alfombras o desmontar piezas.
 
 ## Señales eléctricas
 
-Observá las luces del tablero durante la secuencia de encendido y las advertencias que permanecen activas. Probá ventanas, cierre, luces y climatización: las fallas intermitentes o de varios sistemas justifican investigar.
+Observa las luces del tablero durante la secuencia de encendido y las advertencias que permanecen activas. Prueba ventanas, cierre, luces y climatización: las fallas intermitentes o de varios sistemas justifican investigar.
 
-Los conectores verdes o sulfatados y los arneses con reparaciones sin documentar son indicios. No desconectes airbags ni sistemas de alto voltaje para revisarlos por tu cuenta; pedí una inspección profesional.
+Los conectores verdes o sulfatados y los arneses con reparaciones sin documentar son indicios. No desconectes airbags ni sistemas de alto voltaje para revisarlos por tu cuenta; pide una inspección profesional.
 
 ## Qué revisar bajo el capó y en fluidos
 
-Con el motor apagado y frío, buscá sedimentos en zonas protegidas, marcas en la caja del filtro de aire y corrosión fuera de lo esperable. El aceite lechoso puede indicar contaminación con agua o refrigerante; no demuestra por sí solo una inundación.
+Con el motor apagado y frío, busca sedimentos en zonas protegidas, marcas en la caja del filtro de aire y corrosión fuera de lo esperable. El aceite lechoso puede indicar contaminación con agua o refrigerante; no demuestra por sí solo una inundación.
 
-En taller revisamos motor, transmisión y diferenciales según su acceso y procedimiento. Un cambio reciente de aceite puede ocultar indicios, por lo que conviene contrastar fluidos, historial y estado físico. Si sospechás agua en la admisión, no hagas una prueba de arranque.
+En taller revisamos motor, transmisión y diferenciales según su acceso y procedimiento. Un cambio reciente de aceite puede ocultar indicios, por lo que conviene contrastar fluidos, historial y estado físico. Si sospechas agua en la admisión, no hagas una prueba de arranque.
 
 ## Revisión previa a la compra en taller (ofrecemos inspección: diagnóstico con escáner)
 
-En Autonation podés solicitar una inspección antes de comprar: diagnóstico con escáner de los módulos accesibles, revisión física de conectores y habitáculo, fluidos y sistemas de seguridad. Coordiná con el vendedor el acceso al vehículo y traé el historial de mantenimiento o reparación disponible.
+En Autonation puedes solicitar una inspección antes de comprar: diagnóstico con escáner de los módulos accesibles, revisión física de conectores y habitáculo, fluidos y sistemas de seguridad. Coordina con el vendedor el acceso al vehículo y trae el historial de mantenimiento o reparación disponible.
 
 El escáner ayuda a detectar códigos y fallas de comunicación, pero no certifica que el auto nunca se inundó. Te explicamos los hallazgos y los límites de lo que pudimos revisar para que decidas con información.
 
@@ -46,13 +46,13 @@ El escáner ayuda a detectar códigos y fallas de comunicación, pero no certifi
 - Existen indicios de agua hasta el tablero y no hay documentación verificable de la reparación.
 - La incertidumbre sobre seguridad y reparaciones futuras supera lo que estás dispuesto a asumir.
 
-Una limpieza o una prueba corta de manejo no garantizan que no aparezcan fallas después. No todos los autos inundados son recuperables; podés desistir si no tenés información suficiente.
+Una limpieza o una prueba corta de manejo no garantizan que no aparezcan fallas después. No todos los autos inundados son recuperables; puedes desistir si no tienes información suficiente.
 
 ## Preguntas frecuentes
 
 ### ¿El olor a humedad confirma que un carro estuvo inundado?
 
-No por sí solo: también puede venir de una filtración. Si aparece junto con barro oculto, corrosión o fallas eléctricas, necesitás una inspección más profunda antes de comprar.
+No por sí solo: también puede venir de una filtración. Si aparece junto con barro oculto, corrosión o fallas eléctricas, necesitas una inspección más profunda antes de comprar.
 
 ### ¿Un escáner puede confirmar una inundación?
 
@@ -60,7 +60,7 @@ No por sí solo. Puede mostrar códigos y fallas de comunicación, pero no certi
 
 ### ¿Un carro inundado puede verse impecable?
 
-Sí. Una limpieza puede ocultar marcas visibles mientras quedan humedad en espumas y corrosión en conectores. Revisá zonas ocultas con autorización del vendedor y pedí una inspección independiente.
+Sí. Una limpieza puede ocultar marcas visibles mientras quedan humedad en espumas y corrosión en conectores. Revisa zonas ocultas con autorización del vendedor y pide una inspección independiente.
 
 ### ¿Conviene comprar un auto usado que estuvo inundado?
 
@@ -70,7 +70,7 @@ Depende del alcance del daño, la documentación de la reparación y una inspecc
 
 [Evaluación de autos inundados](https://www.autonation.com.ec/reparacion-autos-inundados-guayaquil)[Diagnóstico del sistema eléctrico](https://www.autonation.com.ec/sistema-electrico-automotriz-guayaquil)
 
-## ¿Tu auto se mojó? Escribinos ya
+## ¿Tu auto se mojó? Escríbenos ya
 
 [Consultar por WhatsApp](https://wa.me/593939057454)
 

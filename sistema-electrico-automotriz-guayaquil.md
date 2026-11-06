@@ -72,7 +72,7 @@ La luz de check engine indica que la computadora del motor detectó una falla y 
 
 ### ¿Puedo seguir manejando con el check engine encendido?
 
-Depende de cómo esté la luz. Fija: hay una falla registrada; podés circular con precaución pero conviene diagnosticar pronto. Parpadeando: hay una falla activa grave (generalmente fallo de encendido que puede fundir el catalizador) — reducí exigencia al motor y llevalo al taller cuanto antes.
+Depende de cómo esté la luz. Fija: hay una falla registrada; puedes circular con precaución pero conviene diagnosticar pronto. Parpadeando: hay una falla activa grave (generalmente fallo de encendido que puede fundir el catalizador) — reduce exigencia al motor y llévalo al taller cuanto antes.
 
 En Autonation la lectura de códigos con escáner es gratuita con tu ingreso al taller.
 

@@ -40,13 +40,13 @@ No, siempre que el repuesto cumpla las especificaciones del fabricante y el trab
 
 ### ¿Los repuestos originales valen lo que cuestan?
 
-En algunos componentes críticos o de electrónica específica del vehículo, sí. En muchos otros, pagás en gran parte la marca en la caja: el mismo proveedor fabrica el original y el aftermarket premium. Un taller honesto te dice en cada caso cuál conviene.
+En algunos componentes críticos o de electrónica específica del vehículo, sí. En muchos otros, pagas en gran parte la marca en la caja: el mismo proveedor fabrica el original y el aftermarket premium. Un taller honesto te dice en cada caso cuál conviene.
 
 ### También puede interesarte
 
 ## Repuestos a tu elección, siempre con la verdad
 
-Original o genérico de primera línea — te mostramos opciones, marcas y precios antes de trabajar. Vos tenés la última palabra.
+Original o genérico de primera línea — te mostramos opciones, marcas y precios antes de trabajar. Tú tienes la última palabra.
 
 ---
 

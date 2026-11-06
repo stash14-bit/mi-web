@@ -84,7 +84,7 @@ La garantía aplica sobre el trabajo realizado por Autonation. Se entrega por es
 
 ### ¿Cuánto cuesta pintar un auto en Guayaquil?
 
-Depende del alcance. Como referencia del mercado: pintar un panel (puerta, guardafango) suele estar entre $80 y $180; una pintura completa de calidad, entre $900 y $2.500 según el tamaño del vehículo, el tipo de pintura y la preparación necesaria. Desconfiá de las pinturas completas "ultra económicas": casi siempre significan mala preparación y una pintura que falla en meses.
+Depende del alcance. Como referencia del mercado: pintar un panel (puerta, guardafango) suele estar entre $80 y $180; una pintura completa de calidad, entre $900 y $2.500 según el tamaño del vehículo, el tipo de pintura y la preparación necesaria. Desconfía de las pinturas completas "ultra económicas": casi siempre significan mala preparación y una pintura que falla en meses.
 
 Te damos presupuesto exacto y sin costo viendo el vehículo — con fotos por WhatsApp podemos adelantarte un estimado.
 
@@ -106,7 +106,7 @@ Sí. Todos los trabajos de pintura se entregan con garantía por escrito contra 
 
 ## El presupuesto es gratuito y sin compromiso
 
-Mandanos fotos por WhatsApp y te respondemos con un presupuesto en el día. Sin turnos previos para el presupuesto.
+Mándanos fotos por WhatsApp y te respondemos con un presupuesto en el día. Sin turnos previos para el presupuesto.
 
 ---
 

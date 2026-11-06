@@ -46,7 +46,7 @@ Recibimos tu vehículo con grúa a cualquier hora, cualquier día del año. Si r
 
 ### [Reparación de Autos Inundados en Guayaquil](https://www.autonation.com.ec/reparacion-autos-inundados-guayaquil)
 
-Auto inundado en Guayaquil: diagnóstico de motor, sistema eléctrico y habitáculo, presupuesto previo y garantía escrita. Coordiná el traslado con grúa.
+Auto inundado en Guayaquil: diagnóstico de motor, sistema eléctrico y habitáculo, presupuesto previo y garantía escrita. Coordina el traslado con grúa.
 
 ## Simple, rápido y transparente.
 
@@ -100,7 +100,7 @@ Comunicación clara en cada etapa del proceso
 
 ## Tu taller multimarca ya te espera.
 
-Abrimos las puertas en La Aurora, detrás del Edificio Milenium. Agendá tu cita hoy — diagnóstico gratuito con cada ingreso y garantía escrita en todos los trabajos.
+Abrimos las puertas en La Aurora, detrás del Edificio Milenium. Agenda tu cita hoy — diagnóstico gratuito con cada ingreso y garantía escrita en todos los trabajos.
 
 ## Eléctricos e Híbridos.
 
@@ -136,7 +136,7 @@ Con repuestos originales o genéricos según tu presupuesto. Todas las marcas. S
 
 Información técnica honesta para que tomes mejores decisiones con tu auto.
 
-### ¿Perdés la garantía si no vas al concesionario?
+### ¿Pierdes la garantía si no vas al concesionario?
 
 La respuesta es No. En Ecuador está legalmente prohibido exigirte que hagas el mantenimiento en un concesionario específico. Te explicamos el marco legal.
 
@@ -146,7 +146,7 @@ Aceite, filtros, frenos, suspensión. Todo lo que el concesionario hace — y lo
 
 ### JAC, Jetour, Chery y Dongfeng: mantenimiento en Guayaquil
 
-Las marcas chinas crecen en Ecuador pero pocos talleres las atienden bien. Todo sobre intervalos, repuestos y lo que necesitás saber.
+Las marcas chinas crecen en Ecuador pero pocos talleres las atienden bien. Todo sobre intervalos, repuestos y lo que necesitas saber.
 
 ### Qué significa el Premio Presidente Chevrolet
 
@@ -182,7 +182,7 @@ Del retoque de $40 a la pintura completa de $2.500: qué incluye cada precio y p
 
 ### Eléctricos e híbridos: ¿quién los atiende?
 
-Qué necesita un taller para trabajar EVs de verdad, qué podés atender hoy fuera del concesionario y dónde estamos nosotros.
+Qué necesita un taller para trabajar EVs de verdad, qué puedes atender hoy fuera del concesionario y dónde estamos nosotros.
 
 ### [Mi carro se inundó: qué hacer paso a paso](https://www.autonation.com.ec/blog/que-hacer-si-tu-carro-se-inundo-ecuador)
 

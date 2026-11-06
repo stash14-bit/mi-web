@@ -86,7 +86,7 @@ En Autonation usamos siempre refrigerante certificado — no gas adulterado o de
 
 ### ¿Cada cuánto hay que darle mantenimiento al aire acondicionado del carro?
 
-Se recomienda una revisión general una vez al año, aunque el gas refrigerante puede perderse gradualmente incluso sin fugas grandes — por eso el A/C rinde menos con el tiempo aunque nunca haya fallado del todo. El filtro de cabina conviene cambiarlo cada 10.000-15.000 km o antes si notás menos flujo de aire u olores.
+Se recomienda una revisión general una vez al año, aunque el gas refrigerante puede perderse gradualmente incluso sin fugas grandes — por eso el A/C rinde menos con el tiempo aunque nunca haya fallado del todo. El filtro de cabina conviene cambiarlo cada 10.000-15.000 km o antes si notas menos flujo de aire u olores.
 
 Incluimos una revisión básica del sistema de A/C dentro del mantenimiento preventivo — sin costo adicional.
 
@@ -100,7 +100,7 @@ Se soluciona con limpieza y desinfección del sistema más cambio de filtro. Es 
 
 ## Diagnóstico gratuito con cada ingreso al taller
 
-No esperés a que se vacíe del todo. Ubicamos la fuga, te mostramos el presupuesto exacto y usamos siempre gas certificado.
+No esperes a que se vacíe del todo. Ubicamos la fuga, te mostramos el presupuesto exacto y usamos siempre gas certificado.
 
 ---
 

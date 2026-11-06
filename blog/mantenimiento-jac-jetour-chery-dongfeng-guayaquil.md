@@ -2,7 +2,7 @@
 
 # Mantenimiento JAC, Jetour, Chery y Dongfeng en Guayaquil
 
-Las marcas chinas ya representan más del 35% del mercado ecuatoriano. Aquí lo que necesitás saber sobre su mantenimiento — y por qué el concesionario no es la única opción.
+Las marcas chinas ya representan más del 35% del mercado ecuatoriano. Aquí lo que necesitas saber sobre su mantenimiento — y por qué el concesionario no es la única opción.
 
 Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
 
@@ -62,7 +62,7 @@ Uno de los mitos es que solo el concesionario puede diagnosticar los autos chino
 
 La misma regla que aplica para cualquier marca: la garantía se protege con repuestos correctos, intervalos respetados y documentación. No importa si el taller es o no el concesionario de la marca.
 
-Leé el artículo completo sobre garantía y talleres independientes si tenés dudas sobre esto.
+Lee el artículo completo sobre garantía y talleres independientes si tienes dudas sobre esto.
 
 #### También puede interesarte
 

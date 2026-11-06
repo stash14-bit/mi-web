@@ -2,9 +2,9 @@
 
 # Cajas de Cambio en Guayaquil
 
-Reparación de cajas manuales y automáticas con diagnóstico computarizado. Cuando la caja empieza a fallar, cada kilómetro que esperás multiplica el daño.
+Reparación de cajas manuales y automáticas con diagnóstico computarizado. Cuando la caja empieza a fallar, cada kilómetro que esperas multiplica el daño.
 
-> **Resumen:** Autonation diagnostica y repara cajas manuales, automáticas y CVT. El proceso incluye escáner de transmisión, análisis del fluido y prueba en ruta para identificar el problema. Recibís un presupuesto detallado antes de aprobar la reparación, con repuestos acordados, prueba de manejo posterior y garantía escrita.
+> **Resumen:** Autonation diagnostica y repara cajas manuales, automáticas y CVT. El proceso incluye escáner de transmisión, análisis del fluido y prueba en ruta para identificar el problema. Recibes un presupuesto detallado antes de aprobar la reparación, con repuestos acordados, prueba de manejo posterior y garantía escrita.
 
 "Mi caja automática empezó a tirar de forma rara al cambiar de segunda a tercera. Esperé dos meses porque pensé que era algo menor. Cuando finalmente la llevé, el daño era el triple de lo que hubiera costado atenderlo antes."
 
@@ -74,7 +74,7 @@ Los más frecuentes: patinaje (el motor acelera pero el auto no avanza en propor
 
 ### ¿Qué pasa si no reparo la transmisión de mi auto a tiempo?
 
-El daño de transmisión es progresivo y multiplicador: un sincronizado gastado o un aceite degradado termina dañando engranajes, embragues internos y el convertidor de torque. Lo que hoy es una reparación parcial, en meses puede ser una reconstrucción completa que cuesta varias veces más — o dejarte varado. Si ya sentís síntomas, el diagnóstico gratuito te dice exactamente en qué punto estás.
+El daño de transmisión es progresivo y multiplicador: un sincronizado gastado o un aceite degradado termina dañando engranajes, embragues internos y el convertidor de torque. Lo que hoy es una reparación parcial, en meses puede ser una reconstrucción completa que cuesta varias veces más — o dejarte varado. Si ya sientes síntomas, el diagnóstico gratuito te dice exactamente en qué punto estás.
 
 ### ¿Reparan cajas CVT en Guayaquil?
 
@@ -90,9 +90,9 @@ Depende del tipo de falla y de transmisión. Como referencia del mercado en Guay
 
 ### Servicios relacionados
 
-## Cuanto antes lo atendés, menor es el costo
+## Cuanto antes lo atiendes, menor es el costo
 
-Describinos qué síntoma tiene tu auto por WhatsApp. Te damos una orientación inicial sin costo y coordinamos el diagnóstico.
+Descríbenos qué síntoma tiene tu auto por WhatsApp. Te damos una orientación inicial sin costo y coordinamos el diagnóstico.
 
 ---
 

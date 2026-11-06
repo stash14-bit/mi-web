@@ -4,9 +4,9 @@
 
 Mismos procesos de concesionario. Sin el precio de concesionario. El equipo que durante 20 años ganó 7 Premios Presidente en Autolasa — ahora en taller propio.
 
-> **Resumen:** En Autonation el mantenimiento preventivo se adapta a tu marca, modelo y kilometraje. Incluye aceite y filtros, revisión de frenos, suspensión, niveles y escaneo computarizado. Cada ingreso tiene diagnóstico gratuito y check-list documentado. Recibís garantía por escrito y la experiencia del equipo que trabajó en Autolasa.
+> **Resumen:** En Autonation el mantenimiento preventivo se adapta a tu marca, modelo y kilometraje. Incluye aceite y filtros, revisión de frenos, suspensión, niveles y escaneo computarizado. Cada ingreso tiene diagnóstico gratuito y check-list documentado. Recibes garantía por escrito y la experiencia del equipo que trabajó en Autolasa.
 
-WhatsApp 🏆7 Premios PresidenteChevrolet — Máxima distinción 🔬Diagnóstico GratuitoCon cada ingreso al taller 📋Garantía por EscritoEn todos los trabajos ⚙️20 Años de ExperienciaEl equipo de Autolasa El mantenimiento que postergás hoy se convierte en la reparación costosa del mes que viene. Un motor que falla por falta de aceite, una caja automática quemada por no cambiar el fluido a tiempo, un motor de arranque que muere porque nadie revisó la batería. Todo eso es evitable.
+WhatsApp 🏆7 Premios PresidenteChevrolet — Máxima distinción 🔬Diagnóstico GratuitoCon cada ingreso al taller 📋Garantía por EscritoEn todos los trabajos ⚙️20 Años de ExperienciaEl equipo de Autolasa El mantenimiento que postergas hoy se convierte en la reparación costosa del mes que viene. Un motor que falla por falta de aceite, una caja automática quemada por no cambiar el fluido a tiempo, un motor de arranque que muere porque nadie revisó la batería. Todo eso es evitable.
 
 No es know-how transferido a empleados nuevos. Es el mismo equipo completo — gerencia, jefes de taller, técnicos y pintores — que construyó esos procesos desde adentro. Ahora en taller propio.
 
@@ -48,13 +48,13 @@ Escáner gratuito con cada ingreso. Informe claro antes de empezar cualquier tra
 
 ### Ejecución
 
-Repuestos originales o genéricos — vos elegís según tu presupuesto. Sin sorpresas.
+Repuestos originales o genéricos — tú eliges según tu presupuesto. Sin sorpresas.
 
 ### Entrega
 
 Informe técnico por escrito con trabajo realizado, repuestos usados y kilometraje.
 
-## ¿Perdés la garantía si no vas al concesionario?
+## ¿Pierdes la garantía si no vas al concesionario?
 
 En Ecuador está legalmente prohibido exigirte que hagas el mantenimiento en un concesionario específico como condición para mantener la garantía de fábrica. Si algún concesionario te lo dice, está mintiendo.
 
@@ -75,7 +75,7 @@ Registro Oficial N° 116, 2000 (con reformas vigentes). Establece expresamente c
 | El simple hecho de no ir al concesionario | NO — no es causal válida |
 | Mantenimiento realizado incorrectamente | Sí — solo sobre el daño específico |
 | Repuesto inadecuado que generó un daño demostrable | Sí — únicamente sobre ese daño |
-| Falta de registro del mantenimiento | Depende — guardá siempre las facturas |
+| Falta de registro del mantenimiento | Depende — guarda siempre las facturas |
 
 
 Trabajamos durante 20 años en Autolasa aplicando exactamente los procesos que exige una garantía de fábrica. En cada visita entregamos informe técnico por escrito: trabajo realizado, repuestos con origen indicado y kilometraje. Tu historial queda tan respaldado como en cualquier concesionario.
@@ -106,7 +106,7 @@ En Autonation cada ingreso incluye diagnóstico computarizado gratuito y check-l
 
 ### ¿Cuánto cuesta un cambio de aceite en Guayaquil?
 
-Depende del tipo de aceite (mineral, semisintético o sintético), la cantidad que lleva el motor y el filtro. La diferencia real entre talleres no suele estar en el precio del aceite sino en lo que se revisa junto con el cambio: en Autonation el cambio de aceite incluye inspección de frenos, suspensión, niveles y escaneo — el mismo protocolo de un concesionario, a precio de taller independiente. El mantenimiento preventivo completo suele estar entre $60 y $350 según el kilometraje y los repuestos que correspondan. Pedí tu cotización exacta por WhatsApp.
+Depende del tipo de aceite (mineral, semisintético o sintético), la cantidad que lleva el motor y el filtro. La diferencia real entre talleres no suele estar en el precio del aceite sino en lo que se revisa junto con el cambio: en Autonation el cambio de aceite incluye inspección de frenos, suspensión, niveles y escaneo — el mismo protocolo de un concesionario, a precio de taller independiente. El mantenimiento preventivo completo suele estar entre $60 y $350 según el kilometraje y los repuestos que correspondan. Pide tu cotización exacta por WhatsApp.
 
 ### ¿Puedo hacer el servicio por kilometraje de mi Chevrolet fuera del concesionario?
 
@@ -116,9 +116,9 @@ Sí, y sin perder la garantía. Nuestro equipo trabajó más de 20 años en Auto
 
 No. En Ecuador la ley protege tu derecho a elegir dónde hacer el mantenimiento. Lo que protege la garantía es usar repuestos con la especificación correcta, respetar los intervalos y tener documentación — no el lugar. Te lo explicamos con el marco legal completo en nuestro artículo sobre garantía y talleres independientes.
 
-## Agendá tu cita. Hoy mismo.
+## Agenda tu cita. Hoy mismo.
 
-Primero el diagnóstico — siempre gratis. Después decidís con información real en la mano.
+Primero el diagnóstico — siempre gratis. Después decides con información real en la mano.
 
 ---
 

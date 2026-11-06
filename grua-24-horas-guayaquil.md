@@ -4,11 +4,11 @@
 
 Recibimos tu vehículo con grúa a cualquier hora, cualquier día del año — incluidos feriados y madrugadas. Coordinamos la grúa con la que trabajamos y tu vehículo queda esperando en el taller hasta el siguiente día hábil.
 
-"Un choque, una falla que te deja varado o un carro que no arranca casi nunca avisa con horario de oficina. En Autonation podés dejar tu vehículo en manos seguras apenas pasa, sin esperar a que abramos. La tranquilidad de saber que ya está en el taller."
+"Un choque, una falla que te deja varado o un carro que no arranca casi nunca avisa con horario de oficina. En Autonation puedes dejar tu vehículo en manos seguras apenas pasa, sin esperar a que abramos. La tranquilidad de saber que ya está en el taller."
 
 ## Recibimos ahora, atendemos el siguiente día hábil.
 
-Escribinos por WhatsApp contándonos qué pasó y tu ubicación. Coordinamos la grúa con la que trabajamos para que traiga tu vehículo directo al taller, sin que tengas que buscar una por tu cuenta.
+Escríbenos por WhatsApp contándonos qué pasó y tu ubicación. Coordinamos la grúa con la que trabajamos para que traiga tu vehículo directo al taller, sin que tengas que buscar una por tu cuenta.
 
 Importante: recibir el vehículo no es lo mismo que atenderlo. Tu carro queda seguro en el taller y el diagnóstico y la reparación arrancan el siguiente día hábil, según nuestro horario normal.
 
@@ -20,11 +20,11 @@ Importante: recibir el vehículo no es lo mismo que atenderlo. Tu carro queda se
 
 ### Coordinamos la Grúa
 
-Trabajamos con una grúa de confianza — vos solo nos escribís y coordinamos el traslado.
+Trabajamos con una grúa de confianza — tú solo nos escribes y coordinamos el traslado.
 
 ### 25km de Cobertura
 
-Guayaquil, Samborondón, Daule y La Aurora. Consultanos si estás fuera de esta zona.
+Guayaquil, Samborondón, Daule y La Aurora. Consúltanos si estás fuera de esta zona.
 
 ### 50% o 100% al Reparar Con Nosotros
 

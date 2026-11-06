@@ -1,18 +1,18 @@
 > La garantía de fábrica NO se pierde por llevar el auto a un taller independiente en Ecuador. Te explicamos qué dice la ley, qué condiciones aplican y cómo protegerte.
 
-# ¿Perdés la garantía si llevás el auto a un taller independiente?
+# ¿Pierdes la garantía si llevas el auto a un taller independiente?
 
-La respuesta corta es no. La respuesta completa tiene matices que tenés que conocer antes de decidir dónde llevás el auto.
+La respuesta corta es no. La respuesta completa tiene matices que tienes que conocer antes de decidir dónde llevas el auto.
 
 Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
 
-> **Resumen:** La garantía de fábrica se protege con repuestos que cumplan las especificaciones del fabricante, mantenimiento en los intervalos indicados y documentación completa. Guardá las facturas con el detalle de los trabajos, repuestos y kilometraje. En Autonation documentamos el mantenimiento y registramos el próximo service recomendado.
+> **Resumen:** La garantía de fábrica se protege con repuestos que cumplan las especificaciones del fabricante, mantenimiento en los intervalos indicados y documentación completa. Guarda las facturas con el detalle de los trabajos, repuestos y kilometraje. En Autonation documentamos el mantenimiento y registramos el próximo service recomendado.
 
-Esta información es de carácter orientativo. En caso de conflicto con tu concesionario, consultá con la Defensoría del Pueblo o un abogado especialista en derechos del consumidor.
+Esta información es de carácter orientativo. En caso de conflicto con tu concesionario, consulta con la Defensoría del Pueblo o un abogado especialista en derechos del consumidor.
 
 "El concesionario me dijo que si llevaba el auto a otro taller perdía la garantía. ¿Es eso verdad? Pagan $180 por un service que en otro taller cuesta $60."
 
-Esta pregunta llega constantemente. Y la respuesta es clara: no, no perdés la garantía de fábrica por llevar el auto a un taller independiente — siempre que se cumplan ciertas condiciones.
+Esta pregunta llega constantemente. Y la respuesta es clara: no, no pierdes la garantía de fábrica por llevar el auto a un taller independiente — siempre que se cumplan ciertas condiciones.
 
 ## Qué dice la ley en Ecuador
 
@@ -32,7 +32,7 @@ El mantenimiento debe hacerse en los kilometrajes indicados por el fabricante. S
 
 #### Documentación completa
 
-El taller debe entregar factura o recibo con detalle de lo que se hizo, qué repuestos se usaron y en qué kilómetros. Guardá todo.
+El taller debe entregar factura o recibo con detalle de lo que se hizo, qué repuestos se usaron y en qué kilómetros. Guarda todo.
 
 ## Lo que no afecta la garantía
 
@@ -50,13 +50,13 @@ Un taller independiente que usa los repuestos correctos, respeta los intervalos 
 
 En Autonation entregamos factura detallada con especificación exacta del aceite usado (viscosidad, marca y cantidad), filtros y cualquier repuesto colocado. La factura incluye el kilometraje del vehículo al ingreso y al egreso.
 
-También registramos el próximo service recomendado en kilómetros para que tengas el dato exacto. Este historial documentado es exactamente lo que necesitás para defender la garantía si en algún momento el concesionario cuestiona el mantenimiento.
+También registramos el próximo service recomendado en kilómetros para que tengas el dato exacto. Este historial documentado es exactamente lo que necesitas para defender la garantía si en algún momento el concesionario cuestiona el mantenimiento.
 
 ## Preguntas frecuentes
 
 ### ¿Cómo exijo la garantía en un taller independiente en Ecuador?
 
-Reclamá directamente al taller con la factura y la garantía escrita del trabajo. Si no responde, tenés la vía de la Defensoría del Pueblo y los mecanismos de la Ley Orgánica de Defensa del Consumidor. La regla de oro es trabajar solo con talleres que entreguen garantía por escrito.
+Reclama directamente al taller con la factura y la garantía escrita del trabajo. Si no responde, tienes la vía de la Defensoría del Pueblo y los mecanismos de la Ley Orgánica de Defensa del Consumidor. La regla de oro es trabajar solo con talleres que entreguen garantía por escrito.
 
 ### ¿Qué garantía debe dar un taller mecánico por su trabajo?
 
@@ -68,7 +68,7 @@ Sí — aunque son la minoría. En Autonation todos los trabajos se entregan con
 
 ### ¿Qué derechos tengo al reparar mi auto en un taller?
 
-Los principales: presupuesto previo antes de cualquier trabajo, aprobar o rechazar trabajos adicionales, recibir los repuestos reemplazados si los pedís, factura detallada y servicio idóneo. Cualquier taller que se resista a alguno de estos puntos te está diciendo algo.
+Los principales: presupuesto previo antes de cualquier trabajo, aprobar o rechazar trabajos adicionales, recibir los repuestos reemplazados si los pides, factura detallada y servicio idóneo. Cualquier taller que se resista a alguno de estos puntos te está diciendo algo.
 
 ### ¿La garantía del taller cubre repuestos y mano de obra?
 

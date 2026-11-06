@@ -6,7 +6,7 @@
 
 Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
 
-> **Resumen:** El Premio Presidente Chevrolet evalúa procesos de diagnóstico, reparación, atención al cliente, equipamiento, capacitación y documentación. El equipo de Autonation ganó 7 premios durante su etapa en Autolasa y aplica esos estándares a todas las marcas. Para vos, eso significa trabajos documentados, presupuestos por escrito y garantías entregadas.
+> **Resumen:** El Premio Presidente Chevrolet evalúa procesos de diagnóstico, reparación, atención al cliente, equipamiento, capacitación y documentación. El equipo de Autonation ganó 7 premios durante su etapa en Autolasa y aplica esos estándares a todas las marcas. Para ti, eso significa trabajos documentados, presupuestos por escrito y garantías entregadas.
 
 Si buscaste talleres en Guayaquil y encontraste Autonation, probablemente viste mencionados los 7 Premios Presidente Chevrolet. Es un diferencial que destacamos porque es relevante — pero vale la pena explicar qué significa exactamente y por qué importa para cualquier dueño de auto, independientemente de la marca.
 
@@ -50,7 +50,7 @@ Ese sistema de trabajo es el que el equipo de Autonation aplica a todas las marc
 
 Durante más de 20 años el equipo de Autonation trabajó en Autolasa desarrollando y aplicando estos procesos. Gerencia, jefes de taller, pintores y técnicos — el mismo equipo completo opera hoy en Autonation. No es know-how transferido a empleados nuevos. Es el mismo equipo que construyó esos estándares, ahora en taller propio.
 
-## Lo que eso significa para vos
+## Lo que eso significa para ti
 
 #### Ver más
 

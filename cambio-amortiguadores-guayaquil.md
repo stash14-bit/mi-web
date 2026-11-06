@@ -110,6 +110,8 @@ Sí. Entregamos garantía escrita con el detalle de los trabajos realizados y lo
 
 ## Servicios relacionados
 
+[Guía relacionada: Cuándo cambiar amortiguadores](/blog/cuando-cambiar-amortiguadores-guayaquil)
+
 [Sistema de Frenos](/sistema-de-frenos-guayaquil) · [Motores](/reparacion-motores-guayaquil) · [Mantenimiento preventivo](/mantenimiento-preventivo-guayaquil) · [Cajas de Cambio](/cajas-de-cambio-guayaquil)
 
 [Consultar por WhatsApp](https://wa.me/593939057454?text=Hola%2C%20quiero%20cotizar%20el%20cambio%20de%20amortiguadores)

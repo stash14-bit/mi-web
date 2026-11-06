@@ -26,7 +26,7 @@ Vehículos grandes, colores especiales (perlados, tricapa) o carrocerías con da
 
 ## ¿Cómo sé si me pintaron bien el auto?
 
-Tres pruebas simples: mirá el color a pleno sol y en sombra (debe coincidir en ambas), pasá la mano por la transición entre paneles (no debe sentirse escalón ni cambio de textura), y compará el brillo en ángulo. Un trabajo profesional pasa las tres. Y siempre exigí garantía por escrito contra defectos de aplicación — nosotros la damos en todos los trabajos.
+Tres pruebas simples: mira el color a pleno sol y en sombra (debe coincidir en ambas), pasa la mano por la transición entre paneles (no debe sentirse escalón ni cambio de textura), y compara el brillo en ángulo. Un trabajo profesional pasa las tres. Y siempre exige garantía por escrito contra defectos de aplicación — nosotros la damos en todos los trabajos.
 
 ## Preguntas frecuentes
 
@@ -50,7 +50,7 @@ Un panel: 1 a 2 días. Pintura completa: 5 a 10 días, según preparación y lat
 
 ## Presupuesto de pintura gratis y exacto
 
-Mandanos fotos por WhatsApp y te adelantamos el estimado. El presupuesto formal, viendo el vehículo — sin compromiso.
+Mándanos fotos por WhatsApp y te adelantamos el estimado. El presupuesto formal, viendo el vehículo — sin compromiso.
 
 ---
 

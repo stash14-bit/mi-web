@@ -22,7 +22,7 @@ Arriba de ese umbral, o si el bloque está fisurado, el reemplazo empieza a tene
 
 Como referencia del mercado, la reparación completa de un motor de vehículo liviano — rectificación, repuestos y armado — suele ubicarse entre $900 y $2.500. Motores de mayor cilindrada, diésel o de gama alta pueden superar ese rango. El número exacto depende de tres cosas:
 
-Por eso desconfiá de cualquier precio dado por teléfono sin abrir el motor. En Autonation el diagnóstico con medición de compresión es gratuito, y la cotización te la damos detallada, repuesto por repuesto, antes de tocar nada.
+Por eso desconfía de cualquier precio dado por teléfono sin abrir el motor. En Autonation el diagnóstico con medición de compresión es gratuito, y la cotización te la damos detallada, repuesto por repuesto, antes de tocar nada.
 
 ## Señales de que tu motor pide auxilio
 
@@ -36,7 +36,7 @@ Cuando la reparación cuesta menos del 50–60% de un motor de reemplazo instala
 
 ### ¿Qué dura más: un motor reconstruido o uno usado importado?
 
-Un motor reconstruido correctamente casi siempre dura más, porque sabés exactamente qué tiene adentro: repuestos nuevos, medidas verificadas y armado documentado. Del motor usado importado no conocés ni el kilometraje real ni su historial de mantenimiento.
+Un motor reconstruido correctamente casi siempre dura más, porque sabes exactamente qué tiene adentro: repuestos nuevos, medidas verificadas y armado documentado. Del motor usado importado no conoces ni el kilometraje real ni su historial de mantenimiento.
 
 ### ¿Cuánto cuesta la reparación de motor en Guayaquil?
 
@@ -50,7 +50,7 @@ En Autonation, sí: garantía por escrito con el detalle de repuestos y trabajos
 
 ## Diagnóstico de motor gratuito y sin compromiso
 
-Medición de compresión, escaneo computarizado e informe claro. Después decidís vos — con las dos cotizaciones sobre la mesa.
+Medición de compresión, escaneo computarizado e informe claro. Después decides tú — con las dos cotizaciones sobre la mesa.
 
 ---
 

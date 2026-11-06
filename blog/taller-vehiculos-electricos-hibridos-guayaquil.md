@@ -40,7 +40,7 @@ En general sí: no hay aceite de motor, bujías ni escape. Pero frenos, llantas 
 
 ### ¿Cuándo va a atender Autonation vehículos eléctricos con alto voltaje?
 
-Cuando la certificación y el equipo estén al estándar que nos define — la preparación está en curso. Escribinos por WhatsApp y te avisamos apenas el servicio EV esté disponible; mientras tanto atendemos los sistemas convencionales de tu eléctrico o híbrido.
+Cuando la certificación y el equipo estén al estándar que nos define — la preparación está en curso. Escríbenos por WhatsApp y te avisamos apenas el servicio EV esté disponible; mientras tanto atendemos los sistemas convencionales de tu eléctrico o híbrido.
 
 ### También puede interesarte
 

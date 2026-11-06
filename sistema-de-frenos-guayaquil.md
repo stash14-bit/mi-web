@@ -74,13 +74,13 @@ En frenos no ofrecemos opción "económica": usamos siempre repuestos de primera
 
 ### ¿Qué significa que el ABS se active constantemente en mi vehículo?
 
-Si sentís que el ABS vibra o se activa en frenadas normales, lo más común es un sensor de rueda sucio o dañado, un aro fónico deteriorado o una señal incorrecta al módulo ABS. También puede ser líquido de frenos degradado o aire en el sistema.
+Si sientes que el ABS vibra o se activa en frenadas normales, lo más común es un sensor de rueda sucio o dañado, un aro fónico deteriorado o una señal incorrecta al módulo ABS. También puede ser líquido de frenos degradado o aire en el sistema.
 
 Se diagnostica con escáner computarizado leyendo los datos de cada sensor en tiempo real. En Autonation ese diagnóstico no tiene costo.
 
 ### ¿Puedo seguir manejando con la luz de ABS encendida?
 
-El freno convencional sigue funcionando, así que podés llegar al taller sin remolque. Pero estás manejando sin sistema antibloqueo: en una frenada de emergencia o sobre piso mojado las ruedas pueden bloquearse y perdés control de dirección. No conviene postergarlo — el diagnóstico toma minutos y es gratuito.
+El freno convencional sigue funcionando, así que puedes llegar al taller sin remolque. Pero estás manejando sin sistema antibloqueo: en una frenada de emergencia o sobre piso mojado las ruedas pueden bloquearse y pierdes control de dirección. No conviene postergarlo — el diagnóstico toma minutos y es gratuito.
 
 ### ¿Hacen diagnóstico de frenos para clientes de Samborondón y Daule?
 
@@ -90,7 +90,7 @@ Sí. El taller está en La Aurora, detrás del Edificio Milenium — a minutos d
 
 ## Revisión gratuita con cada ingreso al taller
 
-No esperés a que los frenos fallen. La revisión completa del sistema de frenos no tiene costo adicional cuando ingresás el auto por cualquier servicio.
+No esperes a que los frenos fallen. La revisión completa del sistema de frenos no tiene costo adicional cuando ingresas el auto por cualquier servicio.
 
 ---
 

@@ -1,8 +1,8 @@
-> Auto inundado en Guayaquil: diagnóstico de motor, sistema eléctrico y habitáculo, presupuesto previo y garantía escrita. Coordiná el traslado con grúa.
+> Auto inundado en Guayaquil: diagnóstico de motor, sistema eléctrico y habitáculo, presupuesto previo y garantía escrita. Coordina el traslado con grúa.
 
 # Reparación de Autos Inundados en Guayaquil
 
-Si tu auto quedó mojado o inundado por lluvia o por una calle anegada, no lo enciendas. Coordiná una grúa 24 horas y escribinos por WhatsApp para organizar la recepción y el diagnóstico.
+Si tu auto quedó mojado o inundado por lluvia o por una calle anegada, no lo enciendas. Coordina una grúa 24 horas y escríbenos por WhatsApp para organizar la recepción y el diagnóstico.
 
 Publicado y actualizado: 2026-10-27
 
@@ -11,10 +11,10 @@ Situación ilustrativa: “El agua subió en la calle y el auto se apagó. ¿Lo 
 ## Qué hacer en los primeros minutos
 
 - No lo enciendas ni intentes arrancar para comprobar si funciona.
-- Si está en marcha, apagalo cuando sea seguro y priorizá salir del peligro.
-- Desconectá la batería de 12 V únicamente si estás en un lugar seco, sabés hacerlo y es seguro; si no, esperá al técnico. No manipules componentes de alto voltaje de híbridos o eléctricos.
+- Si está en marcha, apágalo cuando sea seguro y prioriza salir del peligro.
+- Desconecta la batería de 12 V únicamente si estás en un lugar seco, sabes hacerlo y es seguro; si no, espera al técnico. No manipules componentes de alto voltaje de híbridos o eléctricos.
 - No empujes el auto por una calle inundada ni entres al agua para recuperarlo.
-- Avisá a la aseguradora antes de mover o reparar; llamá a la grúa desde un lugar seguro.
+- Avisa a la aseguradora antes de mover o reparar; llama a la grúa desde un lugar seguro.
 
 Si entró agua por la admisión, al intentar arrancar el motor puede sufrir golpe hidráulico: el agua no se comprime como el aire y puede doblar una biela.
 
@@ -56,7 +56,7 @@ Usamos escáner multimódulo cuando es seguro energizar el vehículo e inspeccio
 
 ### Presupuesto por escrito
 
-Separamos lo urgente para la seguridad y el funcionamiento de lo opcional. Vos autorizás antes de reparar.
+Separamos lo urgente para la seguridad y el funcionamiento de lo opcional. Tú autorizas antes de reparar.
 
 ### Reparación y verificación post-reparación
 
@@ -66,13 +66,13 @@ Realizamos el trabajo autorizado y verificamos fluidos, sistemas reparados y có
 
 No es lo mismo agua bajo el umbral que una inundación hasta el tablero. La altura del agua, su contaminación y el tiempo mojado influyen en la corrosión y en la cantidad de componentes afectados. Te decimos la verdad antes de gastar: puede haber daños que hagan inviable la reparación.
 
-Podemos apoyar tu reclamo al seguro con un informe técnico. La cobertura depende de la póliza y no prometemos aprobación. Avisá a la aseguradora ANTES de mover o reparar el vehículo; si hay peligro inmediato, priorizá tu seguridad.
+Podemos apoyar tu reclamo al seguro con un informe técnico. La cobertura depende de la póliza y no prometemos aprobación. Avisa a la aseguradora ANTES de mover o reparar el vehículo; si hay peligro inmediato, prioriza tu seguridad.
 
 ## Preguntas frecuentes
 
 ### ¿Qué hago si mi auto se inundó con la lluvia?
 
-No lo enciendas ni intentes arrancarlo. Si sigue en marcha, apagalo cuando sea seguro. Ponete a salvo, avisá a tu aseguradora antes de moverlo o repararlo y coordiná una grúa para llevarlo al taller.
+No lo enciendas ni intentes arrancarlo. Si sigue en marcha, apágalo cuando sea seguro. Ponte a salvo, avisa a tu aseguradora antes de moverlo o repararlo y coordina una grúa para llevarlo al taller.
 
 ### ¿Puedo encender un carro que estuvo en agua?
 
@@ -84,7 +84,7 @@ Depende del nivel del agua, del tiempo que estuvo mojado, de la marca y de los c
 
 ### ¿El seguro cubre un auto dañado por inundación?
 
-Depende de tu póliza: incluso en un seguro todo riesgo tenés que confirmar la cobertura por inundación, las exclusiones y el deducible. Avisá a la aseguradora antes de mover o reparar el auto. Un informe técnico puede apoyar el reclamo, pero no garantiza su aprobación.
+Depende de tu póliza: incluso en un seguro todo riesgo tienes que confirmar la cobertura por inundación, las exclusiones y el deducible. Avisa a la aseguradora antes de mover o reparar el auto. Un informe técnico puede apoyar el reclamo, pero no garantiza su aprobación.
 
 ### ¿Se puede salvar un auto inundado?
 
@@ -98,7 +98,7 @@ Depende de los daños, el secado necesario y la disponibilidad de repuestos. Pri
 
 [Grúa 24 horas](https://www.autonation.com.ec/grua-24-horas-guayaquil)[Sistema eléctrico](https://www.autonation.com.ec/sistema-electrico-automotriz-guayaquil)[Reparación de motores](https://www.autonation.com.ec/reparacion-motores-guayaquil)[Aire acondicionado](https://www.autonation.com.ec/aire-acondicionado-guayaquil)[Qué hacer si tu carro se inundó](https://www.autonation.com.ec/blog/que-hacer-si-tu-carro-se-inundo-ecuador)[Cómo detectar un usado inundado](https://www.autonation.com.ec/blog/como-saber-si-un-carro-usado-estuvo-inundado)
 
-## ¿Tu auto se mojó? Escribinos ya
+## ¿Tu auto se mojó? Escríbenos ya
 
 [Consultar por WhatsApp](https://wa.me/593939057454)
 

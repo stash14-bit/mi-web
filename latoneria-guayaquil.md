@@ -62,7 +62,7 @@ Inspección final con el cliente, explicación del trabajo realizado y garantía
 
 ### ¿Qué es la reparación de abolladuras sin pintura (PDR)?
 
-Es una técnica que masajea la lámina desde adentro con herramientas especiales hasta devolverle su forma original, sin masilla ni repintado. Aplica para abolladuras menores donde la pintura no se quebró — granizo, golpes de puerta, hundimientos leves. La gran ventaja: conservás la pintura original de fábrica, que siempre vale más que cualquier repintado.
+Es una técnica que masajea la lámina desde adentro con herramientas especiales hasta devolverle su forma original, sin masilla ni repintado. Aplica para abolladuras menores donde la pintura no se quebró — granizo, golpes de puerta, hundimientos leves. La gran ventaja: conservas la pintura original de fábrica, que siempre vale más que cualquier repintado.
 
 ### ¿Cuánto cuesta reparar una abolladura?
 
@@ -82,9 +82,9 @@ Sí. Como en todos nuestros servicios, la latonería se entrega con garantía po
 
 ### Servicios relacionados
 
-## Mandanos una foto y te cotizamos en el día
+## Mándanos una foto y te cotizamos en el día
 
-Foto por WhatsApp y tenés una estimación de costo en pocas horas. Sin turno previo para la cotización.
+Foto por WhatsApp y tienes una estimación de costo en pocas horas. Sin turno previo para la cotización.
 
 ---
 

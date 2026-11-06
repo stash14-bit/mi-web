@@ -2,7 +2,7 @@
 
 # Mantenimiento por kilometraje: la tabla completa.
 
-Cada cuántos kilómetros toca cada cosa — sin misterio y sin services inflados. La guía que aplican los concesionarios, explicada para que la entiendas vos.
+Cada cuántos kilómetros toca cada cosa — sin misterio y sin services inflados. La guía que aplican los concesionarios, explicada para que la entiendas tú.
 
 Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
 
@@ -27,7 +27,7 @@ Los manuales traen dos pautas: uso normal y uso severo. Calor sostenido, tráfic
 
 ### Kilómetros O meses: lo que llegue primero
 
-Si manejás poco, igual corresponde el cambio de aceite cada 6 meses. El aceite se degrada con el tiempo y la humedad aunque el auto duerma en el garaje.
+Si manejas poco, igual corresponde el cambio de aceite cada 6 meses. El aceite se degrada con el tiempo y la humedad aunque el auto duerma en el garaje.
 
 ## El error más caro: saltarse los hitos grandes
 
@@ -41,7 +41,7 @@ Nuestro equipo aplicó estas pautas durante 20+ años en concesionario Chevrolet
 
 ### ¿Cada cuántos kilómetros debo hacer mantenimiento a mi auto en Ecuador?
 
-Regla general: cada 5.000 km con aceite mineral o semisintético, cada 8.000–10.000 km con sintético — o cada 6 meses, lo que llegue primero. Las condiciones de Guayaquil (calor, tráfico, polvo) califican como uso severo, así que usá el intervalo corto de tu manual.
+Regla general: cada 5.000 km con aceite mineral o semisintético, cada 8.000–10.000 km con sintético — o cada 6 meses, lo que llegue primero. Las condiciones de Guayaquil (calor, tráfico, polvo) califican como uso severo, así que usa el intervalo corto de tu manual.
 
 ### ¿Qué incluye un mantenimiento preventivo completo?
 
@@ -59,7 +59,7 @@ Uno aislado no destruye el auto, pero el daño es acumulativo y silencioso: el a
 
 ## Tu plan de mantenimiento exacto y gratis
 
-Decinos marca, modelo y kilometraje por WhatsApp y te armamos el plan según la pauta del fabricante — con precio claro antes de agendar.
+Dinos marca, modelo y kilometraje por WhatsApp y te armamos el plan según la pauta del fabricante — con precio claro antes de agendar.
 
 ---
 

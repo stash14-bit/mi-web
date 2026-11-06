@@ -2,7 +2,7 @@
 
 # Luz de check engine: ¿qué hago ahora?
 
-Se encendió la luz del motor y no sabés si seguir manejando o parar ya. Guía directa: qué significa, cuándo es urgente y cómo se diagnostica de verdad.
+Se encendió la luz del motor y no sabes si seguir manejando o parar ya. Guía directa: qué significa, cuándo es urgente y cómo se diagnostica de verdad.
 
 Por Luciano Arteaga · Mecánico con más de 30 años de experiencia
 
@@ -22,13 +22,13 @@ El clásico: "debe ser el sensor de oxígeno", lo cambian, la luz vuelve. El có
 
 Con escáner multimarca se leen los códigos y los datos en tiempo real de cada sensor. Con osciloscopio y multímetro se verifican las señales eléctricas. Y con los diagramas del fabricante se sigue el circuito hasta la causa real: un arnés cortado, una masa floja, un sensor fuera de rango.
 
-En Autonation la lectura con escáner y el informe explicado en lenguaje claro son gratuitos con tu ingreso al taller. Sabés qué tiene tu auto antes de gastar un dólar en repuestos.
+En Autonation la lectura con escáner y el informe explicado en lenguaje claro son gratuitos con tu ingreso al taller. Sabes qué tiene tu auto antes de gastar un dólar en repuestos.
 
 ## Preguntas frecuentes
 
 ### ¿Puedo seguir manejando con el check engine encendido?
 
-Con la luz fija, sí — con precaución y diagnosticando pronto. Con la luz parpadeando, no conviene: hay una falla activa que puede dañar el catalizador. Reducí la exigencia y llevá el auto al taller cuanto antes.
+Con la luz fija, sí — con precaución y diagnosticando pronto. Con la luz parpadeando, no conviene: hay una falla activa que puede dañar el catalizador. Reduce la exigencia y lleva el auto al taller cuanto antes.
 
 ### ¿Cuánto cuesta leer el código de la luz del motor en Guayaquil?
 
@@ -46,7 +46,7 @@ Porque el código señala el circuito afectado, no necesariamente la pieza. Un c
 
 ## Escaneo gratuito hoy mismo
 
-Traé el auto, leemos los códigos y te explicamos qué significa cada uno — gratis. Después decidís con información real.
+Trae el auto, leemos los códigos y te explicamos qué significa cada uno — gratis. Después decides con información real.
 
 ---
 

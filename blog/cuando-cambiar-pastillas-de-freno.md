@@ -18,13 +18,13 @@ Rango general: entre 25.000 y 50.000 km. Pero el kilometraje es orientativo — 
 
 ## ¿Cuánto cuesta el cambio de pastillas en Ecuador?
 
-Referencia de mercado en Guayaquil: entre $40 y $120 por eje con repuestos de primera línea y mano de obra, según el modelo. Vehículos europeos o de gama alta pueden superar ese rango. Si el descuido llegó a los discos, sumá la rectificación o el reemplazo — por eso atender el chirrido a tiempo es la mitad del ahorro.
+Referencia de mercado en Guayaquil: entre $40 y $120 por eje con repuestos de primera línea y mano de obra, según el modelo. Vehículos europeos o de gama alta pueden superar ese rango. Si el descuido llegó a los discos, suma la rectificación o el reemplazo — por eso atender el chirrido a tiempo es la mitad del ahorro.
 
 ## Preguntas frecuentes
 
 ### ¿Cuánto duran las pastillas de freno en tráfico de Guayaquil?
 
-En uso urbano intenso, esperá el rango bajo: 25.000–35.000 km para semimetálicas, algo más para cerámicas. El tráfico con frenadas constantes es el escenario más exigente para el sistema de frenos.
+En uso urbano intenso, espera el rango bajo: 25.000–35.000 km para semimetálicas, algo más para cerámicas. El tráfico con frenadas constantes es el escenario más exigente para el sistema de frenos.
 
 ### ¿Puedo cambiar solo las pastillas y no los discos?
 
@@ -32,7 +32,7 @@ Sí, si los discos están dentro del espesor mínimo y sin daño. Por eso todo c
 
 ### ¿Qué pasa si sigo manejando con las pastillas gastadas?
 
-Primero dañás los discos (duplicás el costo). Después perdés capacidad de frenado real: más metros para detenerte, sobrecalentamiento y riesgo de falla en el peor momento. Es el único sistema del auto donde postergar es directamente peligroso.
+Primero dañas los discos (duplicas el costo). Después pierdes capacidad de frenado real: más metros para detenerte, sobrecalentamiento y riesgo de falla en el peor momento. Es el único sistema del auto donde postergar es directamente peligroso.
 
 ### ¿La revisión de frenos tiene costo?
 

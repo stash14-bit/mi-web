@@ -28,31 +28,31 @@ Un taller multimarca serio toma lo mejor de ambos mundos: procesos y documentaci
 | Pauta del fabricante | Sí | Rara vez | Sí |
 | Garantía escrita | Sí | Casi nunca | Sí |
 | Diagnóstico computarizado | Sí (pago) | A veces | Sí (gratis) |
-| Elección de repuestos | Solo originales | Lo que haya | Vos elegís, con asesoría |
+| Elección de repuestos | Solo originales | Lo que haya | Tú eliges, con asesoría |
 | Precio | Alto | Bajo | Justo |
 
 
 ## ¿Y la garantía de fábrica?
 
-No la perdés por salir del concesionario — la ley ecuatoriana te protege, siempre que el mantenimiento se haga con repuestos correctos, en los intervalos correctos y con documentación. El marco legal completo, acá.
+No la pierdes por salir del concesionario — la ley ecuatoriana te protege, siempre que el mantenimiento se haga con repuestos correctos, en los intervalos correctos y con documentación. El marco legal completo, acá.
 
 ## Preguntas frecuentes
 
 ### ¿Cuál es la diferencia entre un taller multimarca y un concesionario?
 
-El concesionario atiende una sola marca con procesos del fabricante y estructura corporativa (que pagás en el precio). Un taller multimarca serio atiende todas las marcas aplicando procesos equivalentes sin esa estructura de costos — la diferencia real está en si el taller documenta, sigue pautas y da garantía escrita.
+El concesionario atiende una sola marca con procesos del fabricante y estructura corporativa (que pagas en el precio). Un taller multimarca serio atiende todas las marcas aplicando procesos equivalentes sin esa estructura de costos — la diferencia real está en si el taller documenta, sigue pautas y da garantía escrita.
 
 ### ¿Es mejor llevar mi auto al taller o al concesionario?
 
-Durante la garantía, podés usar cualquiera de los dos (la ley te protege si el mantenimiento está documentado). Después de la garantía, un taller multimarca con estándares de concesionario te da el mismo resultado técnico a un precio justo. La clave es elegir taller por procesos, no solo por precio.
+Durante la garantía, puedes usar cualquiera de los dos (la ley te protege si el mantenimiento está documentado). Después de la garantía, un taller multimarca con estándares de concesionario te da el mismo resultado técnico a un precio justo. La clave es elegir taller por procesos, no solo por precio.
 
 ### ¿El taller multimarca usa los mismos repuestos que el concesionario?
 
-Puede usarlos: los repuestos originales se consiguen fuera del concesionario, y muchos genéricos de primera línea salen de las mismas fábricas que proveen al fabricante. En Autonation te mostramos las opciones con marca y precio, y vos decidís.
+Puede usarlos: los repuestos originales se consiguen fuera del concesionario, y muchos genéricos de primera línea salen de las mismas fábricas que proveen al fabricante. En Autonation te mostramos las opciones con marca y precio, y tú decides.
 
 ### ¿Qué debo exigirle a un taller independiente?
 
-Cuatro cosas: diagnóstico antes de cotizar, cotización detallada antes de trabajar, factura con el detalle de repuestos y kilometraje, y garantía por escrito. Si un taller no te da alguna de las cuatro, seguí buscando.
+Cuatro cosas: diagnóstico antes de cotizar, cotización detallada antes de trabajar, factura con el detalle de repuestos y kilometraje, y garantía por escrito. Si un taller no te da alguna de las cuatro, sigue buscando.
 
 ### También puede interesarte
 

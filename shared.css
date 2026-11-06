@@ -446,3 +446,6 @@ footer{background:#060606;border-top:3px solid var(--red);padding:60px 0 28px}
 .blog-content h2:first-child{border-top:none;margin-top:0;padding-top:0}
 
 .hv-gold-link:hover{border-color:rgba(200,169,81,.9)!important}
+
+.ic{stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;display:block}
+.tr-item > span:first-child:has(> .ic){display:flex;flex-shrink:0;align-items:center;color:var(--gold)}

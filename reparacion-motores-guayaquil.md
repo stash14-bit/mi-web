@@ -124,6 +124,8 @@ No lo enciendas y solicita remolque. El golpe de agua o hidrolock puede dañar b
 
 ## Servicios relacionados
 
+[Guía relacionada: Motor recalentado](/blog/motor-recalentado-que-hacer-guayaquil)
+
 [Amortiguadores](/cambio-amortiguadores-guayaquil)
 
 ## No esperes hasta que sea más caro
