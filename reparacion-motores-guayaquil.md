@@ -1,10 +1,10 @@
-> Reparación de motores en Guayaquil con diagnóstico computarizado. Rectificación, culata, distribución, turbo. El equipo de Autolasa, 20 años. Garantía escrita.
+> Rectificación y cambio de motor en Guayaquil con diagnóstico gratuito y garantía escrita. Reparamos motores de todas las marcas.
 
 # Reparación de Motores
 
 Diagnóstico computarizado antes de tocar nada. Rectificación, culata, distribución y turbo — con repuestos originales o genéricos según tu presupuesto. Garantía escrita.
 
-> **Resumen:** En Autonation diagnosticamos el motor antes de presupuestar: lectura de códigos, medición de compresión y análisis de su estado. Realizamos rectificación, reparación de culata, distribución y turbo. Elegís repuestos originales o genéricos según tu presupuesto; el trabajo comienza con tu aprobación y se entrega con garantía escrita.
+> **Resumen:** En Autonation diagnosticamos el motor antes de presupuestar: lectura de códigos, medición de compresión y análisis de su estado. Realizamos rectificación, reparación de culata, distribución y turbo. Eliges repuestos originales o genéricos según tu presupuesto; el trabajo comienza con tu aprobación y se entrega con garantía escrita.
 
 "Me dijeron que era solo la culata. Abrieron el motor y me dijeron que había más cosas. Al final pagué el doble de lo presupuestado y el auto siguió fallando. Nadie me mostró qué falló ni qué repuesto pusieron."
 
@@ -40,6 +40,32 @@ Bomba de agua, radiador, termostato, mangueras y tapa de radiador. Prevención d
 
 Lectura de códigos OBD, medición de compresión y análisis de rendimiento con equipo profesional.
 
+## ¿Tu motor te está avisando? Síntomas que no debes ignorar
+
+### Motor recalentado
+
+Una temperatura alta puede indicar una falla del sistema de enfriamiento. Detén el vehículo en un lugar seguro y solicita revisión antes de continuar.
+
+### Motor que bota humo (azul, blanco o negro)
+
+El humo azul puede indicar consumo de aceite; el blanco persistente, entrada de refrigerante; y el negro, exceso de combustible. El color orienta la revisión, pero no confirma por sí solo una falla.
+
+### Motor que pierde aceite
+
+Las manchas bajo el carro o la caída del nivel requieren revisar fugas y consumo. Si se enciende la luz de presión de aceite, detén el motor en un lugar seguro.
+
+### Golpeteo o ruido interno
+
+Un golpeteo puede relacionarse con lubricación o desgaste interno y necesita diagnóstico. Evita seguir usando el motor si el ruido es fuerte o aparece de repente.
+
+### Se apaga solo o pierde fuerza
+
+Puede haber fallas de encendido, alimentación o compresión. Revisamos el sistema para identificar la causa antes de cambiar piezas.
+
+### Motor fundido o necesidad de cambio de motor
+
+Evaluamos el daño para comparar reparación y cambio de motor. Si hubo golpe de agua o agua en el motor, no lo enciendas y consulta nuestro servicio de [reparación de autos inundados](/reparacion-autos-inundados-guayaquil).
+
 ## Sin sorpresas. Sin letra chica.
 
 ### Diagnóstico completo
@@ -58,7 +84,7 @@ Solo arrancamos el trabajo con tu aprobación. Te mostramos los repuestos antes 
 
 Prueba de ruta, verificación final y entrega con garantía por escrito. Todo documentado.
 
-## Chevrolet · Toyota · Hyundai · Kia JAC · Jetour · Chery · BYD · Nissan · Ford Nafta, turbo, GNC y más
+## Chevrolet · Toyota · Hyundai · Kia JAC · Jetour · Chery · BYD · Nissan · Ford Gasolina, diésel, turbo, GNC y más
 
 ## Preguntas frecuentes sobre reparación de motor
 
@@ -88,7 +114,17 @@ Las señales más claras: humo azul por el escape (quema de aceite), consumo de 
 
 Sí. Todos los trabajos de motor en Autonation se entregan con garantía por escrito, con el detalle de los repuestos instalados y los trabajos realizados. Somos el equipo con 20+ años de experiencia y 7 Premios Presidente Chevrolet, aplicando estándares de concesionario a todas las marcas.
 
-### Servicios relacionados
+### Mi motor se recalienta, ¿qué hago?
+
+Detén el vehículo en un lugar seguro y apaga el motor. No abras la tapa del radiador en caliente; revisa el nivel de refrigerante cuando se enfríe. No sigas manejando si la aguja de temperatura está alta: pide una grúa. Las causas frecuentes incluyen fuga de refrigerante, bomba de agua, termostato, ventilador o empaque de culata; hace falta diagnóstico para confirmarlas.
+
+### ¿Qué hago si le entró agua al motor?
+
+No lo enciendas y solicita remolque. El golpe de agua o hidrolock puede dañar bielas y pistones al intentar comprimir agua dentro del motor. En Autonation el diagnóstico es gratuito: consulta el servicio de [reparación de autos inundados](/reparacion-autos-inundados-guayaquil).
+
+## Servicios relacionados
+
+[Amortiguadores](/cambio-amortiguadores-guayaquil)
 
 ## No esperes hasta que sea más caro
 
@@ -103,3 +139,5 @@ Horario: Lunes a Viernes 08:00–18:00, Sábado 08:00–13:00. Grúa 24/7.
 Más contenido: [Inicio](https://www.autonation.com.ec/) · [Mapa del sitio](https://www.autonation.com.ec/sitemap.xml) · [llms.txt](https://www.autonation.com.ec/llms.txt)
 
 URL canónica: https://www.autonation.com.ec/reparacion-motores-guayaquil
+
+[Consultar por WhatsApp](https://wa.me/593939057454?text=Hola%2C%20quiero%20cotizar%20la%20reparaci%C3%B3n%20de%20mi%20motor)
