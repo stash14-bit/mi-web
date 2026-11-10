@@ -24,7 +24,7 @@ Transmisiones manuales, automáticas y CVT. Diagnóstico de fallas, aceite de ca
 
 Reparación de abolladuras en puertas y paneles, enderezado de estructura. Técnicas sin pintura para daños menores sin perder la garantía del fabricante.
 
-### Sistema de Frenos
+### Sistema de Frenos y Dirección
 
 Rectificación de discos y tambores, pastillas y zapatas, purga de líquido. Diagnóstico y reparación de ABS, ESC y sistemas de freno electrónico.
 

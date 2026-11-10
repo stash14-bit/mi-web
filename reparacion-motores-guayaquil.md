@@ -84,7 +84,11 @@ Solo arrancamos el trabajo con tu aprobación. Te mostramos los repuestos antes 
 
 Prueba de ruta, verificación final y entrega con garantía por escrito. Todo documentado.
 
-## Chevrolet · Toyota · Hyundai · Kia JAC · Jetour · Chery · BYD · Nissan · Ford Gasolina, diésel, turbo, GNC y más
+## Atendemos todas las marcas del mercado ecuatoriano
+
+Gasolina, diésel, turbo, GNC y más
+
+[Ver la lista completa](/#marcas)
 
 ## Preguntas frecuentes sobre reparación de motor
 

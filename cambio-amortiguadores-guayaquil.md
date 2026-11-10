@@ -84,7 +84,7 @@ El equipo de Autolasa: 20 años de experiencia, 7 Premios Presidente y estándar
 
 ## Todas las marcas
 
-Chevrolet · Toyota · Hyundai · Kia · JAC · Jetour · Chery · BYD · Nissan
+Atendemos todas las marcas del mercado ecuatoriano. [Ver la lista completa](/#marcas)
 
 ## Preguntas frecuentes
 
@@ -112,7 +112,7 @@ Sí. Entregamos garantía escrita con el detalle de los trabajos realizados y lo
 
 [Guía relacionada: Cuándo cambiar amortiguadores](/blog/cuando-cambiar-amortiguadores-guayaquil)
 
-[Sistema de Frenos](/sistema-de-frenos-guayaquil) · [Motores](/reparacion-motores-guayaquil) · [Mantenimiento preventivo](/mantenimiento-preventivo-guayaquil) · [Cajas de Cambio](/cajas-de-cambio-guayaquil)
+[Sistema de Frenos y Dirección](/sistema-de-frenos-guayaquil) · [Motores](/reparacion-motores-guayaquil) · [Mantenimiento preventivo](/mantenimiento-preventivo-guayaquil) · [Cajas de Cambio](/cajas-de-cambio-guayaquil)
 
 [Consultar por WhatsApp](https://wa.me/593939057454?text=Hola%2C%20quiero%20cotizar%20el%20cambio%20de%20amortiguadores)
 

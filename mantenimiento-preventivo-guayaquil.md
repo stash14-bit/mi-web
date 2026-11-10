@@ -84,7 +84,7 @@ Trabajamos durante 20 años en Autolasa aplicando exactamente los procesos que e
 
 ### Atendemos sin excepción
 
-Chevrolet · Toyota · Kia · Hyundai · Mazda · Nissan · Ford · Renault · Volkswagen Mitsubishi · Suzuki · Honda · JAC · Jetour · Chery · Dongfeng · BYD · DFSK Great Wall · Haval · y todas las marcas del mercado ecuatoriano
+Atendemos todas las marcas del mercado ecuatoriano. [Ver la lista completa](/#marcas)
 
 📍 Alfredo Adum y Av. Aurora — La Aurora, Daule · A minutos de Samborondón y Guayaquil
 

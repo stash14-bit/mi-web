@@ -76,7 +76,9 @@ En Autonation es el mismo equipo, en taller propio, con la misma cabina y el mis
 
 La garantía aplica sobre el trabajo realizado por Autonation. Se entrega por escrito al momento de la entrega del vehículo.
 
-## Chevrolet · Toyota · Hyundai · Kia JAC · Jetour · Chery · BYD · Nissan y cualquier marca del mercado ecuatoriano
+## Atendemos todas las marcas del mercado ecuatoriano
+
+[Ver la lista completa](/#marcas)
 
 ### Otros servicios que te pueden interesar
 

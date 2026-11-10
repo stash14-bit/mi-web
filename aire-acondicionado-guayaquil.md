@@ -62,7 +62,11 @@ Chillido o golpeteo metálico al encender el aire. Puede ser el compresor o la c
 
 El A/C funciona un rato y luego deja de enfriar. Común cuando el nivel de gas ya está muy bajo.
 
-## Chevrolet · Toyota · Hyundai · Kia JAC · Jetour · Chery · BYD · Nissan Todas las marcas, con o sin clima automático
+## Atendemos todas las marcas del mercado ecuatoriano
+
+Con o sin clima automático
+
+[Ver la lista completa](/#marcas)
 
 ## Preguntas frecuentes sobre aire acondicionado
 

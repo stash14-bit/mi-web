@@ -322,13 +322,11 @@ h2.title em{font-family:'Playfair Display',serif;font-style:italic;font-weight:4
 .ev-logo-chip:hover{background:rgba(34,197,94,.12)}
 .ev-logo-chip img{height:22px;width:auto;object-fit:contain;filter:brightness(0) saturate(100%) invert(58%) sepia(68%) saturate(500%) hue-rotate(95deg) brightness(90%)}
 
-/* MARCAS — solo logos, sin texto */
+/* MARCAS */
 .brands-section{background:#0d0d0d}
-.brands-logos-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:#1c1c1c;margin-top:48px}
-.brand-logo-cell{background:#0d0d0d;padding:24px 20px;display:flex;align-items:center;justify-content:center;transition:background .2s;cursor:default;min-height:80px}
-.brand-logo-cell:hover{background:#111}
-.brand-logo-cell img{height:38px;width:auto;object-fit:contain;max-width:100px;transition:opacity .2s}
-.brand-logo-cell:hover img{opacity:.9}
+.brands-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:32px 0 0}
+.brands-grid li{display:flex;align-items:center;justify-content:center;min-height:76px;padding:18px 12px;border:1px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:600;letter-spacing:1px;text-align:center;color:var(--muted)}
+@media(max-width:768px){.brands-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.brands-grid li{font-size:.85rem;letter-spacing:.5px;min-height:56px;padding:12px 6px}}
 
 /* TESTIMONIALES */
 .testi-section{background:#0a0a0a}
@@ -557,7 +555,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
         <li><a href="/cajas-de-cambio-guayaquil">Cajas de Cambio</a></li>
         <li><a href="/pintura-automotriz-guayaquil">Pintura Automotriz</a></li>
         <li><a href="/latoneria-guayaquil">Latonería &amp; Chapa</a></li>
-        <li><a href="/sistema-de-frenos-guayaquil">Sistema de Frenos</a></li>
+        <li><a href="/sistema-de-frenos-guayaquil">Sistema de Frenos y Dirección</a></li>
         <li><a href="/cambio-amortiguadores-guayaquil">Amortiguadores y Suspensión</a></li>
         <li><a href="/sistema-electrico-automotriz-guayaquil">Sistema Eléctrico</a></li>
         <li><a href="/aire-acondicionado-guayaquil">Aire Acondicionado</a></li>
@@ -637,7 +635,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
       <a class="svc-card" href="/sistema-de-frenos-guayaquil">
         <div class="svc-num">03</div>
         <div class="svc-img"><img src="/img/frenos.webp" alt="Sistema de frenos" width="1408" height="768"></div>
-        <div class="svc-body"><h3>Sistema de Frenos</h3><p>Rectificación de discos y tambores, pastillas y zapatas, purga de líquido. Diagnóstico y reparación de ABS, ESC y sistemas de freno electrónico.</p><span class="svc-tag">Ver página completa →</span></div>
+        <div class="svc-body"><h3>Sistema de Frenos y Dirección</h3><p>Rectificación de discos y tambores, pastillas y zapatas, purga de líquido. Diagnóstico y reparación de ABS, ESC y sistemas de freno electrónico. Servicio de dirección hidráulica, cremalleras y bombas.</p><span class="svc-tag">Ver página completa →</span></div>
       </a>
       <a class="svc-card" href="/cambio-amortiguadores-guayaquil">
         <div class="svc-num">04</div>
@@ -874,6 +872,33 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
         <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(1rem,1.8vw,1.25rem);font-weight:400;letter-spacing:3px;text-transform:uppercase;color:var(--muted);line-height:1.5">Con repuestos originales o genéricos según tu presupuesto.<br>Todas las marcas. Sin excepción.</p>
       </div>
     </div>
+    <ul class="brands-grid reveal" aria-label="Marcas que atendemos">
+      <li>Chevrolet</li>
+      <li>Kia</li>
+      <li>Toyota</li>
+      <li>Hyundai</li>
+      <li>Great Wall</li>
+      <li>Suzuki</li>
+      <li>Nissan</li>
+      <li>Chery</li>
+      <li>JAC</li>
+      <li>Jetour</li>
+      <li>Mazda</li>
+      <li>Renault</li>
+      <li>Ford</li>
+      <li>Volkswagen</li>
+      <li>Mitsubishi</li>
+      <li>Changan</li>
+      <li>Hino</li>
+      <li>Isuzu</li>
+      <li>Honda</li>
+      <li>BYD</li>
+      <li>Jeep / Dodge / Fiat</li>
+      <li>Peugeot</li>
+      <li>Foton</li>
+      <li>Dongfeng</li>
+      <li>JMC</li>
+    </ul>
   </div>
 </section>
 
@@ -1014,7 +1039,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
           <select id="f-marca"><option>Seleccionar marca...</option><option>Chevrolet</option><option>Toyota</option><option>Kia</option><option>Hyundai</option><option>Mazda</option><option>Nissan</option><option>Ford</option><option>Volkswagen</option><option>Renault</option><option>BYD (Eléctrico)</option><option>JAC EV (Eléctrico)</option><option>Chery EV (Eléctrico)</option><option>Mitsubishi</option><option>Suzuki</option><option>Honda</option><option>Otra</option></select>
         </div>
         <div class="fg"><label for="f-servicio">Servicio Requerido</label>
-          <select id="f-servicio"><option>Seleccionar servicio...</option><option>Mantenimiento Preventivo</option><option>Reparación de Motor</option><option>Caja de Cambios</option><option>Pintura / Carrocería</option><option>Sistema de Frenos</option><option>Amortiguadores y Suspensión</option><option>Vehículo Eléctrico / Híbrido</option><option>Sistema Eléctrico</option><option>Diagnóstico General</option></select>
+          <select id="f-servicio"><option>Seleccionar servicio...</option><option>Mantenimiento Preventivo</option><option>Reparación de Motor</option><option>Caja de Cambios</option><option>Pintura / Carrocería</option><option value="Sistema de Frenos">Sistema de Frenos y Dirección</option><option>Amortiguadores y Suspensión</option><option>Vehículo Eléctrico / Híbrido</option><option>Sistema Eléctrico</option><option>Diagnóstico General</option></select>
         </div>
         <div class="fg"><label for="f-mensaje">Mensaje (opcional)</label><textarea id="f-mensaje" placeholder="Cuéntanos el problema o lo que necesitas..."></textarea></div>
         <div style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label for="cf-website">No llenar este campo</label><input id="cf-website" type="text" tabindex="-1" autocomplete="off"></div>
@@ -1071,7 +1096,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
         <li><a href="/reparacion-motores-guayaquil">Reparación de Motores</a></li>
         <li><a href="/cajas-de-cambio-guayaquil">Cajas de Cambio</a></li>
         <li><a href="/latoneria-guayaquil">Latonería y Chapa</a></li>
-        <li><a href="/sistema-de-frenos-guayaquil">Sistema de Frenos</a></li>
+        <li><a href="/sistema-de-frenos-guayaquil">Sistema de Frenos y Dirección</a></li>
         <li><a href="/cambio-amortiguadores-guayaquil">Amortiguadores y Suspensión</a></li>
         <li><a href="/sistema-electrico-automotriz-guayaquil">Sistema Eléctrico</a></li>
         <li><a href="/aire-acondicionado-guayaquil">Aire Acondicionado</a></li>

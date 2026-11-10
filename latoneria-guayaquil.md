@@ -56,7 +56,9 @@ Los mismos procesos que en Autolasa — sin atajos, sin masilla excesiva, sin pa
 
 Inspección final con el cliente, explicación del trabajo realizado y garantía por escrito.
 
-## Chevrolet · Toyota · Hyundai · Kia JAC · Jetour · Chery · BYD · Nissan y cualquier marca del mercado ecuatoriano
+## Atendemos todas las marcas del mercado ecuatoriano
+
+[Ver la lista completa](/#marcas)
 
 ## Preguntas frecuentes sobre latonería
 

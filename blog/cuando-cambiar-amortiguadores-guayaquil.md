@@ -54,7 +54,7 @@ Un escurrimiento visible puede indicar pérdida del fluido de trabajo. Hay que d
 
 Un balanceo mayor al habitual o la necesidad de corregir constantemente la dirección exige revisar suspensión, llantas y dirección. Evita maniobras bruscas para comprobarlo.
 
-Si el problema aparece al frenar, también conviene revisar el [sistema de frenos](/sistema-de-frenos-guayaquil) y las [señales de desgaste de las pastillas](/blog/cuando-cambiar-pastillas-de-freno).
+Si el problema aparece al frenar, también conviene revisar el [sistema de frenos y dirección](/sistema-de-frenos-guayaquil) y las [señales de desgaste de las pastillas](/blog/cuando-cambiar-pastillas-de-freno).
 
 ## La prueba del rebote solo sirve como orientación
 

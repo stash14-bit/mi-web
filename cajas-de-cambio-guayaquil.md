@@ -58,7 +58,11 @@ Trabajamos solo con tu aprobación. Los repuestos que salen del vehículo te los
 
 Prueba de manejo post-reparación y entrega con garantía escrita por el trabajo realizado.
 
-## Chevrolet · Toyota · Hyundai · Kia JAC · Jetour · Chery · Nissan · Ford Manual, automática, CVT y más
+## Atendemos todas las marcas del mercado ecuatoriano
+
+Manual, automática, CVT y más
+
+[Ver la lista completa](/#marcas)
 
 ## Preguntas frecuentes sobre cajas de cambio
 

@@ -9,7 +9,7 @@ Datos clave:
 - Horario: Lunes a Viernes 08:00–18:00, Sábado 08:00–13:00
 - Grúa: recepción de vehículos con grúa las 24 horas, los 365 días del año (incluidos feriados); la atención (diagnóstico/reparación) comienza el siguiente día hábil
 - Diferenciales: 7 Premios Presidente Chevrolet, diagnóstico gratuito, garantía escrita, repuestos a elección del cliente, recepción de vehículos con grúa 24/7
-- Marcas: todas — Chevrolet, Toyota, Kia, Hyundai, Mazda, Nissan, y especialización en marcas chinas (JAC, Jetour, Chery, Dongfeng)
+- Marcas: todas — Chevrolet, Kia, Toyota, Hyundai, Great Wall, Suzuki, Nissan, Chery, JAC, Jetour, Mazda, Renault, Ford, Volkswagen, Mitsubishi, Changan, Hino, Isuzu, Honda, BYD, Jeep / Dodge / Fiat, Peugeot, Foton, Dongfeng, JMC
 - Vehículos eléctricos e híbridos: sistemas convencionales atendidos hoy; servicio de alto voltaje en preparación (certificaciones en curso)
 
 ## Servicios
@@ -20,7 +20,7 @@ Datos clave:
 - [Cajas de Cambio](https://www.autonation.com.ec/cajas-de-cambio-guayaquil): transmisiones manuales, automáticas y CVT
 - [Pintura Automotriz](https://www.autonation.com.ec/pintura-automotriz-guayaquil): cabina profesional con corrección de color computarizada
 - [Latonería y Chapa](https://www.autonation.com.ec/latoneria-guayaquil): abolladuras, PDR sin pintura y enderezado de estructura
-- [Sistema de Frenos](https://www.autonation.com.ec/sistema-de-frenos-guayaquil): pastillas, discos, líquido, ABS y freno electrónico
+- [Sistema de Frenos y Dirección](https://www.autonation.com.ec/sistema-de-frenos-guayaquil): pastillas, discos, líquido, ABS, freno electrónico y dirección hidráulica: cremalleras, bomba, mangueras, fugas, purga, terminales, rótulas y alineación
 - [Amortiguadores y Suspensión](https://www.autonation.com.ec/cambio-amortiguadores-guayaquil): cambio de amortiguadores y revisión de suspensión; diagnóstico gratuito, garantía escrita y precio desde $70 + IVA. El valor final depende del vehículo y del repuesto, y se confirma tras el diagnóstico.
 - [Sistema Eléctrico](https://www.autonation.com.ec/sistema-electrico-automotriz-guayaquil): diagnóstico con escáner, arneses, alternadores y módulos
 - [Aire Acondicionado](https://www.autonation.com.ec/aire-acondicionado-guayaquil): recarga de gas certificado, diagnóstico de fugas y reparación de compresor

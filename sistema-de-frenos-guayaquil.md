@@ -1,6 +1,6 @@
-> Reparación del sistema de frenos en Guayaquil. Pastillas, discos, líquido, ABS y freno de mano. Diagnóstico gratuito. El equipo de Autolasa, garantía escrita.
+> Sistema de frenos y dirección en Guayaquil: pastillas, discos, ABS, cremalleras, bombas y fugas de dirección hidráulica. Diagnóstico y garantía escrita.
 
-# Sistema de Frenos en Guayaquil
+# Sistema de Frenos y Dirección en Guayaquil
 
 Los frenos son el sistema de seguridad más importante de tu vehículo. Diagnóstico gratuito, pastillas, discos, ABS y líquido de frenos — todo con garantía escrita.
 
@@ -38,6 +38,30 @@ Diagnóstico computarizado del ABS. Reparación de sensores, módulo y bomba de 
 
 Regulación, cable y mecanismo del freno de estacionamiento. Verificación en rampa incluida.
 
+## Dirección hidráulica
+
+Si notas el volante duro, ruido al girar o una fuga de aceite de dirección, revisamos el sistema para encontrar la causa.
+
+### Reparación y cambio de cremalleras
+
+Revisamos fugas y holguras para definir si la cremallera se puede reparar o necesita cambio.
+
+### Bomba de dirección hidráulica
+
+Diagnóstico de la bomba y reparación o cambio según su estado y las especificaciones del vehículo.
+
+### Mangueras y fugas de aceite
+
+Revisión de mangueras, uniones y sellos para localizar y corregir las fugas del sistema.
+
+### Cambio de líquido y purga
+
+Usamos el líquido indicado por el fabricante y purgamos el circuito para eliminar el aire.
+
+### Terminales, rótulas y alineación
+
+Revisamos terminales y rótulas, cambiamos las piezas con desgaste y alineamos la dirección después de la reparación.
+
 ## No ignores estos avisos de tu auto.
 
 ### Ruido al frenar
@@ -56,7 +80,11 @@ El volante o el vehículo vibra al frenar. Discos alabeados o con desgaste irreg
 
 El sistema antibloqueo detectó una falla. No siempre afecta el frenado normal, pero requiere diagnóstico computarizado.
 
-## Chevrolet · Toyota · Hyundai · Kia JAC · Jetour · Chery · BYD · Nissan Con o sin ABS, todas las marcas
+## Atendemos todas las marcas del mercado ecuatoriano
+
+Con o sin ABS
+
+[Ver la lista completa](/#marcas)
 
 ## Preguntas frecuentes sobre frenos
 
@@ -101,3 +129,16 @@ Horario: Lunes a Viernes 08:00–18:00, Sábado 08:00–13:00. Grúa 24/7.
 Más contenido: [Inicio](https://www.autonation.com.ec/) · [Mapa del sitio](https://www.autonation.com.ec/sitemap.xml) · [llms.txt](https://www.autonation.com.ec/llms.txt)
 
 URL canónica: https://www.autonation.com.ec/sistema-de-frenos-guayaquil
+
+
+### ¿Por qué se pone duro el volante de mi carro?
+
+Un volante duro puede indicar falta de líquido, una fuga o una falla en la bomba o la cremallera. Revisamos el sistema de dirección hidráulica para identificar la causa antes de recomendar una reparación.
+
+### ¿Qué revisan si hay ruido al girar o fuga de aceite de dirección?
+
+Revisamos el nivel y estado del líquido, las mangueras, las uniones, la bomba y la cremallera. El ruido al girar y las fugas requieren diagnóstico; rellenar el depósito no corrige el origen del problema.
+
+### ¿Reparan cremalleras o solo las cambian?
+
+Evaluamos el desgaste, las holguras y las fugas de la cremallera. Según su estado, recomendamos reparación o cambio y te explicamos el trabajo antes de hacerlo. Al finalizar verificamos el funcionamiento y la alineación.

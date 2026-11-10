@@ -62,7 +62,11 @@ Los vehículos híbridos y eléctricos requieren formación específica y equipo
 
 En Autonation atendemos BYD, Toyota Hybrid, Kia e Hyundai electrificados con el equipamiento y el conocimiento adecuado.
 
-## Chevrolet · Toyota · Hyundai · Kia BYD · JAC · Jetour · Chery · Nissan Convencionales, híbridos y eléctricos
+## Atendemos todas las marcas del mercado ecuatoriano
+
+Convencionales, híbridos y eléctricos
+
+[Ver la lista completa](/#marcas)
 
 ## Preguntas frecuentes sobre diagnóstico eléctrico
 
