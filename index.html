@@ -166,7 +166,8 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;600&family=Playfair+Display:ital,wght@1,400&display=swap" media="print" data-async-css>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;600&family=Playfair+Display:ital,wght@1,400&display=swap"></noscript>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:hidden}
@@ -207,7 +208,8 @@ nav{position:fixed;top:35px;width:100%;z-index:999;transition:top .3s}
 
 /* HERO */
 .hero{min-height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;padding-top:145px}
-.hero-bg{position:absolute;inset:0;background:url('/img/taller-autonation-la-aurora.jpg') center/cover no-repeat;transform:scale(1.04)}
+.hero-bg{position:absolute;inset:0;transform:scale(1.04)}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,1) 0%,rgba(10,10,10,.55) 45%,rgba(10,10,10,.1) 100%)}
 .hero-grad2{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,10,10,.9) 40%,transparent 100%)}
 .hero-content{position:relative;max-width:1280px;width:100%;margin:auto;padding:0 40px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
@@ -578,7 +580,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg"><img src="/img/hero-taller-800.webp" srcset="/img/hero-taller-480.webp 480w, /img/hero-taller-800.webp 800w, /img/hero-taller-1280.webp 1280w, /img/hero-taller-1920.webp 1920w" sizes="100vw" width="1920" height="1440" alt="" fetchpriority="high" decoding="async"></div>
   <div class="hero-grad"></div>
   <div class="hero-grad2"></div>
   <div class="hero-content">
@@ -629,12 +631,12 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
       </a>
       <a class="svc-card" href="/cajas-de-cambio-guayaquil">
         <div class="svc-num">02</div>
-        <div class="svc-img"><img src="/img/caja-cambios.webp" alt="Cajas de cambio" width="1536" height="1024"></div>
+        <div class="svc-img"><img src="/img/caja-cambios.webp" alt="Cajas de cambio" width="1536" height="1024" loading="lazy" decoding="async"></div>
         <div class="svc-body"><h3>Cajas de Cambio</h3><p>Transmisiones manuales, automáticas y CVT. Diagnóstico de fallas, aceite de caja, sincronización y reparación completa de todos los componentes internos.</p><span class="svc-tag">Ver página completa →</span></div>
       </a>
       <a class="svc-card" href="/sistema-de-frenos-guayaquil">
         <div class="svc-num">03</div>
-        <div class="svc-img"><img src="/img/frenos.webp" alt="Sistema de frenos" width="1408" height="768"></div>
+        <div class="svc-img"><img src="/img/frenos.webp" alt="Sistema de frenos" width="1408" height="768" loading="lazy" decoding="async"></div>
         <div class="svc-body"><h3>Sistema de Frenos y Dirección</h3><p>Rectificación de discos y tambores, pastillas y zapatas, purga de líquido. Diagnóstico y reparación de ABS, ESC y sistemas de freno electrónico. Servicio de dirección hidráulica, cremalleras y bombas.</p><span class="svc-tag">Ver página completa →</span></div>
       </a>
       <a class="svc-card" href="/cambio-amortiguadores-guayaquil">
@@ -644,27 +646,27 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
       </a>
       <a class="svc-card" href="/sistema-electrico-automotriz-guayaquil">
         <div class="svc-num">05</div>
-        <div class="svc-img"><img src="/img/electrico.webp" alt="Sistema eléctrico" width="1408" height="768"></div>
+        <div class="svc-img"><img src="/img/electrico.webp" alt="Sistema eléctrico" width="1408" height="768" loading="lazy" decoding="async"></div>
         <div class="svc-body"><h3>Sistema Eléctrico</h3><p>Diagnóstico de fallas eléctricas con escáner, reparación de arneses y alternadores. Interpretación de luces encendidas y configuración de módulos modernos.</p><span class="svc-tag">Ver página completa →</span></div>
       </a>
       <a class="svc-card" href="/mantenimiento-preventivo-guayaquil">
         <div class="svc-num">06</div>
-        <div class="svc-img"><img src="/img/mantenimiento-preventivo.webp" alt="Mantenimiento preventivo" width="1408" height="768"></div>
+        <div class="svc-img"><img src="/img/mantenimiento-preventivo.webp" alt="Mantenimiento preventivo" width="1408" height="768" loading="lazy" decoding="async"></div>
         <div class="svc-body"><h3>Mantenimiento Preventivo</h3><p>Plan personalizado según tu marca, modelo y kilometraje. Diagnóstico gratuito con cada ingreso. Mismos estándares de los concesionarios a precio de taller independiente.</p><span class="svc-tag">Ver página completa →</span></div>
       </a>
       <a class="svc-card" href="/aire-acondicionado-guayaquil">
         <div class="svc-num">07</div>
-        <div class="svc-img"><img src="/img/ac-compresor.webp" alt="Aire acondicionado automotriz" width="1122" height="1402"></div>
+        <div class="svc-img"><img src="/img/ac-compresor.webp" alt="Aire acondicionado automotriz" width="1122" height="1402" loading="lazy" decoding="async"></div>
         <div class="svc-body"><h3>Aire Acondicionado</h3><p>Recarga de gas, diagnóstico de fugas y reparación de compresor. Nuevo en Autonation — mismo estándar de garantía escrita que el resto de nuestros servicios.</p><span class="svc-tag">Ver página completa →</span></div>
       </a>
       <a class="svc-card" href="/grua-24-horas-guayaquil">
         <div class="svc-num">08</div>
-        <div class="svc-img"><img src="/img/grua-24-horas.webp" alt="Grúa 24 horas Autonation" width="1122" height="1402"></div>
+        <div class="svc-img"><img src="/img/grua-24-horas.webp" alt="Grúa 24 horas Autonation" width="1122" height="1402" loading="lazy" decoding="async"></div>
         <div class="svc-body"><h3>Grúa 24 Horas</h3><p>Recibimos tu vehículo con grúa a cualquier hora, cualquier día del año. Si reparas con nosotros cubrimos 50% o 100% según el daño. Atención el siguiente día hábil.</p><span class="svc-tag">Ver página completa →</span></div>
       </a>
       <a class="svc-card" href="/reparacion-autos-inundados-guayaquil">
         <div class="svc-num">09</div>
-        <div class="svc-img"><img src="/img/electrico.webp" alt="Diagnóstico de autos inundados" width="1408" height="768"></div>
+        <div class="svc-img"><img src="/img/electrico.webp" alt="Diagnóstico de autos inundados" width="1408" height="768" loading="lazy" decoding="async"></div>
         <div class="svc-body"><h3>Autos Inundados</h3><p>Auto inundado en Guayaquil: diagnóstico de motor, sistema eléctrico y habitáculo, presupuesto previo y garantía escrita. Coordina el traslado con grúa.</p><span class="svc-tag">Ver página completa →</span></div>
       </a>
       <a class="svc-card" href="/pintura-automotriz-guayaquil">
@@ -674,7 +676,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
       </a>
       <a class="svc-card" href="/latoneria-guayaquil">
         <div class="svc-num">11</div>
-        <div class="svc-img"><img src="/img/latoneria.webp" alt="Latonería y chapa" width="1536" height="1024"></div>
+        <div class="svc-img"><img src="/img/latoneria.webp" alt="Latonería y chapa" width="1536" height="1024" loading="lazy" decoding="async"></div>
         <div class="svc-body"><h3>Latonería & Chapa</h3><p>Reparación de abolladuras en puertas y paneles, enderezado de estructura. Técnicas sin pintura para daños menores sin perder la garantía del fabricante.</p><span class="svc-tag">Ver página completa →</span></div>
       </a>
     </div>
@@ -700,7 +702,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
     <div class="reveal"><div class="eyebrow">Mantenimiento</div><h2 class="title">Preventivo<br>& <em>Correctivo.</em></h2></div>
     <div class="mant-inner reveal">
       <div class="mant-img">
-        <img src="/img/mantenimiento.webp" alt="Mantenimiento preventivo y correctivo" width="1408" height="768">
+        <img src="/img/mantenimiento.webp" alt="Mantenimiento preventivo y correctivo" width="1408" height="768" loading="lazy" decoding="async">
       </div>
       <div>
         <p class="lead">Plan personalizado según tu marca, modelo y kilometraje. Mismos estándares de los concesionarios a precio de taller independiente.</p>

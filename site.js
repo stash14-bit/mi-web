@@ -1,4 +1,6 @@
 (function () {
+// Hojas de estilo no bloqueantes (fuentes): se activan al correr este script
+document.querySelectorAll('link[data-async-css]').forEach(function (l) { l.media = 'all'; });
 // Año dinámico en footer
 const year = document.getElementById('fyear');
 if (year) year.textContent = new Date().getFullYear();
