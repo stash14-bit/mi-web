@@ -3,7 +3,7 @@
   "info": {
     "title": "Autonation Public Contact API",
     "version": "1.0.0",
-    "description": "Send an appointment request to Autonation Taller Multimarca. Alternative contact: WhatsApp +593 939 057 454 or info@autonation.com.ec. Hours: Mon-Fri 08:00-18:00, Sat 08:00-13:00 (Ecuador local time).\n\n## Versioning and deprecation policy\nThe canonical endpoint uses /api/v1/...; /api/public/... is a permanent unversioned alias of the latest compatible v1 behavior, with identical behavior and a shared rate limit. Breaking changes will be published as a new path version (/api/v2/...). Removal requires at least 6 months notice. When a version is deprecated, its deprecated operations will send the Deprecation header (RFC 9745) and Sunset header (RFC 8594) and will be marked deprecated: true in this spec. v1 is stable; nothing is deprecated.",
+    "description": "Send an appointment request to Autonation Taller Multimarca. Alternative contact: WhatsApp +593 939 057 454 or info@autonation.com.ec. Hours: Mon-Fri 08:00-18:00, Sat 08:00-15:00 (Ecuador local time).\n\n## Versioning and deprecation policy\nThe canonical endpoint uses /api/v1/...; /api/public/... is a permanent unversioned alias of the latest compatible v1 behavior, with identical behavior and a shared rate limit. Breaking changes will be published as a new path version (/api/v2/...). Removal requires at least 6 months notice. When a version is deprecated, its deprecated operations will send the Deprecation header (RFC 9745) and Sunset header (RFC 8594) and will be marked deprecated: true in this spec. v1 is stable; nothing is deprecated.",
     "contact": {
       "name": "Autonation Taller Multimarca",
       "url": "https://www.autonation.com.ec/",

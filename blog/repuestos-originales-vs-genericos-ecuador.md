@@ -52,7 +52,7 @@ Original o genérico de primera línea — te mostramos opciones, marcas y preci
 
 **Autonation Taller Multimarca** — La Aurora, detrás del Edificio Milenium (Daule, Guayas, Ecuador), cerca de Guayaquil y Samborondón.
 WhatsApp: +593 939 057 454 · Email: info@autonation.com.ec
-Horario: Lunes a Viernes 08:00–18:00, Sábado 08:00–13:00. Grúa 24/7.
+Horario: Lunes a Viernes 08:00–18:00, Sábado 08:00–15:00. Grúa 24/7.
 
 Más contenido: [Inicio](https://www.autonation.com.ec/) · [Mapa del sitio](https://www.autonation.com.ec/sitemap.xml) · [llms.txt](https://www.autonation.com.ec/llms.txt)
 

@@ -62,7 +62,7 @@ De noche, fin de semana o feriado — igual te recibimos.
 
 Sí. Recibimos tu vehículo con grúa las 24 horas del día, los 365 días del año, incluidos feriados y fines de semana.
 
-Ojo: recibir el vehículo no es lo mismo que atenderlo — el diagnóstico y la reparación arrancan el siguiente día hábil según nuestro horario normal (Lunes a Viernes 8:00-18:00, Sábado 8:00-13:00).
+Ojo: recibir el vehículo no es lo mismo que atenderlo — el diagnóstico y la reparación arrancan el siguiente día hábil según nuestro horario normal (Lunes a Viernes 8:00-18:00, Sábado 8:00-15:00).
 
 ### ¿La grúa tiene costo?
 
@@ -86,7 +86,7 @@ Escríbenos por WhatsApp con tu ubicación y coordinamos la grúa. Tu vehículo 
 
 **Autonation Taller Multimarca** — La Aurora, detrás del Edificio Milenium (Daule, Guayas, Ecuador), cerca de Guayaquil y Samborondón.
 WhatsApp: +593 939 057 454 · Email: info@autonation.com.ec
-Horario: Lunes a Viernes 08:00–18:00, Sábado 08:00–13:00. Grúa 24/7.
+Horario: Lunes a Viernes 08:00–18:00, Sábado 08:00–15:00. Grúa 24/7.
 
 Más contenido: [Inicio](https://www.autonation.com.ec/) · [Mapa del sitio](https://www.autonation.com.ec/sitemap.xml) · [llms.txt](https://www.autonation.com.ec/llms.txt)
 
