@@ -168,6 +168,11 @@
 <link rel="preload" href="/fonts/barlow-condensed-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:'BC Fallback';font-weight:400;src:local('Arial'),local('ArialMT');size-adjust:64.3%;ascent-override:155%;descent-override:31%;line-gap-override:0%}
+@font-face{font-family:'BC Fallback';font-weight:600 700;src:local('Arial Bold'),local('Arial-BoldMT');size-adjust:67.4%;ascent-override:148%;descent-override:29.7%;line-gap-override:0%}
+@font-face{font-family:'BC Fallback';font-weight:800 900;src:local('Arial Bold'),local('Arial-BoldMT');size-adjust:70.1%;ascent-override:142.7%;descent-override:28.5%;line-gap-override:0%}
+@font-face{font-family:'Barlow Fallback';font-weight:400;src:local('Arial'),local('ArialMT');size-adjust:96%;ascent-override:104%;descent-override:20.8%;line-gap-override:0%}
+@font-face{font-family:'Barlow Fallback';font-weight:600 700;src:local('Arial Bold'),local('Arial-BoldMT');size-adjust:91.1%;ascent-override:109.8%;descent-override:22%;line-gap-override:0%}
 @font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/barlow-400.woff2) format('woff2')}
 @font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/barlow-600.woff2) format('woff2')}
 @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/barlow-condensed-400.woff2) format('woff2')}
@@ -176,11 +181,11 @@
 @font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/playfair-display-400i.woff2) format('woff2')}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:hidden}
-body{background:#0a0a0a;color:#e8e8e8;font-family:'Barlow',sans-serif;overflow-x:hidden}
+body{background:#0a0a0a;color:#e8e8e8;font-family:'Barlow','Barlow Fallback',sans-serif;overflow-x:hidden}
 :root{--red:#D42B2B;--gold:#C8A951;--border:rgba(255,255,255,.07);--muted:#8c8c8c}
 
 /* TOPBAR */
-.topbar{background:var(--red);text-align:center;padding:9px 20px;font-family:'Barlow Condensed',sans-serif;font-size:.82rem;letter-spacing:2px;text-transform:uppercase;color:#fff}
+.topbar{background:var(--red);text-align:center;padding:9px 20px;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.82rem;letter-spacing:2px;text-transform:uppercase;color:#fff}
 .topbar span{opacity:.5;margin:0 14px}
 
 /* NAV */
@@ -193,7 +198,7 @@ nav{position:fixed;top:35px;width:100%;z-index:999;transition:top .3s}
 /* "Taller Multimarca" — tipografía azul/plateada en armonía con el logo:
    azul marino oscuro del texto AUTONATION + plateado de la silueta del auto */
 .logo-sub{
-  font-family:'Barlow Condensed',sans-serif;
+  font-family:'Barlow Condensed','BC Fallback',sans-serif;
   font-size:1.45rem;
   letter-spacing:7px;
   font-weight:700;
@@ -207,9 +212,9 @@ nav{position:fixed;top:35px;width:100%;z-index:999;transition:top .3s}
 }
 
 .nav-links{display:flex;gap:30px;list-style:none;margin-left:auto;margin-right:40px}
-.nav-links a{font-family:'Barlow Condensed',sans-serif;font-size:.88rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:color .2s;text-decoration:none}
+.nav-links a{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.88rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);transition:color .2s;text-decoration:none}
 .nav-links a:hover{color:#fff}
-.nav-phone{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:1px;color:var(--red);white-space:nowrap;text-decoration:none}
+.nav-phone{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:1px;color:var(--red);white-space:nowrap;text-decoration:none}
 
 /* HERO */
 .hero{min-height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;padding-top:145px}
@@ -218,22 +223,22 @@ nav{position:fixed;top:35px;width:100%;z-index:999;transition:top .3s}
 .hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,1) 0%,rgba(10,10,10,.55) 45%,rgba(10,10,10,.1) 100%)}
 .hero-grad2{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,10,10,.9) 40%,transparent 100%)}
 .hero-content{position:relative;max-width:1280px;width:100%;margin:auto;padding:0 40px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
-.hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.hero-eyebrow{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.78rem;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:16px;display:flex;align-items:center;gap:12px}
 .hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--red)}
-.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(4rem,8vw,7.5rem);font-weight:900;line-height:.88;letter-spacing:-2px;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.hero h1{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:clamp(4rem,8vw,7.5rem);font-weight:900;line-height:.88;letter-spacing:-2px;text-transform:uppercase;color:#fff;margin-bottom:16px}
 .hero h1 .ital{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;color:var(--red);text-transform:none;font-size:clamp(3.5rem,7vw,6.5rem)}
 .hero-desc{font-size:1rem;color:#aaa;line-height:1.7;max-width:500px;margin-bottom:36px}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-.btn-red{background:var(--red);color:#fff;padding:15px 32px;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
+.btn-red{background:var(--red);color:#fff;padding:15px 32px;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
 .btn-red:hover{background:#b52222}
-.btn-ghost{background:transparent;color:#fff;padding:15px 32px;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(255,255,255,.25);cursor:pointer;transition:border-color .2s,color .2s}
+.btn-ghost{background:transparent;color:#fff;padding:15px 32px;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(255,255,255,.25);cursor:pointer;transition:border-color .2s,color .2s}
 .btn-ghost:hover{border-color:var(--red);color:var(--red)}
 .hero-stats{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,.04)}
 .hero-stat{background:rgba(8,8,8,.82);backdrop-filter:blur(8px);padding:20px 26px;display:flex;align-items:center;gap:20px;border-left:3px solid transparent;transition:border-color .25s}
 .hero-stat:hover{border-left-color:var(--red)}
-.stat-n{font-family:'Barlow Condensed',sans-serif;font-size:2.8rem;font-weight:900;line-height:1;color:#fff;min-width:72px}
+.stat-n{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:2.8rem;font-weight:900;line-height:1;color:#fff;min-width:72px}
 .stat-n.gold{color:var(--gold)}
-.stat-info strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff}
+.stat-info strong{display:block;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff}
 .stat-info span{font-size:.82rem;color:var(--muted)}
 .hero-loc{background:rgba(8,8,8,.82);backdrop-filter:blur(8px);padding:16px 26px;display:flex;align-items:center;gap:14px;border-left:3px solid var(--red)}
 .hero-loc span{font-size:.83rem;color:#aaa;line-height:1.5}
@@ -244,15 +249,15 @@ nav{position:fixed;top:35px;width:100%;z-index:999;transition:top .3s}
 .trust-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);border-right:1px solid #1b1b1b}
 .trust-item{padding:26px;border-left:1px solid #1b1b1b;display:flex;align-items:center;gap:14px}
 .t-dot{width:7px;height:7px;background:var(--red);border-radius:50%;flex-shrink:0}
-.t-text strong{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;display:block;color:#fff}
+.t-text strong{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;display:block;color:#fff}
 .t-text span{font-size:.85rem;color:var(--muted)}
 
 /* BASE */
 section{padding:100px 0}
 .wrap{max-width:1280px;margin:auto;padding:0 40px}
-.eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.8rem;letter-spacing:4px;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.eyebrow{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.8rem;letter-spacing:4px;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .eyebrow::before{content:'';width:28px;height:1px;background:var(--red)}
-h2.title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.8rem,5vw,4.8rem);font-weight:900;line-height:.9;letter-spacing:-1px;text-transform:uppercase;color:#fff;margin-bottom:16px}
+h2.title{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:clamp(2.8rem,5vw,4.8rem);font-weight:900;line-height:.9;letter-spacing:-1px;text-transform:uppercase;color:#fff;margin-bottom:16px}
 h2.title em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400;text-transform:none;color:var(--red)}
 .lead{font-size:1.02rem;color:var(--muted);line-height:1.75;max-width:560px}
 
@@ -264,19 +269,19 @@ h2.title em{font-family:'Playfair Display',serif;font-style:italic;font-weight:4
 .svc-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:brightness(.75);transition:filter .5s,transform .6s}
 .svc-card:hover .svc-img img{filter:brightness(.9);transform:scale(1.05)}
 .svc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,1) 0%,rgba(10,10,10,.1) 70%,transparent 100%)}
-.svc-num{position:absolute;top:12px;right:16px;font-family:'Barlow Condensed',sans-serif;font-size:4.5rem;font-weight:900;color:rgba(255,255,255,.04);line-height:1;pointer-events:none;z-index:2}
+.svc-num{position:absolute;top:12px;right:16px;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:4.5rem;font-weight:900;color:rgba(255,255,255,.04);line-height:1;pointer-events:none;z-index:2}
 .svc-body{padding:22px 28px 30px}
-.svc-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:10px}
+.svc-card h3{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:10px}
 .svc-card p{font-size:.92rem;color:var(--muted);line-height:1.7}
-.svc-tag{margin-top:16px;font-family:'Barlow Condensed',sans-serif;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px}
+.svc-tag{margin-top:16px;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px}
 .svc-tag::before{content:'';width:16px;height:1px;background:var(--red)}
 
 /* PROCESO */
 .process-section{background:#0d0d0d}
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:#1c1c1c;margin-top:56px}
 .process-step{background:#0d0d0d;padding:40px 28px}
-.p-num{font-family:'Barlow Condensed',sans-serif;font-size:4rem;font-weight:900;color:var(--red);opacity:.2;line-height:1;margin-bottom:12px}
-.process-step h3{font-family:'Barlow Condensed',sans-serif;font-size:1.45rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:10px}
+.p-num{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:4rem;font-weight:900;color:var(--red);opacity:.2;line-height:1;margin-bottom:12px}
+.process-step h3{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.45rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:10px}
 .process-step p{font-size:.92rem;color:var(--muted);line-height:1.7}
 
 /* MANTENIMIENTO */
@@ -291,7 +296,7 @@ h2.title em{font-family:'Playfair Display',serif;font-style:italic;font-weight:4
 .mant-row-left{display:flex;align-items:center;gap:12px}
 .mant-row-left::before{content:'';width:5px;height:5px;background:var(--red);border-radius:50%;flex-shrink:0}
 .mant-row strong{font-size:.92rem;font-weight:600;color:#ddd}
-.badge{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border:1px solid}
+.badge{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.68rem;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border:1px solid}
 .badge.prev{color:var(--red);border-color:rgba(212,43,43,.3)}
 .badge.corr{color:#555;border-color:rgba(255,255,255,.1)}
 
@@ -299,14 +304,14 @@ h2.title em{font-family:'Playfair Display',serif;font-style:italic;font-weight:4
 .awards-section{position:relative;overflow:hidden}
 .awards-bg-img{position:absolute;inset:0;background:url('/img/mantenimiento-hero-800.webp') center/cover no-repeat;opacity:.07}
 .awards-inner{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.big-7{font-family:'Barlow Condensed',sans-serif;font-size:clamp(8rem,18vw,15rem);font-weight:900;line-height:.82;color:var(--gold);letter-spacing:-6px}
-.awards-left h3{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:#fff;margin-top:8px}
+.big-7{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:clamp(8rem,18vw,15rem);font-weight:900;line-height:.82;color:var(--gold);letter-spacing:-6px}
+.awards-left h3{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:2rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:#fff;margin-top:8px}
 .awards-left p{font-size:.95rem;color:var(--muted);line-height:1.75;margin-top:14px}
 .awards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#1c1c1c}
 .award-box{background:#0a0a0a;padding:26px 22px;transition:background .2s}
 .award-box:hover{background:#111}
 .award-box .ico{font-size:1.4rem;margin-bottom:10px}
-.award-box h4{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.award-box h4{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
 .award-box p{font-size:.85rem;color:var(--muted);line-height:1.6}
 
 /* EV */
@@ -322,17 +327,17 @@ h2.title em{font-family:'Playfair Display',serif;font-style:italic;font-weight:4
 .ev-feat{background:#060906;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;border-left:2px solid transparent;transition:background .2s,border-color .2s}
 .ev-feat:hover{background:#0a110a;border-left-color:#22c55e}
 .ev-feat-ico{width:8px;height:8px;background:#22c55e;border-radius:50%;flex-shrink:0;margin-top:7px}
-.ev-feat h3{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#22c55e;margin-bottom:3px}
+.ev-feat h3{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#22c55e;margin-bottom:3px}
 .ev-feat p{font-size:.85rem;color:#4a4a4a;line-height:1.6}
 .ev-brand-logos{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.ev-logo-chip{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);padding:10px 18px;display:flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:#22c55e;transition:background .2s}
+.ev-logo-chip{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);padding:10px 18px;display:flex;align-items:center;gap:8px;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:#22c55e;transition:background .2s}
 .ev-logo-chip:hover{background:rgba(34,197,94,.12)}
 .ev-logo-chip img{height:22px;width:auto;object-fit:contain;filter:brightness(0) saturate(100%) invert(58%) sepia(68%) saturate(500%) hue-rotate(95deg) brightness(90%)}
 
 /* MARCAS */
 .brands-section{background:#0d0d0d}
 .brands-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:32px 0 0}
-.brands-grid li{display:flex;align-items:center;justify-content:center;min-height:76px;padding:18px 12px;border:1px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:600;letter-spacing:1px;text-align:center;color:var(--muted)}
+.brands-grid li{display:flex;align-items:center;justify-content:center;min-height:76px;padding:18px 12px;border:1px solid var(--border);font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.2rem;font-weight:600;letter-spacing:1px;text-align:center;color:var(--muted)}
 @media(max-width:768px){.brands-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.brands-grid li{font-size:.85rem;letter-spacing:.5px;min-height:56px;padding:12px 6px}}
 
 /* TESTIMONIALES */
@@ -344,7 +349,7 @@ h2.title em{font-family:'Playfair Display',serif;font-style:italic;font-weight:4
 .stars{color:var(--gold);font-size:.8rem;letter-spacing:3px;margin-bottom:14px}
 .testi-text{font-size:.92rem;color:#aaa;line-height:1.8;margin-bottom:20px}
 .testi-divider{width:28px;height:1px;background:var(--red);margin-bottom:12px}
-.testi-name{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff}
+.testi-name{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff}
 .testi-car{font-size:.78rem;color:var(--muted)}
 
 /* CONTACTO */
@@ -354,24 +359,24 @@ h2.title em{font-family:'Playfair Display',serif;font-style:italic;font-weight:4
 .cinfo-item{background:#0d0d0d;padding:20px 22px;display:flex;gap:16px;align-items:flex-start;transition:background .2s}
 .cinfo-item:hover{background:#111}
 .cinfo-ico{font-size:1.1rem;margin-top:2px;flex-shrink:0}
-.cinfo-item strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:3px}
+.cinfo-item strong{display:block;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:3px}
 .cinfo-item span{font-size:.85rem;color:var(--muted);line-height:1.6}
 .hours-table{background:#111;border:1px solid #1c1c1c;margin-bottom:20px}
 .hours-row{display:flex;justify-content:space-between;padding:12px 20px;border-bottom:1px solid #1c1c1c;font-size:.88rem}
 .hours-row:last-child{border:none}
-.hours-row span:last-child{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red)}
+.hours-row span:last-child{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red)}
 .form-panel{background:#111;border:1px solid #1c1c1c;padding:36px}
-.form-title{font-family:'Barlow Condensed',sans-serif;font-size:1.9rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid #1c1c1c}
+.form-title{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.9rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid #1c1c1c}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .fg{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-.fg label{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-.fg input,.fg select,.fg textarea{background:#0a0a0a;border:1px solid #222;color:#e8e8e8;padding:12px 14px;font-size:.9rem;font-family:'Barlow',sans-serif;outline:none;transition:border-color .2s;border-radius:0;-webkit-appearance:none}
+.fg label{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.fg input,.fg select,.fg textarea{background:#0a0a0a;border:1px solid #222;color:#e8e8e8;padding:12px 14px;font-size:.9rem;font-family:'Barlow','Barlow Fallback',sans-serif;outline:none;transition:border-color .2s;border-radius:0;-webkit-appearance:none}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--red)}
 .fg select option{background:#111}
 .fg textarea{resize:vertical;min-height:80px}
-.submit-btn{width:100%;background:var(--red);color:#fff;padding:15px;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;margin-bottom:10px;transition:background .2s}
+.submit-btn{width:100%;background:var(--red);color:#fff;padding:15px;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.95rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;margin-bottom:10px;transition:background .2s}
 .submit-btn:hover{background:#b52222}
-.wa-btn{width:100%;background:#25D366;color:#fff;padding:14px;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:filter .2s}
+.wa-btn{width:100%;background:#25D366;color:#fff;padding:14px;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.9rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:filter .2s}
 .wa-btn:hover{filter:brightness(1.1)}
 
 /* FOOTER */
@@ -379,8 +384,8 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
 .footer-inner{max-width:1280px;margin:auto;padding:0 40px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid #141414;margin-bottom:24px}
 .f-brand p{font-size:.85rem;color:var(--muted);line-height:1.7;margin-top:12px;max-width:300px}
-.f-gold-badge{margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(200,169,81,.06);border:1px solid rgba(200,169,81,.18);padding:8px 16px;font-family:'Barlow Condensed',sans-serif;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
-.f-col h3{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:#E03A3A;margin-bottom:16px}
+.f-gold-badge{margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(200,169,81,.06);border:1px solid rgba(200,169,81,.18);padding:8px 16px;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.f-col h3{font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:#E03A3A;margin-bottom:16px}
 .f-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
 .f-col li a{font-size:.85rem;color:var(--muted);transition:color .2s;text-decoration:none}
 .f-col li a:hover{color:#fff}
@@ -489,7 +494,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
 
 /* RIBBON PRE-APERTURA */
 .ribbon-fixed{position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;overflow:hidden}
-.ribbon-fixed .band{position:absolute;top:50%;left:50%;width:160vw;padding:18px 0;background:#C8A951;transform:translate(-50%,-50%) rotate(-35deg);text-align:center;font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:900;letter-spacing:8px;text-transform:uppercase;color:#0a0a0a;box-shadow:0 4px 30px rgba(0,0,0,.5);white-space:nowrap}
+.ribbon-fixed .band{position:absolute;top:50%;left:50%;width:160vw;padding:18px 0;background:#C8A951;transform:translate(-50%,-50%) rotate(-35deg);text-align:center;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.5rem;font-weight:900;letter-spacing:8px;text-transform:uppercase;color:#0a0a0a;box-shadow:0 4px 30px rgba(0,0,0,.5);white-space:nowrap}
 
 /* RESPONSIVE — MÓVILES PEQUEÑOS */
 @media (max-width: 420px){
@@ -531,7 +536,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
 .nav-dropdown li:last-child{border-bottom:none}
 .nav-dropdown a{
   display:block;padding:12px 20px;
-  font-family:'Barlow Condensed',sans-serif;font-size:.82rem;letter-spacing:2px;
+  font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.82rem;letter-spacing:2px;
   text-transform:uppercase;color:#888;text-decoration:none;
   transition:background .15s,color .15s,padding-left .15s;white-space:nowrap
 }
@@ -592,7 +597,7 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
     <div>
       <div class="hero-eyebrow">La Aurora, Guayaquil · A minutos de Samborondón y Daule</div>
       <h1 style="font-size:clamp(2.8rem,6vw,5.5rem)">Taller multimarca<br>en La Aurora, Guayaquil</h1>
-      <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#aaa;margin-bottom:20px;line-height:1.2">A minutos de Guayaquil<br>y Samborondón</h2>
+      <h2 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#aaa;margin-bottom:20px;line-height:1.2">A minutos de Guayaquil<br>y Samborondón</h2>
       <p class="hero-desc">Tu taller multimarca en Guayaquil: estándares de concesionario, precios accesibles. Más de 20 años de experiencia y <a href="/blog/premio-presidente-chevrolet-que-significa" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(200,169,81,.4);transition:border-color .2s" class="hv-gold-link">7 Premios Presidente Chevrolet</a>, con repuestos originales y genéricos.</p>
       <div class="hero-btns">
         <a href="https://wa.me/593939057454" target="_blank" rel="noopener" class="btn-red" style="display:inline-block;text-decoration:none">Agendar Cita →</a>
@@ -759,21 +764,21 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
         <h2 class="title" style="margin-bottom:20px">Tu taller multimarca<br><em>ya te espera.</em></h2>
         <p style="color:#aaa;line-height:1.8;font-size:1rem;margin-bottom:28px">Abrimos las puertas en La Aurora, detrás del Edificio Milenium. Agenda tu cita hoy — diagnóstico gratuito con cada ingreso y garantía escrita en todos los trabajos.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a href="https://wa.me/593939057454" target="_blank" rel="noopener" class="btn-red" style="display:inline-block;padding:14px 28px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--red);color:#fff">Agendar Cita →</a>
+          <a href="https://wa.me/593939057454" target="_blank" rel="noopener" class="btn-red" style="display:inline-block;padding:14px 28px;text-decoration:none;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--red);color:#fff">Agendar Cita →</a>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:1px;background:#1a1a1a">
         <div style="background:#060606;padding:22px 28px;display:flex;gap:16px;align-items:center">
           <span style="font-size:1.6rem">📍</span>
-          <div><strong style="display:block;font-family:'Barlow Condensed',sans-serif;font-size:1rem;letter-spacing:1px;text-transform:uppercase;color:#fff">Abiertos al público</strong><span style="font-size:.85rem;color:#666">La Aurora · Detrás del Edificio Milenium</span></div>
+          <div><strong style="display:block;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1rem;letter-spacing:1px;text-transform:uppercase;color:#fff">Abiertos al público</strong><span style="font-size:.85rem;color:#666">La Aurora · Detrás del Edificio Milenium</span></div>
         </div>
         <div style="background:#060606;padding:22px 28px;display:flex;gap:16px;align-items:center">
           <span style="font-size:1.6rem">🔧</span>
-          <div><strong style="display:block;font-family:'Barlow Condensed',sans-serif;font-size:1rem;letter-spacing:1px;text-transform:uppercase;color:#fff">Equipo con experiencia</strong><span style="font-size:.85rem;color:#666">20+ años — el mismo equipo de Autolasa</span></div>
+          <div><strong style="display:block;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1rem;letter-spacing:1px;text-transform:uppercase;color:#fff">Equipo con experiencia</strong><span style="font-size:.85rem;color:#666">20+ años — el mismo equipo de Autolasa</span></div>
         </div>
         <div style="background:#060606;padding:22px 28px;display:flex;gap:16px;align-items:center">
           <span style="font-size:1.6rem">⭐</span>
-          <div><strong style="display:block;font-family:'Barlow Condensed',sans-serif;font-size:1rem;letter-spacing:1px;text-transform:uppercase;color:#fff">5.0 en Google</strong><span style="font-size:.85rem;color:#666">Opiniones de clientes reales</span></div>
+          <div><strong style="display:block;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1rem;letter-spacing:1px;text-transform:uppercase;color:#fff">5.0 en Google</strong><span style="font-size:.85rem;color:#666">Opiniones de clientes reales</span></div>
         </div>
       </div>
     </div>
@@ -875,9 +880,9 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
       <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,61,122,.08) 0%,rgba(74,124,200,.04) 50%,rgba(176,192,216,.06) 100%);border:1px solid rgba(74,124,200,.12)"></div>
       <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom,#1a3d7a,#4a7cc8,#b0c0d8)"></div>
       <div style="position:relative;padding:52px 60px;text-align:left">
-        <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:2px;text-transform:uppercase;line-height:1.15;color:#fff;margin-bottom:14px">Estándares de concesionario<br>en taller independiente.</p>
+        <p style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:2px;text-transform:uppercase;line-height:1.15;color:#fff;margin-bottom:14px">Estándares de concesionario<br>en taller independiente.</p>
         <div style="width:48px;height:2px;background:linear-gradient(to right,#1a3d7a,#4a7cc8,#b0c0d8);margin-bottom:18px"></div>
-        <p style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(1rem,1.8vw,1.25rem);font-weight:400;letter-spacing:3px;text-transform:uppercase;color:var(--muted);line-height:1.5">Con repuestos originales o genéricos según tu presupuesto.<br>Todas las marcas. Sin excepción.</p>
+        <p style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:clamp(1rem,1.8vw,1.25rem);font-weight:400;letter-spacing:3px;text-transform:uppercase;color:var(--muted);line-height:1.5">Con repuestos originales o genéricos según tu presupuesto.<br>Todas las marcas. Sin excepción.</p>
       </div>
     </div>
     <ul class="brands-grid reveal" aria-label="Marcas que atendemos">
@@ -921,100 +926,100 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
     </div>
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#1c1c1c" class="reveal">
       <a href="/blog/motor-recalentado-que-hacer-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Motor — Guía práctica</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Motor recalentado: qué hacer y qué causas revisar en Guayaquil</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Motor — Guía práctica</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Motor recalentado: qué hacer y qué causas revisar en Guayaquil</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Motor recalentado en Guayaquil: cómo detenerte con seguridad, causas frecuentes y señales para revisar la culata antes de volver a manejar.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
 <a href="/blog/cuando-cambiar-amortiguadores-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Suspensión — Guía práctica</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Cuándo cambiar los amortiguadores: 7 señales de que están dañados</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Suspensión — Guía práctica</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Cuándo cambiar los amortiguadores: 7 señales de que están dañados</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Cuándo cambiar los amortiguadores en Guayaquil: siete señales de desgaste, revisión de suspensión, cambio en pares y diagnóstico gratuito.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
 <a href="/blog/que-hacer-si-tu-carro-se-inundo-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Lluvias · Guía práctica</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Mi carro se inundó: qué hacer paso a paso</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Lluvias · Guía práctica</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Mi carro se inundó: qué hacer paso a paso</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Qué hacer si tu carro se inundó en Ecuador: primeros pasos, daños según el nivel del agua, errores que evitar y coordinación con seguro, grúa y taller.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
 <a href="/blog/como-saber-si-un-carro-usado-estuvo-inundado" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Lluvias · Guía práctica</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Cómo saber si un carro usado estuvo inundado</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Lluvias · Guía práctica</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Cómo saber si un carro usado estuvo inundado</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Cómo detectar señales de inundación en un carro usado: humedad, corrosión, fallas eléctricas y revisión con escáner antes de decidir una compra.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
 <a href="/blog/garantia-taller-independiente-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Garantía · Derechos del Consumidor</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Pierdes la garantía si no vas al concesionario?</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Garantía · Derechos del Consumidor</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Pierdes la garantía si no vas al concesionario?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">La respuesta es No. En Ecuador está legalmente prohibido exigirte que hagas el mantenimiento en un concesionario específico. Te explicamos el marco legal.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
       <a href="/blog/mantenimiento-10000-km-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Mantenimiento · Guía Práctica</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Qué le hacen a tu auto en el mantenimiento de 10.000 km</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Mantenimiento · Guía Práctica</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Qué le hacen a tu auto en el mantenimiento de 10.000 km</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Aceite, filtros, frenos, suspensión. Todo lo que el concesionario hace — y lo que muchos talleres se saltean. Guía completa para Guayaquil.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
       <a href="/blog/mantenimiento-jac-jetour-chery-dongfeng-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Marcas Chinas · Especialización</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">JAC, Jetour, Chery y Dongfeng: mantenimiento en Guayaquil</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Marcas Chinas · Especialización</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">JAC, Jetour, Chery y Dongfeng: mantenimiento en Guayaquil</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Las marcas chinas crecen en Ecuador pero pocos talleres las atienden bien. Todo sobre intervalos, repuestos y lo que necesitas saber.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
       <a href="/blog/premio-presidente-chevrolet-que-significa" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-gold">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Premio Presidente · Distinción</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Qué significa el Premio Presidente Chevrolet</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Premio Presidente · Distinción</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Qué significa el Premio Presidente Chevrolet</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">El máximo reconocimiento de Chevrolet a sus mejores talleres. Qué criterios evalúa, por qué es difícil obtenerlo y qué te garantiza como cliente.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
       <a href="/blog/taller-multimarca-vs-concesionario-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Guía de Decisión · Sin Marketing</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Taller multimarca o concesionario?</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Guía de Decisión · Sin Marketing</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Taller multimarca o concesionario?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">La comparación honesta escrita por gente que trabajó 20 años del lado del concesionario. Costos, calidad, garantía y cuándo conviene cada uno.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
       <a href="/blog/repuestos-originales-vs-genericos-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Repuestos · Guía Honesta</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Repuestos originales o genéricos?</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Repuestos · Guía Honesta</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Repuestos originales o genéricos?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Ni siempre original ni siempre lo más barato. Dónde no se negocia la calidad y dónde el genérico premium es la compra inteligente.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
       <a href="/blog/reparar-o-cambiar-motor-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Motor · Guía de Decisión</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Reparar o cambiar el motor de tu auto?</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Motor · Guía de Decisión</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Reparar o cambiar el motor de tu auto?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">La regla del 50-60%, motor reconstruido vs nuevo vs usado importado, y cuánto cuesta rectificar un motor en Ecuador.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
       <a href="/blog/luz-check-engine-encendida-que-hacer" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Diagnóstico · Guía Rápida</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Luz de check engine: ¿qué hago ahora?</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Diagnóstico · Guía Rápida</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Luz de check engine: ¿qué hago ahora?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Fija o parpadeando — la diferencia importa. Causas comunes, cuándo es urgente y por qué cambiar piezas a ciegas sale caro.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
       <a href="/blog/mantenimiento-preventivo-por-kilometraje-ecuador" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Mantenimiento · Tabla Completa</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Mantenimiento por kilometraje: la tabla completa</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Mantenimiento · Tabla Completa</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Mantenimiento por kilometraje: la tabla completa</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Qué toca a los 5.000, 10.000, 20.000, 40.000 y 80.000 km — y por qué Guayaquil cuenta como uso severo.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
       <a href="/blog/cuando-cambiar-pastillas-de-freno" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Frenos · Seguridad</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Cuándo cambiar las pastillas de freno?</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Frenos · Seguridad</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Cuándo cambiar las pastillas de freno?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Señales de desgaste, kilometrajes reales y costos referenciales. El repuesto de seguridad que más gente posterga.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
       <a href="/blog/cuanto-cuesta-pintar-un-auto-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-red">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Pintura · Precios Reales</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Cuánto cuesta pintar un auto en Guayaquil?</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px">Pintura · Precios Reales</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">¿Cuánto cuesta pintar un auto en Guayaquil?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Del retoque de $40 a la pintura completa de $2.500: qué incluye cada precio y por qué la pintura barata sale carísima.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
       <a href="/blog/taller-vehiculos-electricos-hibridos-guayaquil" style="background:#0d0d0d;padding:36px 32px;text-decoration:none;color:inherit;display:block;border-left:3px solid transparent;transition:background .25s,border-color .25s" class="hv-card-gold">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Eléctricos · El Futuro</div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Eléctricos e híbridos: ¿quién los atiende?</h3>
+        <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Eléctricos · El Futuro</div>
+        <h3 style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:12px;line-height:1.1">Eléctricos e híbridos: ¿quién los atiende?</h3>
         <p style="font-size:.9rem;color:#777;line-height:1.7;margin-bottom:20px">Qué necesita un taller para trabajar EVs de verdad, qué puedes atender hoy fuera del concesionario y dónde estamos nosotros.</p>
-        <span style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
+        <span style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:8px">Leer artículo <span>→</span></span>
       </a>
     </div>
   </div>
@@ -1069,10 +1074,10 @@ footer{background:#060606;border-top:2px solid var(--red);padding:52px 0 24px}
       <div style="max-width:1280px;margin:auto;display:flex;align-items:center;gap:12px">
         <div style="width:3px;height:28px;background:#D42B2B;flex-shrink:0"></div>
         <div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:4px;text-transform:uppercase;color:#D42B2B;margin-bottom:2px">Cómo llegar</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff">Detrás del Edificio Milenium · La Aurora, Guayaquil</div>
+          <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.75rem;letter-spacing:4px;text-transform:uppercase;color:#D42B2B;margin-bottom:2px">Cómo llegar</div>
+          <div style="font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff">Detrás del Edificio Milenium · La Aurora, Guayaquil</div>
         </div>
-        <a href="/ubicacion" style="pointer-events:auto;margin-left:auto;display:inline-block;padding:11px 22px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:#D42B2B;color:#fff;border-radius:8px;white-space:nowrap">Cómo llegar →</a>
+        <a href="/ubicacion" style="pointer-events:auto;margin-left:auto;display:inline-block;padding:11px 22px;text-decoration:none;font-family:'Barlow Condensed','BC Fallback',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:#D42B2B;color:#fff;border-radius:8px;white-space:nowrap">Cómo llegar →</a>
       </div>
     </div>
     <iframe
