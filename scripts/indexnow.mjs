@@ -36,12 +36,22 @@ if (!live.ok || (await live.text()).trim() !== key) {
   throw new Error(`La clave no esta en vivo en ${body.keyLocation} (HTTP ${live.status}). Deployar primero.`);
 }
 
-const res = await fetch('https://api.indexnow.org/indexnow', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json; charset=utf-8' },
-  body: JSON.stringify(body),
-});
-console.log(`IndexNow respondio ${res.status} ${res.statusText}`);
-console.log((await res.text()) || '(sin cuerpo)');
-// 200 = recibido, 202 = recibido y la clave se valida despues; cualquier otro es error
-process.exit(res.status === 200 || res.status === 202 ? 0 : 1);
+// Bing primero (es el objetivo); api.indexnow.org reenvia a todos pero a veces
+// corta el TLS (ECONNRESET), asi que queda de respaldo.
+const ENDPOINTS = ['https://www.bing.com/indexnow', 'https://api.indexnow.org/indexnow'];
+let ok = false;
+for (const endpoint of ENDPOINTS) {
+  try {
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON.stringify(body),
+    });
+    console.log(`${endpoint} -> ${res.status} ${res.statusText} ${(await res.text()).slice(0, 200)}`);
+    // 200 = recibido, 202 = recibido y la clave se valida despues
+    if (res.status === 200 || res.status === 202) { ok = true; break; }
+  } catch (e) {
+    console.log(`${endpoint} -> error de red: ${e.cause?.code ?? e.message}`);
+  }
+}
+process.exitCode = ok ? 0 : 1;
